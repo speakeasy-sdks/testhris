@@ -1,0 +1,11 @@
+# WarningValidationProblem
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               | Example                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `detail`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | An unrecognized field, age, was passed in with request data.              |
+| `problemType`                                                             | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | UNRECOGNIZED_FIELD                                                        |
+| `source`                                                                  | [ValidationProblemSource](../../models/shared/validationproblemsource.md) | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |
+| `title`                                                                   | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | Unrecognized Field                                                        |

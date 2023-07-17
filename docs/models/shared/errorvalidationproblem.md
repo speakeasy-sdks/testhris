@@ -1,0 +1,11 @@
+# ErrorValidationProblem
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               | Example                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `detail`                                                                  | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | custom_fields is a required field on model.                               |
+| `problemType`                                                             | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | MISSING_REQUIRED_FIELD                                                    |
+| `source`                                                                  | [ValidationProblemSource](../../models/shared/validationproblemsource.md) | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |
+| `title`                                                                   | *string*                                                                  | :heavy_check_mark:                                                        | N/A                                                                       | Missing Required Field                                                    |
