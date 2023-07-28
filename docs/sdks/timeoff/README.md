@@ -15,10 +15,13 @@ Creates a `TimeOff` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TimeOffCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { TimeOffCreateResponse, TimeOffCreateSecurity } from "HRIS/dist/sdk/models/operations";
 import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOff.timeOffCreate({
   timeOffEndpointRequest: {
@@ -45,9 +48,7 @@ sdk.timeOff.timeOffCreate({
   xAccountToken: "provident",
   isDebugMode: false,
   runAsync: false,
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffCreateResponse) => {
+}, operationSecurity).then((res: TimeOffCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -81,11 +82,15 @@ import {
   TimeOffListRemoteFields,
   TimeOffListRequestType,
   TimeOffListResponse,
+  TimeOffListSecurity,
   TimeOffListShowEnumOrigins,
   TimeOffListStatus,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOff.timeOffList({
   xAccountToken: "possimus",
@@ -105,9 +110,7 @@ sdk.timeOff.timeOffList({
   requestType: TimeOffListRequestType.Sick,
   showEnumOrigins: TimeOffListShowEnumOrigins.Units,
   status: TimeOffListStatus.Requested,
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffListResponse) => {
+}, operationSecurity).then((res: TimeOffListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -136,15 +139,16 @@ Returns metadata for `TimeOff` POSTs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TimeOffMetaPostRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { TimeOffMetaPostRetrieveResponse, TimeOffMetaPostRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffMetaPostRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOff.timeOffMetaPostRetrieve({
   xAccountToken: "cumque",
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffMetaPostRetrieveResponse) => {
+}, operationSecurity).then((res: TimeOffMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -177,10 +181,14 @@ import {
   TimeOffRetrieveExpand,
   TimeOffRetrieveRemoteFields,
   TimeOffRetrieveResponse,
+  TimeOffRetrieveSecurity,
   TimeOffRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOff.timeOffRetrieve({
   xAccountToken: "vitae",
@@ -189,9 +197,7 @@ sdk.timeOff.timeOffRetrieve({
   includeRemoteData: false,
   remoteFields: TimeOffRetrieveRemoteFields.RequestTypeStatusUnits,
   showEnumOrigins: TimeOffRetrieveShowEnumOrigins.StatusUnits,
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffRetrieveResponse) => {
+}, operationSecurity).then((res: TimeOffRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

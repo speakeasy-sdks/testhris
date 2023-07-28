@@ -13,9 +13,12 @@ Returns a list of `Company` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { CompaniesListResponse } from "HRIS/dist/sdk/models/operations";
+import { CompaniesListResponse, CompaniesListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: CompaniesListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.companies.companiesList({
   xAccountToken: "omnis",
@@ -28,9 +31,7 @@ sdk.companies.companiesList({
   modifiedBefore: new Date("2022-09-11T06:15:44.019Z"),
   pageSize: 652790,
   remoteId: "dolorem",
-}, {
-  tokenAuth: "",
-}).then((res: CompaniesListResponse) => {
+}, operationSecurity).then((res: CompaniesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -59,17 +60,18 @@ Returns a `Company` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { CompaniesRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { CompaniesRetrieveResponse, CompaniesRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: CompaniesRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.companies.companiesRetrieve({
   xAccountToken: "culpa",
   id: "2fa94677-3925-41aa-92c3-f5ad019da1ff",
   includeRemoteData: false,
-}, {
-  tokenAuth: "",
-}).then((res: CompaniesRetrieveResponse) => {
+}, operationSecurity).then((res: CompaniesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

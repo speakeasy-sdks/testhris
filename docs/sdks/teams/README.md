@@ -13,9 +13,12 @@ Returns a list of `Team` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsListExpand, TeamsListResponse } from "HRIS/dist/sdk/models/operations";
+import { TeamsListExpand, TeamsListResponse, TeamsListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TeamsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.teams.teamsList({
   xAccountToken: "molestiae",
@@ -30,9 +33,7 @@ sdk.teams.teamsList({
   pageSize: 523006,
   parentTeamId: "aliquam",
   remoteId: "ad",
-}, {
-  tokenAuth: "",
-}).then((res: TeamsListResponse) => {
+}, operationSecurity).then((res: TeamsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -61,18 +62,19 @@ Returns a `Team` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsRetrieveExpand, TeamsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { TeamsRetrieveExpand, TeamsRetrieveResponse, TeamsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TeamsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.teams.teamsRetrieve({
   xAccountToken: "repellat",
   expand: TeamsRetrieveExpand.ParentTeam,
   id: "0597a60f-f2a5-44a3-9e94-764a3e865e79",
   includeRemoteData: false,
-}, {
-  tokenAuth: "",
-}).then((res: TeamsRetrieveResponse) => {
+}, operationSecurity).then((res: TeamsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

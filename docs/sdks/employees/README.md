@@ -18,7 +18,7 @@ Creates an `Employee` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeesCreateResponse, EmployeesCreateSecurity } from "HRIS/dist/sdk/models/operations";
 import {
   EmployeeRequestEmploymentStatus,
   EmployeeRequestEthnicity,
@@ -27,6 +27,9 @@ import {
 } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesCreate({
   employeeEndpointRequest: {
@@ -75,9 +78,7 @@ sdk.employees.employeesCreate({
   xAccountToken: "accusantium",
   isDebugMode: false,
   runAsync: false,
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesCreateResponse) => {
+}, operationSecurity).then((res: EmployeesCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -106,9 +107,12 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateFormResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateFormResponse, EmployeesIgnoreCreateFormSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesIgnoreCreateFormSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesIgnoreCreateForm({
   ignoreCommonModelRequest2: {
@@ -117,9 +121,7 @@ sdk.employees.employeesIgnoreCreateForm({
   },
   xAccountToken: "praesentium",
   modelId: "921cddc6-9260-41fb-976b-0d5f0d30c5fb",
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesIgnoreCreateFormResponse) => {
+}, operationSecurity).then((res: EmployeesIgnoreCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -148,10 +150,13 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateJsonResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateJsonResponse, EmployeesIgnoreCreateJsonSecurity } from "HRIS/dist/sdk/models/operations";
 import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesIgnoreCreateJsonSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesIgnoreCreateJson({
   ignoreCommonModelRequest: {
@@ -160,9 +165,7 @@ sdk.employees.employeesIgnoreCreateJson({
   },
   xAccountToken: "nobis",
   modelId: "25870532-02c7-43d5-be9b-90c28909b3fe",
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesIgnoreCreateJsonResponse) => {
+}, operationSecurity).then((res: EmployeesIgnoreCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -191,9 +194,12 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateMultipartResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateMultipartResponse, EmployeesIgnoreCreateMultipartSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesIgnoreCreateMultipartSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesIgnoreCreateMultipart({
   ignoreCommonModelRequest2: {
@@ -202,9 +208,7 @@ sdk.employees.employeesIgnoreCreateMultipart({
   },
   xAccountToken: "iste",
   modelId: "a8d9cbf4-8633-4323-b9b7-7f3a4100674e",
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesIgnoreCreateMultipartResponse) => {
+}, operationSecurity).then((res: EmployeesIgnoreCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -238,10 +242,14 @@ import {
   EmployeesListExpand,
   EmployeesListRemoteFields,
   EmployeesListResponse,
+  EmployeesListSecurity,
   EmployeesListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesList({
   xAccountToken: "quidem",
@@ -274,9 +282,7 @@ sdk.employees.employeesList({
   terminatedBefore: new Date("2021-06-10T21:59:23.045Z"),
   workEmail: "Aaliyah27@yahoo.com",
   workLocationId: "vel",
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesListResponse) => {
+}, operationSecurity).then((res: EmployeesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -305,15 +311,16 @@ Returns metadata for `Employee` POSTs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesMetaPostRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeesMetaPostRetrieveResponse, EmployeesMetaPostRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesMetaPostRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesMetaPostRetrieve({
   xAccountToken: "quod",
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesMetaPostRetrieveResponse) => {
+}, operationSecurity).then((res: EmployeesMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -346,10 +353,14 @@ import {
   EmployeesRetrieveExpand,
   EmployeesRetrieveRemoteFields,
   EmployeesRetrieveResponse,
+  EmployeesRetrieveSecurity,
   EmployeesRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeesRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employees.employeesRetrieve({
   xAccountToken: "officiis",
@@ -359,9 +370,7 @@ sdk.employees.employeesRetrieve({
   includeSensitiveFields: false,
   remoteFields: EmployeesRetrieveRemoteFields.Gender,
   showEnumOrigins: EmployeesRetrieveShowEnumOrigins.EthnicityMaritalStatus,
-}, {
-  tokenAuth: "",
-}).then((res: EmployeesRetrieveResponse) => {
+}, operationSecurity).then((res: EmployeesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

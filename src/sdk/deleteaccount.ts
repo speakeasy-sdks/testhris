@@ -42,6 +42,7 @@ export class DeleteAccount {
 
         const headers = { ...utils.getHeadersFromRequest(req), ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

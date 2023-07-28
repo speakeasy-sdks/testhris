@@ -12,15 +12,16 @@ Delete a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { DeleteAccountCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { DeleteAccountCreateResponse, DeleteAccountCreateSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: DeleteAccountCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.deleteAccount.deleteAccountCreate({
   xAccountToken: "vero",
-}, {
-  tokenAuth: "",
-}).then((res: DeleteAccountCreateResponse) => {
+}, operationSecurity).then((res: DeleteAccountCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

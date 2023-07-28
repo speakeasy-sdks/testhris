@@ -12,15 +12,16 @@ Force re-sync of all models. This is available for all organizations via the das
 
 ```typescript
 import { Hris } from "HRIS";
-import { SyncStatusResyncCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { SyncStatusResyncCreateResponse, SyncStatusResyncCreateSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: SyncStatusResyncCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.forceResync.syncStatusResyncCreate({
   xAccountToken: "cupiditate",
-}, {
-  tokenAuth: "",
-}).then((res: SyncStatusResyncCreateResponse) => {
+}, operationSecurity).then((res: SyncStatusResyncCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

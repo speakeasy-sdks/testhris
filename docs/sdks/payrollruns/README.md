@@ -17,10 +17,14 @@ import {
   PayrollRunsListRemoteFields,
   PayrollRunsListResponse,
   PayrollRunsListRunType,
+  PayrollRunsListSecurity,
   PayrollRunsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: PayrollRunsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.payrollRuns.payrollRunsList({
   xAccountToken: "et",
@@ -40,9 +44,7 @@ sdk.payrollRuns.payrollRunsList({
   showEnumOrigins: PayrollRunsListShowEnumOrigins.RunState,
   startedAfter: new Date("2022-06-03T05:52:14.954Z"),
   startedBefore: new Date("2022-03-25T13:15:35.424Z"),
-}, {
-  tokenAuth: "",
-}).then((res: PayrollRunsListResponse) => {
+}, operationSecurity).then((res: PayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,10 +76,14 @@ import { Hris } from "HRIS";
 import {
   PayrollRunsRetrieveRemoteFields,
   PayrollRunsRetrieveResponse,
+  PayrollRunsRetrieveSecurity,
   PayrollRunsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: PayrollRunsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.payrollRuns.payrollRunsRetrieve({
   xAccountToken: "explicabo",
@@ -85,9 +91,7 @@ sdk.payrollRuns.payrollRunsRetrieve({
   includeRemoteData: false,
   remoteFields: PayrollRunsRetrieveRemoteFields.RunState,
   showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunStateRunType,
-}, {
-  tokenAuth: "",
-}).then((res: PayrollRunsRetrieveResponse) => {
+}, operationSecurity).then((res: PayrollRunsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

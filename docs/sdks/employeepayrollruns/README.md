@@ -13,9 +13,16 @@ Returns a list of `EmployeePayrollRun` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsListExpand, EmployeePayrollRunsListResponse } from "HRIS/dist/sdk/models/operations";
+import {
+  EmployeePayrollRunsListExpand,
+  EmployeePayrollRunsListResponse,
+  EmployeePayrollRunsListSecurity,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeePayrollRunsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employeePayrollRuns.employeePayrollRunsList({
   xAccountToken: "nihil",
@@ -35,9 +42,7 @@ sdk.employeePayrollRuns.employeePayrollRunsList({
   remoteId: "enim",
   startedAfter: new Date("2021-10-04T09:10:06.610Z"),
   startedBefore: new Date("2022-10-22T18:12:12.288Z"),
-}, {
-  tokenAuth: "",
-}).then((res: EmployeePayrollRunsListResponse) => {
+}, operationSecurity).then((res: EmployeePayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -66,18 +71,23 @@ Returns an `EmployeePayrollRun` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsRetrieveExpand, EmployeePayrollRunsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import {
+  EmployeePayrollRunsRetrieveExpand,
+  EmployeePayrollRunsRetrieveResponse,
+  EmployeePayrollRunsRetrieveSecurity,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmployeePayrollRunsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employeePayrollRuns.employeePayrollRunsRetrieve({
   xAccountToken: "ipsum",
   expand: EmployeePayrollRunsRetrieveExpand.PayrollRun,
   id: "99d488e1-e91e-4450-ad2a-bd44269802d5",
   includeRemoteData: false,
-}, {
-  tokenAuth: "",
-}).then((res: EmployeePayrollRunsRetrieveResponse) => {
+}, operationSecurity).then((res: EmployeePayrollRunsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

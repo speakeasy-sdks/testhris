@@ -13,9 +13,12 @@ Creates a `WebhookReceiver` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { WebhookReceiversCreateResponse, WebhookReceiversCreateSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: WebhookReceiversCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.webhookReceivers.webhookReceiversCreate({
   webhookReceiverRequest: {
@@ -24,9 +27,7 @@ sdk.webhookReceivers.webhookReceiversCreate({
     key: "fugiat",
   },
   xAccountToken: "expedita",
-}, {
-  tokenAuth: "",
-}).then((res: WebhookReceiversCreateResponse) => {
+}, operationSecurity).then((res: WebhookReceiversCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -55,15 +56,16 @@ Returns a list of `WebhookReceiver` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversListResponse } from "HRIS/dist/sdk/models/operations";
+import { WebhookReceiversListResponse, WebhookReceiversListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: WebhookReceiversListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.webhookReceivers.webhookReceiversList({
   xAccountToken: "aliquid",
-}, {
-  tokenAuth: "",
-}).then((res: WebhookReceiversListResponse) => {
+}, operationSecurity).then((res: WebhookReceiversListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

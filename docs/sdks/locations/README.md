@@ -13,9 +13,17 @@ Returns a list of `Location` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LocationsListRemoteFields, LocationsListResponse, LocationsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import {
+  LocationsListRemoteFields,
+  LocationsListResponse,
+  LocationsListSecurity,
+  LocationsListShowEnumOrigins,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: LocationsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.locations.locationsList({
   xAccountToken: "accusamus",
@@ -30,9 +38,7 @@ sdk.locations.locationsList({
   remoteFields: LocationsListRemoteFields.LocationType,
   remoteId: "eum",
   showEnumOrigins: LocationsListShowEnumOrigins.LocationType,
-}, {
-  tokenAuth: "",
-}).then((res: LocationsListResponse) => {
+}, operationSecurity).then((res: LocationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -64,10 +70,14 @@ import { Hris } from "HRIS";
 import {
   LocationsRetrieveRemoteFields,
   LocationsRetrieveResponse,
+  LocationsRetrieveSecurity,
   LocationsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: LocationsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.locations.locationsRetrieve({
   xAccountToken: "quas",
@@ -75,9 +85,7 @@ sdk.locations.locationsRetrieve({
   includeRemoteData: false,
   remoteFields: LocationsRetrieveRemoteFields.LocationType,
   showEnumOrigins: LocationsRetrieveShowEnumOrigins.LocationType,
-}, {
-  tokenAuth: "",
-}).then((res: LocationsRetrieveResponse) => {
+}, operationSecurity).then((res: LocationsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

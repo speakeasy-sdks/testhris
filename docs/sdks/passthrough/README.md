@@ -14,10 +14,13 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateFormResponse } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateFormResponse, PassthroughCreateFormSecurity } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: PassthroughCreateFormSecurity = {
+  tokenAuth: "",
+};
 
 sdk.passthrough.passthroughCreateForm({
   dataPassthroughRequest3: {
@@ -57,9 +60,7 @@ sdk.passthrough.passthroughCreateForm({
     requestFormat: "tempore",
   },
   xAccountToken: "adipisci",
-}, {
-  tokenAuth: "",
-}).then((res: PassthroughCreateFormResponse) => {
+}, operationSecurity).then((res: PassthroughCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -88,7 +89,7 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateJsonResponse } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateJsonResponse, PassthroughCreateJsonSecurity } from "HRIS/dist/sdk/models/operations";
 import {
   DataPassthroughRequestMethod,
   DataPassthroughRequestRequestFormat,
@@ -96,6 +97,9 @@ import {
 } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: PassthroughCreateJsonSecurity = {
+  tokenAuth: "",
+};
 
 sdk.passthrough.passthroughCreateJson({
   dataPassthroughRequest: {
@@ -126,9 +130,7 @@ sdk.passthrough.passthroughCreateJson({
     requestFormat: DataPassthroughRequestRequestFormat.Json,
   },
   xAccountToken: "sapiente",
-}, {
-  tokenAuth: "",
-}).then((res: PassthroughCreateJsonResponse) => {
+}, operationSecurity).then((res: PassthroughCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -157,10 +159,13 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateMultipartResponse } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateMultipartResponse, PassthroughCreateMultipartSecurity } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: PassthroughCreateMultipartSecurity = {
+  tokenAuth: "",
+};
 
 sdk.passthrough.passthroughCreateMultipart({
   dataPassthroughRequest3: {
@@ -192,9 +197,7 @@ sdk.passthrough.passthroughCreateMultipart({
     requestFormat: "quasi",
   },
   xAccountToken: "a",
-}, {
-  tokenAuth: "",
-}).then((res: PassthroughCreateMultipartResponse) => {
+}, operationSecurity).then((res: PassthroughCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

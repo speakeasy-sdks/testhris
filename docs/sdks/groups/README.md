@@ -13,9 +13,17 @@ Returns a list of `Group` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { GroupsListRemoteFields, GroupsListResponse, GroupsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import {
+  GroupsListRemoteFields,
+  GroupsListResponse,
+  GroupsListSecurity,
+  GroupsListShowEnumOrigins,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: GroupsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.groups.groupsList({
   xAccountToken: "qui",
@@ -31,9 +39,7 @@ sdk.groups.groupsList({
   remoteId: "delectus",
   showEnumOrigins: GroupsListShowEnumOrigins.Type,
   types: "voluptate",
-}, {
-  tokenAuth: "",
-}).then((res: GroupsListResponse) => {
+}, operationSecurity).then((res: GroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -65,10 +71,14 @@ import { Hris } from "HRIS";
 import {
   GroupsRetrieveRemoteFields,
   GroupsRetrieveResponse,
+  GroupsRetrieveSecurity,
   GroupsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: GroupsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.groups.groupsRetrieve({
   xAccountToken: "consectetur",
@@ -76,9 +86,7 @@ sdk.groups.groupsRetrieve({
   includeRemoteData: false,
   remoteFields: GroupsRetrieveRemoteFields.Type,
   showEnumOrigins: GroupsRetrieveShowEnumOrigins.Type,
-}, {
-  tokenAuth: "",
-}).then((res: GroupsRetrieveResponse) => {
+}, operationSecurity).then((res: GroupsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

@@ -18,10 +18,14 @@ import {
   EmploymentsListOrderBy,
   EmploymentsListRemoteFields,
   EmploymentsListResponse,
+  EmploymentsListSecurity,
   EmploymentsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmploymentsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employments.employmentsList({
   xAccountToken: "dicta",
@@ -39,9 +43,7 @@ sdk.employments.employmentsList({
   remoteFields: EmploymentsListRemoteFields.EmploymentTypeFlsaStatusPayFrequency,
   remoteId: "magni",
   showEnumOrigins: EmploymentsListShowEnumOrigins.EmploymentTypePayPeriod,
-}, {
-  tokenAuth: "",
-}).then((res: EmploymentsListResponse) => {
+}, operationSecurity).then((res: EmploymentsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,10 +76,14 @@ import {
   EmploymentsRetrieveExpand,
   EmploymentsRetrieveRemoteFields,
   EmploymentsRetrieveResponse,
+  EmploymentsRetrieveSecurity,
   EmploymentsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: EmploymentsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.employments.employmentsRetrieve({
   xAccountToken: "sunt",
@@ -86,9 +92,7 @@ sdk.employments.employmentsRetrieve({
   includeRemoteData: false,
   remoteFields: EmploymentsRetrieveRemoteFields.EmploymentTypeFlsaStatusPayPeriod,
   showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.FlsaStatusPayFrequencyPayPeriod,
-}, {
-  tokenAuth: "",
-}).then((res: EmploymentsRetrieveResponse) => {
+}, operationSecurity).then((res: EmploymentsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

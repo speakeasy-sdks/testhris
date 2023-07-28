@@ -12,15 +12,16 @@ Get details for a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AccountDetailsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { AccountDetailsRetrieveResponse, AccountDetailsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: AccountDetailsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.accountDetails.accountDetailsRetrieve({
   xAccountToken: "provident",
-}, {
-  tokenAuth: "",
-}).then((res: AccountDetailsRetrieveResponse) => {
+}, operationSecurity).then((res: AccountDetailsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

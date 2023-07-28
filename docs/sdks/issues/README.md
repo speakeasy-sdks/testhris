@@ -13,9 +13,12 @@ Gets issues.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesListResponse, IssuesListStatus } from "HRIS/dist/sdk/models/operations";
+import { IssuesListResponse, IssuesListSecurity, IssuesListStatus } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: IssuesListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.issues.issuesList({
   accountToken: "ipsam",
@@ -31,9 +34,7 @@ sdk.issues.issuesList({
   pageSize: 862192,
   startDate: "excepturi",
   status: IssuesListStatus.Resolved,
-}, {
-  tokenAuth: "",
-}).then((res: IssuesListResponse) => {
+}, operationSecurity).then((res: IssuesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -62,15 +63,16 @@ Get a specific issue.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { IssuesRetrieveResponse, IssuesRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: IssuesRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.issues.issuesRetrieve({
   id: "5fce6c55-6146-4c3e-a50f-b008c42e141a",
-}, {
-  tokenAuth: "",
-}).then((res: IssuesRetrieveResponse) => {
+}, operationSecurity).then((res: IssuesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

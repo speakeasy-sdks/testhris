@@ -19,10 +19,14 @@ import {
   BankInfoListOrderBy,
   BankInfoListRemoteFields,
   BankInfoListResponse,
+  BankInfoListSecurity,
   BankInfoListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: BankInfoListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.bankInfo.bankInfoList({
   xAccountToken: "unde",
@@ -42,9 +46,7 @@ sdk.bankInfo.bankInfoList({
   remoteFields: BankInfoListRemoteFields.AccountType,
   remoteId: "molestiae",
   showEnumOrigins: BankInfoListShowEnumOrigins.AccountType,
-}, {
-  tokenAuth: "",
-}).then((res: BankInfoListResponse) => {
+}, operationSecurity).then((res: BankInfoListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -77,10 +79,14 @@ import {
   BankInfoRetrieveExpand,
   BankInfoRetrieveRemoteFields,
   BankInfoRetrieveResponse,
+  BankInfoRetrieveSecurity,
   BankInfoRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: BankInfoRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.bankInfo.bankInfoRetrieve({
   xAccountToken: "minus",
@@ -89,9 +95,7 @@ sdk.bankInfo.bankInfoRetrieve({
   includeRemoteData: false,
   remoteFields: BankInfoRetrieveRemoteFields.AccountType,
   showEnumOrigins: BankInfoRetrieveShowEnumOrigins.AccountType,
-}, {
-  tokenAuth: "",
-}).then((res: BankInfoRetrieveResponse) => {
+}, operationSecurity).then((res: BankInfoRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

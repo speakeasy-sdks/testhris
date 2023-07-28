@@ -14,15 +14,16 @@ Get a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncConfigurationsListResponse } from "HRIS/dist/sdk/models/operations";
+import { SelectiveSyncConfigurationsListResponse, SelectiveSyncConfigurationsListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: SelectiveSyncConfigurationsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.selectiveSync.selectiveSyncConfigurationsList({
   xAccountToken: "est",
-}, {
-  tokenAuth: "",
-}).then((res: SelectiveSyncConfigurationsListResponse) => {
+}, operationSecurity).then((res: SelectiveSyncConfigurationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -51,9 +52,15 @@ Replace a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncConfigurationsUpdateResponse } from "HRIS/dist/sdk/models/operations";
+import {
+  SelectiveSyncConfigurationsUpdateResponse,
+  SelectiveSyncConfigurationsUpdateSecurity,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: SelectiveSyncConfigurationsUpdateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
   linkedAccountSelectiveSyncConfigurationListRequest: {
@@ -122,9 +129,7 @@ sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
     ],
   },
   xAccountToken: "eveniet",
-}, {
-  tokenAuth: "",
-}).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
+}, operationSecurity).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -153,18 +158,19 @@ Get metadata for the conditions available to a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncMetaListResponse } from "HRIS/dist/sdk/models/operations";
+import { SelectiveSyncMetaListResponse, SelectiveSyncMetaListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: SelectiveSyncMetaListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.selectiveSync.selectiveSyncMetaList({
   xAccountToken: "non",
   commonModel: "vero",
   cursor: "doloremque",
   pageSize: 434156,
-}, {
-  tokenAuth: "",
-}).then((res: SelectiveSyncMetaListResponse) => {
+}, operationSecurity).then((res: SelectiveSyncMetaListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

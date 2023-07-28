@@ -13,9 +13,12 @@ Returns a list of `PayGroup` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PayGroupsListResponse } from "HRIS/dist/sdk/models/operations";
+import { PayGroupsListResponse, PayGroupsListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: PayGroupsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.payGroups.payGroupsList({
   xAccountToken: "error",
@@ -28,9 +31,7 @@ sdk.payGroups.payGroupsList({
   modifiedBefore: new Date("2022-11-03T19:31:44.626Z"),
   pageSize: 94458,
   remoteId: "similique",
-}, {
-  tokenAuth: "",
-}).then((res: PayGroupsListResponse) => {
+}, operationSecurity).then((res: PayGroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -59,17 +60,18 @@ Returns a `PayGroup` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PayGroupsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { PayGroupsRetrieveResponse, PayGroupsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: PayGroupsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.payGroups.payGroupsRetrieve({
   xAccountToken: "culpa",
   id: "6f1e674b-db04-4f15-b560-82d68ea19f1d",
   includeRemoteData: false,
-}, {
-  tokenAuth: "",
-}).then((res: PayGroupsRetrieveResponse) => {
+}, operationSecurity).then((res: PayGroupsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

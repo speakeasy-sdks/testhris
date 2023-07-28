@@ -12,15 +12,16 @@ Exchange remote keys.
 
 ```typescript
 import { Hris } from "HRIS";
-import { RegenerateKeyCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { RegenerateKeyCreateResponse, RegenerateKeyCreateSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: RegenerateKeyCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.regenerateKey.regenerateKeyCreate({
   name: "Remote Deployment Key 1",
-}, {
-  tokenAuth: "",
-}).then((res: RegenerateKeyCreateResponse) => {
+}, operationSecurity).then((res: RegenerateKeyCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

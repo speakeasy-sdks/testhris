@@ -12,10 +12,13 @@ Creates a link token to be used when linking a new end user.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkTokenCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { LinkTokenCreateResponse, LinkTokenCreateSecurity } from "HRIS/dist/sdk/models/operations";
 import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared";
 
 const sdk = new Hris();
+const operationSecurity: LinkTokenCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.linkToken.linkTokenCreate({
   categories: [
@@ -54,9 +57,7 @@ sdk.linkToken.linkTokenCreate({
   integration: "esse",
   linkExpiryMins: 456141,
   shouldCreateMagicLinkUrl: false,
-}, {
-  tokenAuth: "",
-}).then((res: LinkTokenCreateResponse) => {
+}, operationSecurity).then((res: LinkTokenCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

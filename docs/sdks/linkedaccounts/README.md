@@ -12,9 +12,16 @@ List linked accounts for your organization.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkedAccountsListCategory, LinkedAccountsListResponse } from "HRIS/dist/sdk/models/operations";
+import {
+  LinkedAccountsListCategory,
+  LinkedAccountsListResponse,
+  LinkedAccountsListSecurity,
+} from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: LinkedAccountsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.linkedAccounts.linkedAccountsList({
   category: LinkedAccountsListCategory.Filestorage,
@@ -30,9 +37,7 @@ sdk.linkedAccounts.linkedAccountsList({
   isTestAccount: "inventore",
   pageSize: 469498,
   status: "totam",
-}, {
-  tokenAuth: "",
-}).then((res: LinkedAccountsListResponse) => {
+}, operationSecurity).then((res: LinkedAccountsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

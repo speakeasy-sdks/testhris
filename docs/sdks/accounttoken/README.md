@@ -12,15 +12,16 @@ Returns the account token for the end user with the provided public token.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AccountTokenRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { AccountTokenRetrieveResponse, AccountTokenRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: AccountTokenRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.accountToken.accountTokenRetrieve({
   publicToken: "distinctio",
-}, {
-  tokenAuth: "",
-}).then((res: AccountTokenRetrieveResponse) => {
+}, operationSecurity).then((res: AccountTokenRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

@@ -12,15 +12,16 @@ Returns a list of models and actions available for an account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AvailableActionsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { AvailableActionsRetrieveResponse, AvailableActionsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: AvailableActionsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.availableActions.availableActionsRetrieve({
   xAccountToken: "quibusdam",
-}, {
-  tokenAuth: "",
-}).then((res: AvailableActionsRetrieveResponse) => {
+}, operationSecurity).then((res: AvailableActionsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

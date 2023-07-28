@@ -12,15 +12,16 @@ Create a remote key.
 
 ```typescript
 import { Hris } from "HRIS";
-import { GenerateKeyCreateResponse } from "HRIS/dist/sdk/models/operations";
+import { GenerateKeyCreateResponse, GenerateKeyCreateSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: GenerateKeyCreateSecurity = {
+  tokenAuth: "",
+};
 
 sdk.generateKey.generateKeyCreate({
   name: "Remote Deployment Key 1",
-}, {
-  tokenAuth: "",
-}).then((res: GenerateKeyCreateResponse) => {
+}, operationSecurity).then((res: GenerateKeyCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

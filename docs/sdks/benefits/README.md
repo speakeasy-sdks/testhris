@@ -13,9 +13,12 @@ Returns a list of `Benefit` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { BenefitsListExpand, BenefitsListResponse } from "HRIS/dist/sdk/models/operations";
+import { BenefitsListExpand, BenefitsListResponse, BenefitsListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: BenefitsListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.benefits.benefitsList({
   xAccountToken: "fugit",
@@ -30,9 +33,7 @@ sdk.benefits.benefitsList({
   modifiedBefore: new Date("2022-03-24T09:42:46.236Z"),
   pageSize: 736918,
   remoteId: "esse",
-}, {
-  tokenAuth: "",
-}).then((res: BenefitsListResponse) => {
+}, operationSecurity).then((res: BenefitsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -61,18 +62,19 @@ Returns a `Benefit` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { BenefitsRetrieveExpand, BenefitsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { BenefitsRetrieveExpand, BenefitsRetrieveResponse, BenefitsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: BenefitsRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.benefits.benefitsRetrieve({
   xAccountToken: "ipsum",
   expand: BenefitsRetrieveExpand.Employee,
   id: "92059293-96fe-4a75-96eb-10faaa2352c5",
   includeRemoteData: false,
-}, {
-  tokenAuth: "",
-}).then((res: BenefitsRetrieveResponse) => {
+}, operationSecurity).then((res: BenefitsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

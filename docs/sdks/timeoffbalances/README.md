@@ -18,10 +18,14 @@ import {
   TimeOffBalancesListPolicyType,
   TimeOffBalancesListRemoteFields,
   TimeOffBalancesListResponse,
+  TimeOffBalancesListSecurity,
   TimeOffBalancesListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffBalancesListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOffBalances.timeOffBalancesList({
   xAccountToken: "suscipit",
@@ -39,9 +43,7 @@ sdk.timeOffBalances.timeOffBalancesList({
   remoteFields: TimeOffBalancesListRemoteFields.PolicyType,
   remoteId: "natus",
   showEnumOrigins: TimeOffBalancesListShowEnumOrigins.PolicyType,
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffBalancesListResponse) => {
+}, operationSecurity).then((res: TimeOffBalancesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,10 +76,14 @@ import {
   TimeOffBalancesRetrieveExpand,
   TimeOffBalancesRetrieveRemoteFields,
   TimeOffBalancesRetrieveResponse,
+  TimeOffBalancesRetrieveSecurity,
   TimeOffBalancesRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: TimeOffBalancesRetrieveSecurity = {
+  tokenAuth: "",
+};
 
 sdk.timeOffBalances.timeOffBalancesRetrieve({
   xAccountToken: "occaecati",
@@ -86,9 +92,7 @@ sdk.timeOffBalances.timeOffBalancesRetrieve({
   includeRemoteData: false,
   remoteFields: TimeOffBalancesRetrieveRemoteFields.PolicyType,
   showEnumOrigins: TimeOffBalancesRetrieveShowEnumOrigins.PolicyType,
-}, {
-  tokenAuth: "",
-}).then((res: TimeOffBalancesRetrieveResponse) => {
+}, operationSecurity).then((res: TimeOffBalancesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

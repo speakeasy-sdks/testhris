@@ -12,17 +12,18 @@ Get syncing status. Possible values: `DISABLED`, `DONE`, `FAILED`, `PARTIALLY_SY
 
 ```typescript
 import { Hris } from "HRIS";
-import { SyncStatusListResponse } from "HRIS/dist/sdk/models/operations";
+import { SyncStatusListResponse, SyncStatusListSecurity } from "HRIS/dist/sdk/models/operations";
 
 const sdk = new Hris();
+const operationSecurity: SyncStatusListSecurity = {
+  tokenAuth: "",
+};
 
 sdk.syncStatus.syncStatusList({
   xAccountToken: "ipsa",
   cursor: "totam",
   pageSize: 61078,
-}, {
-  tokenAuth: "",
-}).then((res: SyncStatusListResponse) => {
+}, operationSecurity).then((res: SyncStatusListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
