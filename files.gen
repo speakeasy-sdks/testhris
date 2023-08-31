@@ -543,3 +543,4 @@ docs/models/shared/timeoffbalancepolicytype.md
 docs/models/shared/timeoffbalance.md
 docs/models/shared/webhookreceiver.md
 docs/models/shared/webhookreceiverrequest.md
+.gitattributes
