@@ -27,23 +27,23 @@ const operationSecurity: PayrollRunsListSecurity = {
 };
 
 sdk.payrollRuns.payrollRunsList({
-  xAccountToken: "et",
-  createdAfter: new Date("2022-12-11T13:44:20.631Z"),
-  createdBefore: new Date("2022-11-30T09:58:30.487Z"),
-  cursor: "consectetur",
-  endedAfter: new Date("2022-05-21T17:17:20.623Z"),
-  endedBefore: new Date("2022-11-25T18:47:58.319Z"),
+  xAccountToken: "distinctio",
+  createdAfter: new Date("2022-12-02T08:37:36.325Z"),
+  createdBefore: new Date("2021-07-16T01:55:06.595Z"),
+  cursor: "adipisci",
+  endedAfter: new Date("2022-07-09T05:02:22.250Z"),
+  endedBefore: new Date("2022-03-16T07:36:38.247Z"),
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-12-20T14:34:53.149Z"),
-  modifiedBefore: new Date("2022-02-21T23:29:55.837Z"),
-  pageSize: 649832,
-  remoteFields: PayrollRunsListRemoteFields.RunState,
-  remoteId: "corrupti",
-  runType: PayrollRunsListRunType.OffCycle,
-  showEnumOrigins: PayrollRunsListShowEnumOrigins.RunState,
-  startedAfter: new Date("2022-06-03T05:52:14.954Z"),
-  startedBefore: new Date("2022-03-25T13:15:35.424Z"),
+  modifiedAfter: new Date("2022-01-15T21:42:01.969Z"),
+  modifiedBefore: new Date("2022-07-17T18:42:13.476Z"),
+  pageSize: 503427,
+  remoteFields: PayrollRunsListRemoteFields.RunStateRunType,
+  remoteId: "a",
+  runType: PayrollRunsListRunType.Termination,
+  showEnumOrigins: PayrollRunsListShowEnumOrigins.RunStateRunType,
+  startedAfter: new Date("2022-11-26T10:10:26.600Z"),
+  startedBefore: new Date("2021-02-19T06:17:20.977Z"),
 }, operationSecurity).then((res: PayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -86,11 +86,11 @@ const operationSecurity: PayrollRunsRetrieveSecurity = {
 };
 
 sdk.payrollRuns.payrollRunsRetrieve({
-  xAccountToken: "explicabo",
-  id: "6071f93f-5f06-442d-ac7a-f515cc413aa6",
+  xAccountToken: "sint",
+  id: "dd2efd12-1aa6-4f1e-a74b-db04f1575608",
   includeRemoteData: false,
   remoteFields: PayrollRunsRetrieveRemoteFields.RunState,
-  showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunStateRunType,
+  showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunType,
 }, operationSecurity).then((res: PayrollRunsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

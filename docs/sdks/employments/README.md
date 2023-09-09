@@ -28,21 +28,21 @@ const operationSecurity: EmploymentsListSecurity = {
 };
 
 sdk.employments.employmentsList({
-  xAccountToken: "dicta",
-  createdAfter: new Date("2021-12-19T07:31:04.219Z"),
-  createdBefore: new Date("2022-11-13T19:04:59.225Z"),
-  cursor: "dolores",
-  employeeId: "distinctio",
+  xAccountToken: "quaerat",
+  createdAfter: new Date("2022-07-29T17:02:39.743Z"),
+  createdBefore: new Date("2020-05-06T13:19:34.143Z"),
+  cursor: "qui",
+  employeeId: "dolorum",
   expand: EmploymentsListExpand.PayGroup,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-07-15T22:48:14.867Z"),
-  modifiedBefore: new Date("2021-04-27T11:41:31.258Z"),
-  orderBy: EmploymentsListOrderBy.MinusEffectiveDate,
-  pageSize: 204865,
-  remoteFields: EmploymentsListRemoteFields.EmploymentTypeFlsaStatusPayFrequency,
-  remoteId: "magni",
-  showEnumOrigins: EmploymentsListShowEnumOrigins.EmploymentTypePayPeriod,
+  modifiedAfter: new Date("2022-04-25T01:36:09.517Z"),
+  modifiedBefore: new Date("2022-10-14T08:09:09.090Z"),
+  orderBy: EmploymentsListOrderBy.EffectiveDate,
+  pageSize: 947371,
+  remoteFields: EmploymentsListRemoteFields.EmploymentTypeFlsaStatusPayFrequencyPayPeriod,
+  remoteId: "tempore",
+  showEnumOrigins: EmploymentsListShowEnumOrigins.PayFrequencyPayPeriod,
 }, operationSecurity).then((res: EmploymentsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -86,12 +86,12 @@ const operationSecurity: EmploymentsRetrieveSecurity = {
 };
 
 sdk.employments.employmentsRetrieve({
-  xAccountToken: "sunt",
-  expand: EmploymentsRetrieveExpand.EmployeePayGroup,
-  id: "bf0cbb1e-31b8-4b90-b344-3a1108e0adcf",
+  xAccountToken: "numquam",
+  expand: EmploymentsRetrieveExpand.Employee,
+  id: "3f870b32-6b5a-4734-a9cd-b1a8422bb679",
   includeRemoteData: false,
-  remoteFields: EmploymentsRetrieveRemoteFields.EmploymentTypeFlsaStatusPayPeriod,
-  showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.FlsaStatusPayFrequencyPayPeriod,
+  remoteFields: EmploymentsRetrieveRemoteFields.PayFrequency,
+  showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.EmploymentTypeFlsaStatusPayFrequency,
 }, operationSecurity).then((res: EmploymentsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

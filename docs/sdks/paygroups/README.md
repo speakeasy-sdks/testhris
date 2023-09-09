@@ -21,16 +21,16 @@ const operationSecurity: PayGroupsListSecurity = {
 };
 
 sdk.payGroups.payGroupsList({
-  xAccountToken: "error",
-  createdAfter: new Date("2021-04-10T23:50:37.359Z"),
-  createdBefore: new Date("2022-07-12T09:25:25.257Z"),
-  cursor: "eveniet",
+  xAccountToken: "dolores",
+  createdAfter: new Date("2022-01-19T00:55:43.636Z"),
+  createdBefore: new Date("2022-03-20T23:14:37.473Z"),
+  cursor: "eum",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2020-07-22T00:02:01.812Z"),
-  modifiedBefore: new Date("2022-11-03T19:31:44.626Z"),
-  pageSize: 94458,
-  remoteId: "similique",
+  modifiedAfter: new Date("2021-12-24T16:30:16.544Z"),
+  modifiedBefore: new Date("2022-06-19T07:05:05.913Z"),
+  pageSize: 143829,
+  remoteId: "fuga",
 }, operationSecurity).then((res: PayGroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,8 +68,8 @@ const operationSecurity: PayGroupsRetrieveSecurity = {
 };
 
 sdk.payGroups.payGroupsRetrieve({
-  xAccountToken: "culpa",
-  id: "6f1e674b-db04-4f15-b560-82d68ea19f1d",
+  xAccountToken: "mollitia",
+  id: "482562f2-22e9-4817-ae17-cbe61e6b7b95",
   includeRemoteData: false,
 }, operationSecurity).then((res: PayGroupsRetrieveResponse) => {
   if (res.statusCode == 200) {

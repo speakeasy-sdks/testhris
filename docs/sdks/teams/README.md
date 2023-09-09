@@ -21,18 +21,18 @@ const operationSecurity: TeamsListSecurity = {
 };
 
 sdk.teams.teamsList({
-  xAccountToken: "molestiae",
-  createdAfter: new Date("2022-06-13T02:57:02.580Z"),
-  createdBefore: new Date("2022-02-17T14:59:36.472Z"),
-  cursor: "necessitatibus",
+  xAccountToken: "asperiores",
+  createdAfter: new Date("2022-08-04T16:41:09.494Z"),
+  createdBefore: new Date("2022-11-02T12:31:08.461Z"),
+  cursor: "repellendus",
   expand: TeamsListExpand.ParentTeam,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-04-30T12:10:44.049Z"),
-  modifiedBefore: new Date("2021-12-10T20:58:20.380Z"),
-  pageSize: 523006,
-  parentTeamId: "aliquam",
-  remoteId: "ad",
+  modifiedAfter: new Date("2021-05-21T20:57:35.388Z"),
+  modifiedBefore: new Date("2022-05-12T09:23:17.883Z"),
+  pageSize: 989410,
+  parentTeamId: "nemo",
+  remoteId: "quae",
 }, operationSecurity).then((res: TeamsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -70,9 +70,9 @@ const operationSecurity: TeamsRetrieveSecurity = {
 };
 
 sdk.teams.teamsRetrieve({
-  xAccountToken: "repellat",
+  xAccountToken: "quaerat",
   expand: TeamsRetrieveExpand.ParentTeam,
-  id: "0597a60f-f2a5-44a3-9e94-764a3e865e79",
+  id: "cc413aa6-3aae-48d6-b864-dbb675fd5e60",
   includeRemoteData: false,
 }, operationSecurity).then((res: TeamsRetrieveResponse) => {
   if (res.statusCode == 200) {

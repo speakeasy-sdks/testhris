@@ -22,40 +22,24 @@ const operationSecurity: LinkTokenCreateSecurity = {
 
 sdk.linkToken.linkTokenCreate({
   categories: [
-    CategoriesEnum.Mktg,
-    CategoriesEnum.Ats,
-    CategoriesEnum.Ticketing,
+    CategoriesEnum.Hris,
   ],
   commonModels: [
     {
       disabledFields: [
-        "quas",
-        "assumenda",
-        "nulla",
-        "voluptas",
+        "dolor",
       ],
       enabledActions: [
-        EnabledActionsEnum.Read,
-        EnabledActionsEnum.Read,
-        EnabledActionsEnum.Read,
-      ],
-      modelId: "hris.Employee",
-    },
-    {
-      disabledFields: [
-        "provident",
-      ],
-      enabledActions: [
-        EnabledActionsEnum.Read,
+        EnabledActionsEnum.Write,
       ],
       modelId: "hris.Employee",
     },
   ],
-  endUserEmailAddress: "magnam",
-  endUserOrganizationName: "odio",
-  endUserOriginId: "eius",
-  integration: "esse",
-  linkExpiryMins: 456141,
+  endUserEmailAddress: "quasi",
+  endUserOrganizationName: "ex",
+  endUserOriginId: "nulla",
+  integration: "excepturi",
+  linkExpiryMins: 972920,
   shouldCreateMagicLinkUrl: false,
 }, operationSecurity).then((res: LinkTokenCreateResponse) => {
   if (res.statusCode == 200) {

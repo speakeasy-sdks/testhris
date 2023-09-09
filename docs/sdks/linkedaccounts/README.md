@@ -24,19 +24,19 @@ const operationSecurity: LinkedAccountsListSecurity = {
 };
 
 sdk.linkedAccounts.linkedAccountsList({
-  category: LinkedAccountsListCategory.Filestorage,
-  cursor: "fuga",
-  endUserEmailAddress: "reprehenderit",
-  endUserOrganizationName: "quidem",
-  endUserOriginId: "fugiat",
-  endUserOriginIds: "ut",
-  id: "66d28c10-ab3c-4dca-8251-904e523c7e0b",
-  ids: "quod",
+  category: LinkedAccountsListCategory.Crm,
+  cursor: "sapiente",
+  endUserEmailAddress: "quisquam",
+  endUserOrganizationName: "saepe",
+  endUserOriginId: "ea",
+  endUserOriginIds: "impedit",
+  id: "556146c3-e250-4fb0-88c4-2e141aac366c",
+  ids: "quas",
   includeDuplicates: false,
-  integrationName: "dignissimos",
-  isTestAccount: "inventore",
-  pageSize: 469498,
-  status: "totam",
+  integrationName: "assumenda",
+  isTestAccount: "nulla",
+  pageSize: 379034,
+  status: "libero",
 }, operationSecurity).then((res: LinkedAccountsListResponse) => {
   if (res.statusCode == 200) {
     // handle response

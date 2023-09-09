@@ -22,7 +22,7 @@ const operationSecurity: SelectiveSyncConfigurationsListSecurity = {
 };
 
 sdk.selectiveSync.selectiveSyncConfigurationsList({
-  xAccountToken: "est",
+  xAccountToken: "ex",
 }, operationSecurity).then((res: SelectiveSyncConfigurationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,67 +68,15 @@ sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
       {
         linkedAccountConditions: [
           {
-            conditionSchemaId: "d67864db-b675-4fd5-a60b-375ed4f6fbee",
-            operator: "dolore",
-            value: "sunt",
-          },
-          {
-            conditionSchemaId: "f33317fe-35b6-40eb-9ea4-26555ba3c287",
-            operator: "dolore",
-            value: "aliquam",
-          },
-          {
-            conditionSchemaId: "ed53b88f-3a8d-48f5-80b2-f2fb7b194a27",
-            operator: "commodi",
-            value: "quidem",
-          },
-        ],
-      },
-      {
-        linkedAccountConditions: [
-          {
-            conditionSchemaId: "6916fe1f-08f4-4294-a369-8f447f603e8b",
-            operator: "quaerat",
-            value: "incidunt",
-          },
-        ],
-      },
-      {
-        linkedAccountConditions: [
-          {
-            conditionSchemaId: "e80ca55e-fd20-4e45-be18-58b6a89fbe3a",
-            operator: "nostrum",
-            value: "officia",
-          },
-          {
-            conditionSchemaId: "a8e4824d-0ab4-4075-888e-51862065e904",
-            operator: "reiciendis",
-            value: "dolorem",
-          },
-        ],
-      },
-      {
-        linkedAccountConditions: [
-          {
-            conditionSchemaId: "1194b8ab-f603-4a79-b9df-e0ab7da8a50c",
-            operator: "repudiandae",
-            value: "quasi",
-          },
-          {
-            conditionSchemaId: "87f86bc1-73d6-489e-ae95-26f8d986e881",
-            operator: "recusandae",
-            value: "dolorum",
-          },
-          {
-            conditionSchemaId: "d4f0e101-2563-4f94-a29e-973e922a57a1",
-            operator: "corporis",
-            value: "quidem",
+            conditionSchemaId: "8ea19f1d-1705-4133-9d08-086a1840394c",
+            operator: "explicabo",
+            value: "voluptas",
           },
         ],
       },
     ],
   },
-  xAccountToken: "eveniet",
+  xAccountToken: "aut",
 }, operationSecurity).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -166,10 +114,10 @@ const operationSecurity: SelectiveSyncMetaListSecurity = {
 };
 
 sdk.selectiveSync.selectiveSyncMetaList({
-  xAccountToken: "non",
-  commonModel: "vero",
-  cursor: "doloremque",
-  pageSize: 434156,
+  xAccountToken: "dignissimos",
+  commonModel: "dicta",
+  cursor: "maiores",
+  pageSize: 618480,
 }, operationSecurity).then((res: SelectiveSyncMetaListResponse) => {
   if (res.statusCode == 200) {
     // handle response

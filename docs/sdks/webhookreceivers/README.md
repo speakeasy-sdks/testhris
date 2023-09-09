@@ -22,11 +22,11 @@ const operationSecurity: WebhookReceiversCreateSecurity = {
 
 sdk.webhookReceivers.webhookReceiversCreate({
   webhookReceiverRequest: {
-    event: "nostrum",
+    event: "reiciendis",
     isActive: false,
-    key: "fugiat",
+    key: "ex",
   },
-  xAccountToken: "expedita",
+  xAccountToken: "sit",
 }, operationSecurity).then((res: WebhookReceiversCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -64,7 +64,7 @@ const operationSecurity: WebhookReceiversListSecurity = {
 };
 
 sdk.webhookReceivers.webhookReceiversList({
-  xAccountToken: "aliquid",
+  xAccountToken: "non",
 }, operationSecurity).then((res: WebhookReceiversListResponse) => {
   if (res.statusCode == 200) {
     // handle response

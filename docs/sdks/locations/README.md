@@ -26,17 +26,17 @@ const operationSecurity: LocationsListSecurity = {
 };
 
 sdk.locations.locationsList({
-  xAccountToken: "accusamus",
-  createdAfter: new Date("2022-07-06T17:31:39.783Z"),
-  createdBefore: new Date("2022-03-04T08:46:39.442Z"),
-  cursor: "sapiente",
+  xAccountToken: "quasi",
+  createdAfter: new Date("2022-09-29T12:13:01.368Z"),
+  createdBefore: new Date("2022-05-29T22:38:52.265Z"),
+  cursor: "ipsa",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-05-10T08:48:16.521Z"),
-  modifiedBefore: new Date("2022-12-19T02:13:29.248Z"),
-  pageSize: 783648,
+  modifiedAfter: new Date("2022-09-12T21:59:44.784Z"),
+  modifiedBefore: new Date("2022-09-27T07:50:41.350Z"),
+  pageSize: 458515,
   remoteFields: LocationsListRemoteFields.LocationType,
-  remoteId: "eum",
+  remoteId: "esse",
   showEnumOrigins: LocationsListShowEnumOrigins.LocationType,
 }, operationSecurity).then((res: LocationsListResponse) => {
   if (res.statusCode == 200) {
@@ -80,8 +80,8 @@ const operationSecurity: LocationsRetrieveSecurity = {
 };
 
 sdk.locations.locationsRetrieve({
-  xAccountToken: "quas",
-  id: "8282aa48-2562-4f22-ae98-17ee17cbe61e",
+  xAccountToken: "rem",
+  id: "a7bd466d-28c1-40ab-bcdc-a4251904e523",
   includeRemoteData: false,
   remoteFields: LocationsRetrieveRemoteFields.LocationType,
   showEnumOrigins: LocationsRetrieveShowEnumOrigins.LocationType,

@@ -24,29 +24,13 @@ const operationSecurity: PassthroughCreateFormSecurity = {
 
 sdk.passthrough.passthroughCreateForm({
   dataPassthroughRequest3: {
-    baseUrlOverride: "vel",
+    baseUrlOverride: "quo",
     data: "{"company": "Lime", "model": "Gen 2.5"}",
     headers: {
-      "molestiae": "rerum",
-      "occaecati": "minima",
-      "distinctio": "eligendi",
+      "esse": "recusandae",
     },
-    method: "sit",
+    method: "aperiam",
     multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
-      },
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
-      },
       {
         contentType: "application/pdf",
         data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
@@ -57,9 +41,9 @@ sdk.passthrough.passthroughCreateForm({
     ],
     normalizeResponse: false,
     path: "/scooters",
-    requestFormat: "tempore",
+    requestFormat: "distinctio",
   },
-  xAccountToken: "adipisci",
+  xAccountToken: "quod",
 }, operationSecurity).then((res: PassthroughCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -103,20 +87,13 @@ const operationSecurity: PassthroughCreateJsonSecurity = {
 
 sdk.passthrough.passthroughCreateJson({
   dataPassthroughRequest: {
-    baseUrlOverride: "cumque",
+    baseUrlOverride: "dignissimos",
     data: "{"company": "Lime", "model": "Gen 2.5"}",
     headers: {
-      "consequatur": "minus",
+      "inventore": "nihil",
     },
     method: DataPassthroughRequestMethod.Post,
     multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
-      },
       {
         contentType: "application/pdf",
         data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
@@ -129,7 +106,7 @@ sdk.passthrough.passthroughCreateJson({
     path: "/scooters",
     requestFormat: DataPassthroughRequestRequestFormat.Json,
   },
-  xAccountToken: "sapiente",
+  xAccountToken: "totam",
 }, operationSecurity).then((res: PassthroughCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -169,21 +146,13 @@ const operationSecurity: PassthroughCreateMultipartSecurity = {
 
 sdk.passthrough.passthroughCreateMultipart({
   dataPassthroughRequest3: {
-    baseUrlOverride: "consectetur",
+    baseUrlOverride: "accusamus",
     data: "{"company": "Lime", "model": "Gen 2.5"}",
     headers: {
-      "blanditiis": "provident",
-      "a": "nulla",
+      "aliquam": "odio",
     },
-    method: "quas",
+    method: "occaecati",
     multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
-      },
       {
         contentType: "application/pdf",
         data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
@@ -194,9 +163,9 @@ sdk.passthrough.passthroughCreateMultipart({
     ],
     normalizeResponse: false,
     path: "/scooters",
-    requestFormat: "quasi",
+    requestFormat: "commodi",
   },
-  xAccountToken: "a",
+  xAccountToken: "sapiente",
 }, operationSecurity).then((res: PassthroughCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response

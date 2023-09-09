@@ -21,18 +21,18 @@ const operationSecurity: IssuesListSecurity = {
 };
 
 sdk.issues.issuesList({
-  accountToken: "ipsam",
-  cursor: "ea",
-  endDate: "aspernatur",
-  endUserOrganizationName: "vel",
-  firstIncidentTimeAfter: new Date("2022-02-08T20:43:00.221Z"),
-  firstIncidentTimeBefore: new Date("2022-08-07T14:04:49.880Z"),
-  includeMuted: "laudantium",
-  integrationName: "dicta",
-  lastIncidentTimeAfter: new Date("2022-01-08T01:04:15.076Z"),
-  lastIncidentTimeBefore: new Date("2022-08-05T18:23:03.713Z"),
-  pageSize: 862192,
-  startDate: "excepturi",
+  accountToken: "quisquam",
+  cursor: "vero",
+  endDate: "omnis",
+  endUserOrganizationName: "quis",
+  firstIncidentTimeAfter: new Date("2022-01-15T00:38:43.469Z"),
+  firstIncidentTimeBefore: new Date("2022-10-08T10:17:36.770Z"),
+  includeMuted: "vero",
+  integrationName: "tenetur",
+  lastIncidentTimeAfter: new Date("2022-01-22T09:31:52.637Z"),
+  lastIncidentTimeBefore: new Date("2021-05-27T13:58:14.379Z"),
+  pageSize: 486160,
+  startDate: "similique",
   status: IssuesListStatus.Resolved,
 }, operationSecurity).then((res: IssuesListResponse) => {
   if (res.statusCode == 200) {
@@ -71,7 +71,7 @@ const operationSecurity: IssuesRetrieveSecurity = {
 };
 
 sdk.issues.issuesRetrieve({
-  id: "5fce6c55-6146-4c3e-a50f-b008c42e141a",
+  id: "d74dd39c-0f5d-42cf-b7c7-0a45626d4368",
 }, operationSecurity).then((res: IssuesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

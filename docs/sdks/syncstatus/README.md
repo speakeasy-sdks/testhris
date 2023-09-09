@@ -20,9 +20,9 @@ const operationSecurity: SyncStatusListSecurity = {
 };
 
 sdk.syncStatus.syncStatusList({
-  xAccountToken: "ipsa",
-  cursor: "totam",
-  pageSize: 61078,
+  xAccountToken: "velit",
+  cursor: "voluptatibus",
+  pageSize: 374323,
 }, operationSecurity).then((res: SyncStatusListResponse) => {
   if (res.statusCode == 200) {
     // handle response

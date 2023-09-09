@@ -41,25 +41,22 @@ sdk.employees.employeesCreate({
       employeeNumber: "2",
       employmentStatus: EmployeeRequestEmploymentStatus.Inactive,
       employments: [
-        "2a94bb4f-63c9-469e-9a3e-fa77dfb14cd6",
+        "02a94bb4-f63c-4969-a9a3-efa77dfb14cd",
       ],
       ethnicity: EmployeeRequestEthnicity.White,
       firstName: "Greg",
       gender: EmployeeRequestGender.Male,
       groups: [
-        "ae395efb-9ba8-48f3-a669-97074ba4469b",
-        "6e214195-9890-4afa-963e-2516fe4c8b71",
+        "66ae395e-fb9b-4a88-b3a6-6997074ba446",
       ],
       hireDate: new Date("2020-10-10T00:00:00Z"),
       homeLocation: "d2f972d0-2526-434b-9409-4c3b468e08f0",
       integrationParams: {
-        "repudiandae": "ullam",
+        "natus": "nobis",
       },
       lastName: "Hirsch",
       linkedAccountParams: {
-        "nihil": "repellat",
-        "quibusdam": "sed",
-        "saepe": "pariatur",
+        "eum": "vero",
       },
       manager: "0048ea5b-911e-4dff-9364-92070dea62ff",
       maritalStatus: EmployeeRequestMaritalStatus.Single,
@@ -75,7 +72,7 @@ sdk.employees.employeesCreate({
       workLocation: "9efbc633-3387-4306-aa55-e2c635e6bb4f",
     },
   },
-  xAccountToken: "accusantium",
+  xAccountToken: "aspernatur",
   isDebugMode: false,
   runAsync: false,
 }, operationSecurity).then((res: EmployeesCreateResponse) => {
@@ -117,10 +114,10 @@ const operationSecurity: EmployeesIgnoreCreateFormSecurity = {
 sdk.employees.employeesIgnoreCreateForm({
   ignoreCommonModelRequest2: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "consequuntur",
+    reason: "architecto",
   },
-  xAccountToken: "praesentium",
-  modelId: "921cddc6-9260-41fb-976b-0d5f0d30c5fb",
+  xAccountToken: "magnam",
+  modelId: "1959890a-fa56-43e2-916f-e4c8b711e5b7",
 }, operationSecurity).then((res: EmployeesIgnoreCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -163,8 +160,8 @@ sdk.employees.employeesIgnoreCreateJson({
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
     reason: IgnoreCommonModelRequestReason.GeneralCustomerRequest,
   },
-  xAccountToken: "nobis",
-  modelId: "25870532-02c7-43d5-be9b-90c28909b3fe",
+  xAccountToken: "repellat",
+  modelId: "d2ed0289-21cd-4dc6-9260-1fb576b0d5f0",
 }, operationSecurity).then((res: EmployeesIgnoreCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -204,10 +201,10 @@ const operationSecurity: EmployeesIgnoreCreateMultipartSecurity = {
 sdk.employees.employeesIgnoreCreateMultipart({
   ignoreCommonModelRequest2: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "modi",
+    reason: "fugiat",
   },
-  xAccountToken: "iste",
-  modelId: "a8d9cbf4-8633-4323-b9b7-7f3a4100674e",
+  xAccountToken: "amet",
+  modelId: "0c5fbb25-8705-4320-ac73-d5fe9b90c289",
 }, operationSecurity).then((res: EmployeesIgnoreCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -252,36 +249,36 @@ const operationSecurity: EmployeesListSecurity = {
 };
 
 sdk.employees.employeesList({
-  xAccountToken: "quidem",
-  companyId: "voluptatibus",
-  createdAfter: new Date("2022-05-20T13:18:59.478Z"),
-  createdBefore: new Date("2022-06-16T23:42:38.113Z"),
-  cursor: "sit",
-  displayFullName: "fugiat",
-  employmentStatus: EmployeesListEmploymentStatus.Active,
-  expand: EmployeesListExpand.GroupsWorkLocationPayGroup,
-  firstName: "Marietta",
-  groups: "iusto",
+  xAccountToken: "eaque",
+  companyId: "occaecati",
+  createdAfter: new Date("2022-07-11T08:07:03.616Z"),
+  createdBefore: new Date("2020-03-14T00:51:21.656Z"),
+  cursor: "modi",
+  displayFullName: "iste",
+  employmentStatus: EmployeesListEmploymentStatus.Pending,
+  expand: EmployeesListExpand.GroupsHomeLocationManager,
+  firstName: "Sam",
+  groups: "provident",
   includeDeletedData: false,
   includeRemoteData: false,
   includeSensitiveFields: false,
-  lastName: "Kling",
-  managerId: "dolorum",
-  modifiedAfter: new Date("2021-10-14T20:34:13.522Z"),
-  modifiedBefore: new Date("2020-11-09T09:45:52.295Z"),
-  pageSize: 990339,
-  payGroupId: "nihil",
-  personalEmail: "Jacky.Ondricka13@gmail.com",
-  remoteFields: EmployeesListRemoteFields.EmploymentStatus,
-  remoteId: "amet",
-  showEnumOrigins: EmployeesListShowEnumOrigins.EthnicityMaritalStatus,
-  startedAfter: new Date("2022-01-15T13:56:57.287Z"),
-  startedBefore: new Date("2021-11-07T02:34:07.563Z"),
-  teamId: "deserunt",
-  terminatedAfter: new Date("2022-05-08T23:33:14.875Z"),
-  terminatedBefore: new Date("2021-06-10T21:59:23.045Z"),
-  workEmail: "Aaliyah27@yahoo.com",
-  workLocationId: "vel",
+  lastName: "Rolfson",
+  managerId: "libero",
+  modifiedAfter: new Date("2022-01-24T10:05:07.174Z"),
+  modifiedBefore: new Date("2022-03-16T07:10:00.236Z"),
+  pageSize: 212390,
+  payGroupId: "dolorem",
+  personalEmail: "Christy_Erdman73@gmail.com",
+  remoteFields: EmployeesListRemoteFields.EmploymentStatusGenderMaritalStatus,
+  remoteId: "dignissimos",
+  showEnumOrigins: EmployeesListShowEnumOrigins.MaritalStatus,
+  startedAfter: new Date("2022-04-27T14:25:42.204Z"),
+  startedBefore: new Date("2022-11-30T20:48:38.083Z"),
+  teamId: "ipsa",
+  terminatedAfter: new Date("2022-07-26T10:30:36.625Z"),
+  terminatedBefore: new Date("2022-09-09T04:40:04.540Z"),
+  workEmail: "Maurine_Wolf@hotmail.com",
+  workLocationId: "eos",
 }, operationSecurity).then((res: EmployeesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -319,7 +316,7 @@ const operationSecurity: EmployeesMetaPostRetrieveSecurity = {
 };
 
 sdk.employees.employeesMetaPostRetrieve({
-  xAccountToken: "quod",
+  xAccountToken: "atque",
 }, operationSecurity).then((res: EmployeesMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -363,13 +360,13 @@ const operationSecurity: EmployeesRetrieveSecurity = {
 };
 
 sdk.employees.employeesRetrieve({
-  xAccountToken: "officiis",
-  expand: EmployeesRetrieveExpand.EmploymentsGroupsManagerTeamPayGroup,
-  id: "af7a73cf-3be4-453f-870b-326b5a73429c",
+  xAccountToken: "sit",
+  expand: EmployeesRetrieveExpand.HomeLocationWorkLocationManagerTeam,
+  id: "1ba77a89-ebf7-437a-a420-3ce5e6a95d8a",
   includeRemoteData: false,
   includeSensitiveFields: false,
-  remoteFields: EmployeesRetrieveRemoteFields.Gender,
-  showEnumOrigins: EmployeesRetrieveShowEnumOrigins.EthnicityMaritalStatus,
+  remoteFields: EmployeesRetrieveRemoteFields.EmploymentStatus,
+  showEnumOrigins: EmployeesRetrieveShowEnumOrigins.GenderMaritalStatus,
 }, operationSecurity).then((res: EmployeesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

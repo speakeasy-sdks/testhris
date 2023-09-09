@@ -26,19 +26,19 @@ const operationSecurity: GroupsListSecurity = {
 };
 
 sdk.groups.groupsList({
-  xAccountToken: "qui",
-  createdAfter: new Date("2022-06-27T23:25:59.184Z"),
-  createdBefore: new Date("2022-06-03T03:16:58.870Z"),
-  cursor: "voluptatibus",
+  xAccountToken: "fugit",
+  createdAfter: new Date("2022-07-06T20:37:36.497Z"),
+  createdBefore: new Date("2022-08-24T04:49:56.144Z"),
+  cursor: "nam",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2020-05-16T05:26:31.901Z"),
-  modifiedBefore: new Date("2022-04-29T03:27:17.664Z"),
-  pageSize: 218403,
+  modifiedAfter: new Date("2022-11-28T15:41:44.846Z"),
+  modifiedBefore: new Date("2020-10-05T00:59:28.911Z"),
+  pageSize: 748664,
   remoteFields: GroupsListRemoteFields.Type,
-  remoteId: "delectus",
+  remoteId: "et",
   showEnumOrigins: GroupsListShowEnumOrigins.Type,
-  types: "voluptate",
+  types: "saepe",
 }, operationSecurity).then((res: GroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -81,8 +81,8 @@ const operationSecurity: GroupsRetrieveSecurity = {
 };
 
 sdk.groups.groupsRetrieve({
-  xAccountToken: "consectetur",
-  id: "ef7fbc7a-bd74-4dd3-9c0f-5d2cff7c70a4",
+  xAccountToken: "ipsum",
+  id: "1b8b90f3-443a-4110-8e0a-dcf4b921879f",
   includeRemoteData: false,
   remoteFields: GroupsRetrieveRemoteFields.Type,
   showEnumOrigins: GroupsRetrieveShowEnumOrigins.Type,

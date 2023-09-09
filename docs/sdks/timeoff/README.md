@@ -32,12 +32,10 @@ sdk.timeOff.timeOffCreate({
       employeeNote: "Moving into the new apartment Kendall Roy gave me!",
       endTime: new Date("2020-11-17T00:00:00Z"),
       integrationParams: {
-        "eum": "reiciendis",
-        "provident": "aspernatur",
+        "cum": "consectetur",
       },
       linkedAccountParams: {
-        "quasi": "animi",
-        "nostrum": "mollitia",
+        "in": "exercitationem",
       },
       requestType: TimeOffRequestRequestType.Vacation,
       startTime: new Date("2020-11-10T00:00:00Z"),
@@ -45,7 +43,7 @@ sdk.timeOff.timeOffCreate({
       units: TimeOffRequestUnits.Days,
     },
   },
-  xAccountToken: "provident",
+  xAccountToken: "earum",
   isDebugMode: false,
   runAsync: false,
 }, operationSecurity).then((res: TimeOffCreateResponse) => {
@@ -93,23 +91,23 @@ const operationSecurity: TimeOffListSecurity = {
 };
 
 sdk.timeOff.timeOffList({
-  xAccountToken: "possimus",
-  approverId: "animi",
-  createdAfter: new Date("2022-08-09T00:01:50.407Z"),
-  createdBefore: new Date("2022-01-01T06:19:29.377Z"),
-  cursor: "doloribus",
-  employeeId: "ullam",
-  expand: TimeOffListExpand.Employee,
+  xAccountToken: "facere",
+  approverId: "numquam",
+  createdAfter: new Date("2021-11-08T23:21:08.200Z"),
+  createdBefore: new Date("2020-11-28T15:07:06.228Z"),
+  cursor: "saepe",
+  employeeId: "necessitatibus",
+  expand: TimeOffListExpand.Approver,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2021-02-15T12:37:51.202Z"),
-  modifiedBefore: new Date("2021-08-28T09:50:26.086Z"),
-  pageSize: 813054,
-  remoteFields: TimeOffListRemoteFields.RequestTypeStatus,
-  remoteId: "voluptatibus",
-  requestType: TimeOffListRequestType.Sick,
+  modifiedAfter: new Date("2022-01-03T21:58:53.395Z"),
+  modifiedBefore: new Date("2022-10-01T23:04:48.771Z"),
+  pageSize: 228263,
+  remoteFields: TimeOffListRemoteFields.RequestType,
+  remoteId: "dignissimos",
+  requestType: TimeOffListRequestType.Volunteer,
   showEnumOrigins: TimeOffListShowEnumOrigins.Units,
-  status: TimeOffListStatus.Requested,
+  status: TimeOffListStatus.Cancelled,
 }, operationSecurity).then((res: TimeOffListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -147,7 +145,7 @@ const operationSecurity: TimeOffMetaPostRetrieveSecurity = {
 };
 
 sdk.timeOff.timeOffMetaPostRetrieve({
-  xAccountToken: "cumque",
+  xAccountToken: "corporis",
 }, operationSecurity).then((res: TimeOffMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -191,12 +189,12 @@ const operationSecurity: TimeOffRetrieveSecurity = {
 };
 
 sdk.timeOff.timeOffRetrieve({
-  xAccountToken: "vitae",
-  expand: TimeOffRetrieveExpand.EmployeeApprover,
-  id: "4512c103-2648-4dc2-b615-199ebfd0e9fe",
+  xAccountToken: "harum",
+  expand: TimeOffRetrieveExpand.Employee,
+  id: "0eb1ea42-6555-4ba3-8287-44ed53b88f3a",
   includeRemoteData: false,
-  remoteFields: TimeOffRetrieveRemoteFields.RequestTypeStatusUnits,
-  showEnumOrigins: TimeOffRetrieveShowEnumOrigins.StatusUnits,
+  remoteFields: TimeOffRetrieveRemoteFields.RequestTypeUnits,
+  showEnumOrigins: TimeOffRetrieveShowEnumOrigins.Units,
 }, operationSecurity).then((res: TimeOffRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

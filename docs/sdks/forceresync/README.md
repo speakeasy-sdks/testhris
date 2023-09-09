@@ -20,7 +20,7 @@ const operationSecurity: SyncStatusResyncCreateSecurity = {
 };
 
 sdk.forceResync.syncStatusResyncCreate({
-  xAccountToken: "cupiditate",
+  xAccountToken: "neque",
 }, operationSecurity).then((res: SyncStatusResyncCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -28,20 +28,20 @@ const operationSecurity: TimeOffBalancesListSecurity = {
 };
 
 sdk.timeOffBalances.timeOffBalancesList({
-  xAccountToken: "suscipit",
-  createdAfter: new Date("2022-11-08T01:11:44.885Z"),
-  createdBefore: new Date("2020-12-11T23:55:22.223Z"),
-  cursor: "ratione",
-  employeeId: "animi",
+  xAccountToken: "totam",
+  createdAfter: new Date("2021-12-15T01:59:29.520Z"),
+  createdBefore: new Date("2022-12-05T00:59:14.180Z"),
+  cursor: "rerum",
+  employeeId: "sed",
   expand: TimeOffBalancesListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2020-06-01T00:59:41.712Z"),
-  modifiedBefore: new Date("2022-11-26T12:01:10.841Z"),
-  pageSize: 90233,
-  policyType: TimeOffBalancesListPolicyType.Personal,
+  modifiedAfter: new Date("2022-08-09T14:55:41.766Z"),
+  modifiedBefore: new Date("2020-11-16T19:55:44.497Z"),
+  pageSize: 451822,
+  policyType: TimeOffBalancesListPolicyType.Vacation,
   remoteFields: TimeOffBalancesListRemoteFields.PolicyType,
-  remoteId: "natus",
+  remoteId: "ab",
   showEnumOrigins: TimeOffBalancesListShowEnumOrigins.PolicyType,
 }, operationSecurity).then((res: TimeOffBalancesListResponse) => {
   if (res.statusCode == 200) {
@@ -86,9 +86,9 @@ const operationSecurity: TimeOffBalancesRetrieveSecurity = {
 };
 
 sdk.timeOffBalances.timeOffBalancesRetrieve({
-  xAccountToken: "occaecati",
+  xAccountToken: "iste",
   expand: TimeOffBalancesRetrieveExpand.Employee,
-  id: "6312fde0-4771-4778-bf61-d017476360a1",
+  id: "4a276b26-916f-4e1f-88f4-294e3698f447",
   includeRemoteData: false,
   remoteFields: TimeOffBalancesRetrieveRemoteFields.PolicyType,
   showEnumOrigins: TimeOffBalancesRetrieveShowEnumOrigins.PolicyType,
