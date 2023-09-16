@@ -1,4 +1,4 @@
-# forceResync
+# ForceResync
 
 ### Available Operations
 

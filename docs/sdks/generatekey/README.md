@@ -1,4 +1,4 @@
-# generateKey
+# GenerateKey
 
 ### Available Operations
 

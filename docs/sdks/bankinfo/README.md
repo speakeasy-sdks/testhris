@@ -1,4 +1,4 @@
-# bankInfo
+# BankInfo
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# payGroups
+# PayGroups
 
 ### Available Operations
 

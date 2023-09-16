@@ -1,4 +1,4 @@
-# selectiveSync
+# SelectiveSync
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# syncStatus
+# SyncStatus
 
 ### Available Operations
 

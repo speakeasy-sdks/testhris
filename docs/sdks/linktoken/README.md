@@ -1,4 +1,4 @@
-# linkToken
+# LinkToken
 
 ### Available Operations
 

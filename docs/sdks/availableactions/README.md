@@ -1,4 +1,4 @@
-# availableActions
+# AvailableActions
 
 ### Available Operations
 

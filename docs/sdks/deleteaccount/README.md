@@ -1,4 +1,4 @@
-# deleteAccount
+# DeleteAccount
 
 ### Available Operations
 

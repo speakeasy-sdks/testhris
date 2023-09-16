@@ -1,4 +1,4 @@
-# payrollRuns
+# PayrollRuns
 
 ### Available Operations
 

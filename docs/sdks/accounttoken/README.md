@@ -1,4 +1,4 @@
-# accountToken
+# AccountToken
 
 ### Available Operations
 

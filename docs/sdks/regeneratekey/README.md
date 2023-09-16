@@ -1,4 +1,4 @@
-# regenerateKey
+# RegenerateKey
 
 ### Available Operations
 

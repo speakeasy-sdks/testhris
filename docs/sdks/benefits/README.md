@@ -1,4 +1,4 @@
-# benefits
+# Benefits
 
 ### Available Operations
 

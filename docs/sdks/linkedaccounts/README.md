@@ -1,4 +1,4 @@
-# linkedAccounts
+# LinkedAccounts
 
 ### Available Operations
 
