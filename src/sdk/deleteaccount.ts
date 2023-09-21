@@ -5,7 +5,7 @@
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class DeleteAccount {
     private sdkConfiguration: SDKConfiguration;
@@ -36,7 +36,7 @@ export class DeleteAccount {
             security = new operations.DeleteAccountCreateSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,

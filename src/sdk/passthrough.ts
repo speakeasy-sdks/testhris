@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Passthrough {
     private sdkConfiguration: SDKConfiguration;
@@ -52,7 +52,7 @@ export class Passthrough {
             security = new operations.PassthroughCreateFormSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -145,7 +145,7 @@ export class Passthrough {
             security = new operations.PassthroughCreateJsonSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -238,7 +238,7 @@ export class Passthrough {
             security = new operations.PassthroughCreateMultipartSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,

@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class SyncStatus {
     private sdkConfiguration: SDKConfiguration;
@@ -38,7 +38,7 @@ export class SyncStatus {
             security = new operations.SyncStatusListSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,

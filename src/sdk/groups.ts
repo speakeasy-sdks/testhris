@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class Groups {
     private sdkConfiguration: SDKConfiguration;
@@ -38,7 +38,7 @@ export class Groups {
             security = new operations.GroupsListSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -114,7 +114,7 @@ export class Groups {
             security = new operations.GroupsRetrieveSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,

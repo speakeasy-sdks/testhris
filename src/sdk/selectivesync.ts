@@ -7,7 +7,7 @@ import * as errors from "./models/errors";
 import * as operations from "./models/operations";
 import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
-import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
 export class SelectiveSync {
     private sdkConfiguration: SDKConfiguration;
@@ -38,7 +38,7 @@ export class SelectiveSync {
             security = new operations.SelectiveSyncConfigurationsListSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
@@ -131,7 +131,7 @@ export class SelectiveSync {
             security = new operations.SelectiveSyncConfigurationsUpdateSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
             ...config?.headers,
@@ -213,7 +213,7 @@ export class SelectiveSync {
             security = new operations.SelectiveSyncMetaListSecurity(security);
         }
         const properties = utils.parseSecurityProperties(security);
-        const headers = {
+        const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
             ...properties.headers,
