@@ -12,16 +12,17 @@ Returns the account token for the end user with the provided public token.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AccountTokenRetrieveResponse, AccountTokenRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { AccountTokenRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: AccountTokenRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.accountToken.accountTokenRetrieve({
-  publicToken: "distinctio",
-}, operationSecurity).then((res: AccountTokenRetrieveResponse) => {
+  publicToken: "quibusdam",
+}).then((res: AccountTokenRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -30,11 +31,10 @@ sdk.accountToken.accountTokenRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.AccountTokenRetrieveRequest](../../models/operations/accounttokenretrieverequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.AccountTokenRetrieveSecurity](../../models/operations/accounttokenretrievesecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.AccountTokenRetrieveRequest](../../models/operations/accounttokenretrieverequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response

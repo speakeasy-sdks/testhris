@@ -6,13 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class PayGroupsListSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
-    })
-    tokenAuth: string;
-}
-
 export class PayGroupsListRequest extends SpeakeasyBase {
     /**
      * Token identifying the end user.

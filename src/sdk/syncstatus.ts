@@ -21,7 +21,6 @@ export class SyncStatus {
      */
     async syncStatusList(
         req: operations.SyncStatusListRequest,
-        security: operations.SyncStatusListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.SyncStatusListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class SyncStatus {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/sync-status";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.SyncStatusListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

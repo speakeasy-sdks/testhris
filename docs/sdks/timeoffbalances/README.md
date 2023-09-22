@@ -18,14 +18,14 @@ import {
   TimeOffBalancesListPolicyType,
   TimeOffBalancesListRemoteFields,
   TimeOffBalancesListResponse,
-  TimeOffBalancesListSecurity,
   TimeOffBalancesListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffBalancesListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOffBalances.timeOffBalancesList({
   xAccountToken: "totam",
@@ -43,7 +43,7 @@ sdk.timeOffBalances.timeOffBalancesList({
   remoteFields: TimeOffBalancesListRemoteFields.PolicyType,
   remoteId: "ab",
   showEnumOrigins: TimeOffBalancesListShowEnumOrigins.PolicyType,
-}, operationSecurity).then((res: TimeOffBalancesListResponse) => {
+}).then((res: TimeOffBalancesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -52,11 +52,10 @@ sdk.timeOffBalances.timeOffBalancesList({
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.TimeOffBalancesListRequest](../../models/operations/timeoffbalanceslistrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.TimeOffBalancesListSecurity](../../models/operations/timeoffbalanceslistsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.TimeOffBalancesListRequest](../../models/operations/timeoffbalanceslistrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response
@@ -76,14 +75,14 @@ import {
   TimeOffBalancesRetrieveExpand,
   TimeOffBalancesRetrieveRemoteFields,
   TimeOffBalancesRetrieveResponse,
-  TimeOffBalancesRetrieveSecurity,
   TimeOffBalancesRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffBalancesRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOffBalances.timeOffBalancesRetrieve({
   xAccountToken: "iste",
@@ -92,7 +91,7 @@ sdk.timeOffBalances.timeOffBalancesRetrieve({
   includeRemoteData: false,
   remoteFields: TimeOffBalancesRetrieveRemoteFields.PolicyType,
   showEnumOrigins: TimeOffBalancesRetrieveShowEnumOrigins.PolicyType,
-}, operationSecurity).then((res: TimeOffBalancesRetrieveResponse) => {
+}).then((res: TimeOffBalancesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -101,11 +100,10 @@ sdk.timeOffBalances.timeOffBalancesRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.TimeOffBalancesRetrieveRequest](../../models/operations/timeoffbalancesretrieverequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.TimeOffBalancesRetrieveSecurity](../../models/operations/timeoffbalancesretrievesecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.TimeOffBalancesRetrieveRequest](../../models/operations/timeoffbalancesretrieverequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response

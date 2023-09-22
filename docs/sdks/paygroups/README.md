@@ -13,12 +13,13 @@ Returns a list of `PayGroup` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PayGroupsListResponse, PayGroupsListSecurity } from "HRIS/dist/sdk/models/operations";
+import { PayGroupsListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: PayGroupsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.payGroups.payGroupsList({
   xAccountToken: "dolores",
@@ -31,7 +32,7 @@ sdk.payGroups.payGroupsList({
   modifiedBefore: new Date("2022-06-19T07:05:05.913Z"),
   pageSize: 143829,
   remoteId: "fuga",
-}, operationSecurity).then((res: PayGroupsListResponse) => {
+}).then((res: PayGroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -40,11 +41,10 @@ sdk.payGroups.payGroupsList({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.PayGroupsListRequest](../../models/operations/paygroupslistrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.PayGroupsListSecurity](../../models/operations/paygroupslistsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PayGroupsListRequest](../../models/operations/paygroupslistrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -60,18 +60,19 @@ Returns a `PayGroup` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PayGroupsRetrieveResponse, PayGroupsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { PayGroupsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: PayGroupsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.payGroups.payGroupsRetrieve({
   xAccountToken: "mollitia",
   id: "482562f2-22e9-4817-ae17-cbe61e6b7b95",
   includeRemoteData: false,
-}, operationSecurity).then((res: PayGroupsRetrieveResponse) => {
+}).then((res: PayGroupsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -80,11 +81,10 @@ sdk.payGroups.payGroupsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PayGroupsRetrieveRequest](../../models/operations/paygroupsretrieverequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.PayGroupsRetrieveSecurity](../../models/operations/paygroupsretrievesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PayGroupsRetrieveRequest](../../models/operations/paygroupsretrieverequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response

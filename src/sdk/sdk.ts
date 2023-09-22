@@ -20,6 +20,7 @@ import { Issues } from "./issues";
 import { LinkedAccounts } from "./linkedaccounts";
 import { LinkToken } from "./linktoken";
 import { Locations } from "./locations";
+import * as shared from "./models/shared";
 import { Passthrough } from "./passthrough";
 import { PayGroups } from "./paygroups";
 import { PayrollRuns } from "./payrollruns";
@@ -52,6 +53,10 @@ export const ServerList = [
  */
 export type SDKProps = {
     /**
+     * The security details required to authenticate the SDK
+     */
+    security?: shared.Security | (() => Promise<shared.Security>);
+    /**
      * Allows overriding the default axios client used by the SDK
      */
     defaultClient?: AxiosInstance;
@@ -73,12 +78,13 @@ export type SDKProps = {
 
 export class SDKConfiguration {
     defaultClient: AxiosInstance;
+    security?: shared.Security | (() => Promise<shared.Security>);
     serverURL: string;
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "1.12.4";
-    genVersion = "2.122.1";
+    sdkVersion = "1.13.0";
+    genVersion = "2.125.1";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -130,6 +136,7 @@ export class Hris {
         const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
+            security: props?.security,
             serverURL: serverURL,
             retryConfig: props?.retryConfig,
         });

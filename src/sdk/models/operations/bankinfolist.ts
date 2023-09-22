@@ -6,13 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class BankInfoListSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
-    })
-    tokenAuth: string;
-}
-
 /**
  * If provided, will only return BankInfo's with this account type. Options: ('SAVINGS', 'CHECKING')
  *

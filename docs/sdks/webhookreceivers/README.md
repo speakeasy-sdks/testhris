@@ -13,12 +13,13 @@ Creates a `WebhookReceiver` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversCreateResponse, WebhookReceiversCreateSecurity } from "HRIS/dist/sdk/models/operations";
+import { WebhookReceiversCreateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: WebhookReceiversCreateSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.webhookReceivers.webhookReceiversCreate({
   webhookReceiverRequest: {
@@ -27,7 +28,7 @@ sdk.webhookReceivers.webhookReceiversCreate({
     key: "ex",
   },
   xAccountToken: "sit",
-}, operationSecurity).then((res: WebhookReceiversCreateResponse) => {
+}).then((res: WebhookReceiversCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,11 +37,10 @@ sdk.webhookReceivers.webhookReceiversCreate({
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.WebhookReceiversCreateRequest](../../models/operations/webhookreceiverscreaterequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.WebhookReceiversCreateSecurity](../../models/operations/webhookreceiverscreatesecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.WebhookReceiversCreateRequest](../../models/operations/webhookreceiverscreaterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
@@ -56,16 +56,17 @@ Returns a list of `WebhookReceiver` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversListResponse, WebhookReceiversListSecurity } from "HRIS/dist/sdk/models/operations";
+import { WebhookReceiversListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: WebhookReceiversListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.webhookReceivers.webhookReceiversList({
   xAccountToken: "non",
-}, operationSecurity).then((res: WebhookReceiversListResponse) => {
+}).then((res: WebhookReceiversListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,11 +75,10 @@ sdk.webhookReceivers.webhookReceiversList({
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.WebhookReceiversListRequest](../../models/operations/webhookreceiverslistrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.WebhookReceiversListSecurity](../../models/operations/webhookreceiverslistsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.WebhookReceiversListRequest](../../models/operations/webhookreceiverslistrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response

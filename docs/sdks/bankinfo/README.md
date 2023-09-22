@@ -19,34 +19,34 @@ import {
   BankInfoListOrderBy,
   BankInfoListRemoteFields,
   BankInfoListResponse,
-  BankInfoListSecurity,
   BankInfoListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: BankInfoListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.bankInfo.bankInfoList({
-  xAccountToken: "unde",
+  xAccountToken: "nulla",
   accountType: BankInfoListAccountType.Savings,
-  bankName: "corrupti",
-  createdAfter: new Date("2021-09-24T02:21:06.409Z"),
-  createdBefore: new Date("2021-09-16T11:56:06.019Z"),
-  cursor: "suscipit",
-  employeeId: "iure",
+  bankName: "illum",
+  createdAfter: new Date("2022-05-18T09:34:54.894Z"),
+  createdBefore: new Date("2022-03-26T09:37:56.283Z"),
+  cursor: "iure",
+  employeeId: "magnam",
   expand: BankInfoListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-02-09T12:04:06.508Z"),
-  modifiedBefore: new Date("2022-01-14T06:18:51.036Z"),
+  modifiedAfter: new Date("2022-10-30T21:34:57.850Z"),
+  modifiedBefore: new Date("2022-03-08T10:35:32.561Z"),
   orderBy: BankInfoListOrderBy.MinusRemoteCreatedAt,
-  pageSize: 383441,
+  pageSize: 477665,
   remoteFields: BankInfoListRemoteFields.AccountType,
-  remoteId: "molestiae",
+  remoteId: "minus",
   showEnumOrigins: BankInfoListShowEnumOrigins.AccountType,
-}, operationSecurity).then((res: BankInfoListResponse) => {
+}).then((res: BankInfoListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -55,11 +55,10 @@ sdk.bankInfo.bankInfoList({
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.BankInfoListRequest](../../models/operations/bankinfolistrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.BankInfoListSecurity](../../models/operations/bankinfolistsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.BankInfoListRequest](../../models/operations/bankinfolistrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
@@ -79,23 +78,23 @@ import {
   BankInfoRetrieveExpand,
   BankInfoRetrieveRemoteFields,
   BankInfoRetrieveResponse,
-  BankInfoRetrieveSecurity,
   BankInfoRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: BankInfoRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.bankInfo.bankInfoRetrieve({
-  xAccountToken: "minus",
+  xAccountToken: "placeat",
   expand: BankInfoRetrieveExpand.Employee,
-  id: "c8796ed1-51a0-45df-82dd-f7cc78ca1ba9",
+  id: "8796ed15-1a05-4dfc-addf-7cc78ca1ba92",
   includeRemoteData: false,
   remoteFields: BankInfoRetrieveRemoteFields.AccountType,
   showEnumOrigins: BankInfoRetrieveShowEnumOrigins.AccountType,
-}, operationSecurity).then((res: BankInfoRetrieveResponse) => {
+}).then((res: BankInfoRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,11 +103,10 @@ sdk.bankInfo.bankInfoRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.BankInfoRetrieveRequest](../../models/operations/bankinforetrieverequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.BankInfoRetrieveSecurity](../../models/operations/bankinforetrievesecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
-| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.BankInfoRetrieveRequest](../../models/operations/bankinforetrieverequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response

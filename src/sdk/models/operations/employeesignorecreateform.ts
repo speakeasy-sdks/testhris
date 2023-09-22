@@ -6,13 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class EmployeesIgnoreCreateFormSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
-    })
-    tokenAuth: string;
-}
-
 export class EmployeesIgnoreCreateFormRequest extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
     ignoreCommonModelRequest2: shared.IgnoreCommonModelRequest2;

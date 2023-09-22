@@ -17,14 +17,14 @@ import {
   PayrollRunsListRemoteFields,
   PayrollRunsListResponse,
   PayrollRunsListRunType,
-  PayrollRunsListSecurity,
   PayrollRunsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: PayrollRunsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.payrollRuns.payrollRunsList({
   xAccountToken: "distinctio",
@@ -44,7 +44,7 @@ sdk.payrollRuns.payrollRunsList({
   showEnumOrigins: PayrollRunsListShowEnumOrigins.RunStateRunType,
   startedAfter: new Date("2022-11-26T10:10:26.600Z"),
   startedBefore: new Date("2021-02-19T06:17:20.977Z"),
-}, operationSecurity).then((res: PayrollRunsListResponse) => {
+}).then((res: PayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,11 +53,10 @@ sdk.payrollRuns.payrollRunsList({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PayrollRunsListRequest](../../models/operations/payrollrunslistrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.PayrollRunsListSecurity](../../models/operations/payrollrunslistsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PayrollRunsListRequest](../../models/operations/payrollrunslistrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
@@ -76,14 +75,14 @@ import { Hris } from "HRIS";
 import {
   PayrollRunsRetrieveRemoteFields,
   PayrollRunsRetrieveResponse,
-  PayrollRunsRetrieveSecurity,
   PayrollRunsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: PayrollRunsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.payrollRuns.payrollRunsRetrieve({
   xAccountToken: "sint",
@@ -91,7 +90,7 @@ sdk.payrollRuns.payrollRunsRetrieve({
   includeRemoteData: false,
   remoteFields: PayrollRunsRetrieveRemoteFields.RunState,
   showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunType,
-}, operationSecurity).then((res: PayrollRunsRetrieveResponse) => {
+}).then((res: PayrollRunsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -100,11 +99,10 @@ sdk.payrollRuns.payrollRunsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.PayrollRunsRetrieveRequest](../../models/operations/payrollrunsretrieverequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.PayrollRunsRetrieveSecurity](../../models/operations/payrollrunsretrievesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PayrollRunsRetrieveRequest](../../models/operations/payrollrunsretrieverequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response

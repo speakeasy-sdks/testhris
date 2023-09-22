@@ -21,7 +21,6 @@ export class LinkedAccounts {
      */
     async linkedAccountsList(
         req: operations.LinkedAccountsListRequest,
-        security: operations.LinkedAccountsListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.LinkedAccountsListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class LinkedAccounts {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/linked-accounts";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.LinkedAccountsListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = { ...config?.headers, ...properties.headers };
         const queryParams: string = utils.serializeQueryParams(req);
         headers["Accept"] = "application/json";

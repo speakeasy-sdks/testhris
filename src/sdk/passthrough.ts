@@ -21,7 +21,6 @@ export class Passthrough {
      */
     async passthroughCreateForm(
         req: operations.PassthroughCreateFormRequest,
-        security: operations.PassthroughCreateFormSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PassthroughCreateFormResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -48,10 +47,14 @@ export class Passthrough {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PassthroughCreateFormSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -114,7 +117,6 @@ export class Passthrough {
      */
     async passthroughCreateJson(
         req: operations.PassthroughCreateJsonRequest,
-        security: operations.PassthroughCreateJsonSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PassthroughCreateJsonResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -141,10 +143,14 @@ export class Passthrough {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PassthroughCreateJsonSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -207,7 +213,6 @@ export class Passthrough {
      */
     async passthroughCreateMultipart(
         req: operations.PassthroughCreateMultipartRequest,
-        security: operations.PassthroughCreateMultipartSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.PassthroughCreateMultipartResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -234,10 +239,14 @@ export class Passthrough {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.PassthroughCreateMultipartSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,

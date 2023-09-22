@@ -13,17 +13,13 @@ Returns a list of `Location` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  LocationsListRemoteFields,
-  LocationsListResponse,
-  LocationsListSecurity,
-  LocationsListShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { LocationsListRemoteFields, LocationsListResponse, LocationsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: LocationsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.locations.locationsList({
   xAccountToken: "quasi",
@@ -38,7 +34,7 @@ sdk.locations.locationsList({
   remoteFields: LocationsListRemoteFields.LocationType,
   remoteId: "esse",
   showEnumOrigins: LocationsListShowEnumOrigins.LocationType,
-}, operationSecurity).then((res: LocationsListResponse) => {
+}).then((res: LocationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -47,11 +43,10 @@ sdk.locations.locationsList({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.LocationsListRequest](../../models/operations/locationslistrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.LocationsListSecurity](../../models/operations/locationslistsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.LocationsListRequest](../../models/operations/locationslistrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -70,14 +65,14 @@ import { Hris } from "HRIS";
 import {
   LocationsRetrieveRemoteFields,
   LocationsRetrieveResponse,
-  LocationsRetrieveSecurity,
   LocationsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: LocationsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.locations.locationsRetrieve({
   xAccountToken: "rem",
@@ -85,7 +80,7 @@ sdk.locations.locationsRetrieve({
   includeRemoteData: false,
   remoteFields: LocationsRetrieveRemoteFields.LocationType,
   showEnumOrigins: LocationsRetrieveShowEnumOrigins.LocationType,
-}, operationSecurity).then((res: LocationsRetrieveResponse) => {
+}).then((res: LocationsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -94,11 +89,10 @@ sdk.locations.locationsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.LocationsRetrieveRequest](../../models/operations/locationsretrieverequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.LocationsRetrieveSecurity](../../models/operations/locationsretrievesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.LocationsRetrieveRequest](../../models/operations/locationsretrieverequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response

@@ -21,7 +21,6 @@ export class AvailableActions {
      */
     async availableActionsRetrieve(
         req: operations.AvailableActionsRetrieveRequest,
-        security: operations.AvailableActionsRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.AvailableActionsRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class AvailableActions {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/available-actions";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.AvailableActionsRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

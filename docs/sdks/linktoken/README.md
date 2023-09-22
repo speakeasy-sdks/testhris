@@ -12,13 +12,14 @@ Creates a link token to be used when linking a new end user.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkTokenCreateResponse, LinkTokenCreateSecurity } from "HRIS/dist/sdk/models/operations";
+import { LinkTokenCreateResponse } from "HRIS/dist/sdk/models/operations";
 import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: LinkTokenCreateSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.linkToken.linkTokenCreate({
   categories: [
@@ -41,7 +42,7 @@ sdk.linkToken.linkTokenCreate({
   integration: "excepturi",
   linkExpiryMins: 972920,
   shouldCreateMagicLinkUrl: false,
-}, operationSecurity).then((res: LinkTokenCreateResponse) => {
+}).then((res: LinkTokenCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -50,11 +51,10 @@ sdk.linkToken.linkTokenCreate({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [shared.EndUserDetailsRequest](../../models/shared/enduserdetailsrequest.md)             | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.LinkTokenCreateSecurity](../../models/operations/linktokencreatesecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [shared.EndUserDetailsRequest](../../models/shared/enduserdetailsrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response

@@ -4,6 +4,7 @@
 
 import * as utils from "../internal/utils";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -19,7 +20,6 @@ export class DeleteAccount {
      */
     async deleteAccountCreate(
         req: operations.DeleteAccountCreateRequest,
-        security: operations.DeleteAccountCreateSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.DeleteAccountCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -32,10 +32,14 @@ export class DeleteAccount {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/delete-account";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.DeleteAccountCreateSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

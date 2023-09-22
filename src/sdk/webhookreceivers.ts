@@ -21,7 +21,6 @@ export class WebhookReceivers {
      */
     async webhookReceiversCreate(
         req: operations.WebhookReceiversCreateRequest,
-        security: operations.WebhookReceiversCreateSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.WebhookReceiversCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -48,10 +47,14 @@ export class WebhookReceivers {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.WebhookReceiversCreateSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -114,7 +117,6 @@ export class WebhookReceivers {
      */
     async webhookReceiversList(
         req: operations.WebhookReceiversListRequest,
-        security: operations.WebhookReceiversListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.WebhookReceiversListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -127,10 +129,14 @@ export class WebhookReceivers {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/webhook-receivers";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.WebhookReceiversListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

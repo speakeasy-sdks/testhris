@@ -18,20 +18,19 @@ yarn add https://github.com/speakeasy-sdks/testhris
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Hris } from "HRIS";
-import { AccountDetailsRetrieveResponse, AccountDetailsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { AccountDetailsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: AccountDetailsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.accountDetails.accountDetailsRetrieve({
-  xAccountToken: "corrupti",
-}, operationSecurity).then((res: AccountDetailsRetrieveResponse) => {
+  xAccountToken: "provident",
+}).then((res: AccountDetailsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -177,6 +176,32 @@ sdk.accountDetails.accountDetailsRetrieve({
 * [webhookReceiversCreate](docs/sdks/webhookreceivers/README.md#webhookreceiverscreate) - Creates a `WebhookReceiver` object with the given values.
 * [webhookReceiversList](docs/sdks/webhookreceivers/README.md#webhookreceiverslist) - Returns a list of `WebhookReceiver` objects.
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `next` method that can be called to pull down the next group of results. If the
+return value of `next` is `null`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

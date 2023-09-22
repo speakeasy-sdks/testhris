@@ -14,16 +14,17 @@ Get a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncConfigurationsListResponse, SelectiveSyncConfigurationsListSecurity } from "HRIS/dist/sdk/models/operations";
+import { SelectiveSyncConfigurationsListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: SelectiveSyncConfigurationsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.selectiveSync.selectiveSyncConfigurationsList({
   xAccountToken: "ex",
-}, operationSecurity).then((res: SelectiveSyncConfigurationsListResponse) => {
+}).then((res: SelectiveSyncConfigurationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -32,11 +33,10 @@ sdk.selectiveSync.selectiveSyncConfigurationsList({
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.SelectiveSyncConfigurationsListRequest](../../models/operations/selectivesyncconfigurationslistrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.SelectiveSyncConfigurationsListSecurity](../../models/operations/selectivesyncconfigurationslistsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.SelectiveSyncConfigurationsListRequest](../../models/operations/selectivesyncconfigurationslistrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
@@ -52,15 +52,13 @@ Replace a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  SelectiveSyncConfigurationsUpdateResponse,
-  SelectiveSyncConfigurationsUpdateSecurity,
-} from "HRIS/dist/sdk/models/operations";
+import { SelectiveSyncConfigurationsUpdateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: SelectiveSyncConfigurationsUpdateSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
   linkedAccountSelectiveSyncConfigurationListRequest: {
@@ -77,7 +75,7 @@ sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
     ],
   },
   xAccountToken: "aut",
-}, operationSecurity).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
+}).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -86,11 +84,10 @@ sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.SelectiveSyncConfigurationsUpdateRequest](../../models/operations/selectivesyncconfigurationsupdaterequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.SelectiveSyncConfigurationsUpdateSecurity](../../models/operations/selectivesyncconfigurationsupdatesecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.SelectiveSyncConfigurationsUpdateRequest](../../models/operations/selectivesyncconfigurationsupdaterequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
@@ -106,19 +103,20 @@ Get metadata for the conditions available to a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncMetaListResponse, SelectiveSyncMetaListSecurity } from "HRIS/dist/sdk/models/operations";
+import { SelectiveSyncMetaListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: SelectiveSyncMetaListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.selectiveSync.selectiveSyncMetaList({
   xAccountToken: "dignissimos",
   commonModel: "dicta",
   cursor: "maiores",
   pageSize: 618480,
-}, operationSecurity).then((res: SelectiveSyncMetaListResponse) => {
+}).then((res: SelectiveSyncMetaListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -127,11 +125,10 @@ sdk.selectiveSync.selectiveSyncMetaList({
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.SelectiveSyncMetaListRequest](../../models/operations/selectivesyncmetalistrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.SelectiveSyncMetaListSecurity](../../models/operations/selectivesyncmetalistsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.SelectiveSyncMetaListRequest](../../models/operations/selectivesyncmetalistrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response

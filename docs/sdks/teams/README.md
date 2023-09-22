@@ -13,12 +13,13 @@ Returns a list of `Team` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsListExpand, TeamsListResponse, TeamsListSecurity } from "HRIS/dist/sdk/models/operations";
+import { TeamsListExpand, TeamsListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TeamsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.teams.teamsList({
   xAccountToken: "asperiores",
@@ -33,7 +34,7 @@ sdk.teams.teamsList({
   pageSize: 989410,
   parentTeamId: "nemo",
   remoteId: "quae",
-}, operationSecurity).then((res: TeamsListResponse) => {
+}).then((res: TeamsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,11 +43,10 @@ sdk.teams.teamsList({
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.TeamsListRequest](../../models/operations/teamslistrequest.md)   | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `security`                                                                   | [operations.TeamsListSecurity](../../models/operations/teamslistsecurity.md) | :heavy_check_mark:                                                           | The security requirements to use for the request.                            |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.TeamsListRequest](../../models/operations/teamslistrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
 
 
 ### Response
@@ -62,19 +62,20 @@ Returns a `Team` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsRetrieveExpand, TeamsRetrieveResponse, TeamsRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { TeamsRetrieveExpand, TeamsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TeamsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.teams.teamsRetrieve({
   xAccountToken: "quaerat",
   expand: TeamsRetrieveExpand.ParentTeam,
   id: "cc413aa6-3aae-48d6-b864-dbb675fd5e60",
   includeRemoteData: false,
-}, operationSecurity).then((res: TeamsRetrieveResponse) => {
+}).then((res: TeamsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,11 +84,10 @@ sdk.teams.teamsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.TeamsRetrieveRequest](../../models/operations/teamsretrieverequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.TeamsRetrieveSecurity](../../models/operations/teamsretrievesecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.TeamsRetrieveRequest](../../models/operations/teamsretrieverequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response

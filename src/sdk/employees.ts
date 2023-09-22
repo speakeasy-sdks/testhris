@@ -21,7 +21,6 @@ export class Employees {
      */
     async employeesCreate(
         req: operations.EmployeesCreateRequest,
-        security: operations.EmployeesCreateSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -48,10 +47,14 @@ export class Employees {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesCreateSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -114,7 +117,6 @@ export class Employees {
      */
     async employeesIgnoreCreateForm(
         req: operations.EmployeesIgnoreCreateFormRequest,
-        security: operations.EmployeesIgnoreCreateFormSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesIgnoreCreateFormResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -141,10 +143,14 @@ export class Employees {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesIgnoreCreateFormSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -193,7 +199,6 @@ export class Employees {
      */
     async employeesIgnoreCreateJson(
         req: operations.EmployeesIgnoreCreateJsonRequest,
-        security: operations.EmployeesIgnoreCreateJsonSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesIgnoreCreateJsonResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -220,10 +225,14 @@ export class Employees {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesIgnoreCreateJsonSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -272,7 +281,6 @@ export class Employees {
      */
     async employeesIgnoreCreateMultipart(
         req: operations.EmployeesIgnoreCreateMultipartRequest,
-        security: operations.EmployeesIgnoreCreateMultipartSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesIgnoreCreateMultipartResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -299,10 +307,14 @@ export class Employees {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesIgnoreCreateMultipartSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -351,7 +363,6 @@ export class Employees {
      */
     async employeesList(
         req: operations.EmployeesListRequest,
-        security: operations.EmployeesListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -364,10 +375,14 @@ export class Employees {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/employees";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -427,7 +442,6 @@ export class Employees {
      */
     async employeesMetaPostRetrieve(
         req: operations.EmployeesMetaPostRetrieveRequest,
-        security: operations.EmployeesMetaPostRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesMetaPostRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -440,10 +454,14 @@ export class Employees {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/employees/meta/post";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesMetaPostRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -503,7 +521,6 @@ export class Employees {
      */
     async employeesRetrieve(
         req: operations.EmployeesRetrieveRequest,
-        security: operations.EmployeesRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.EmployeesRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -516,10 +533,14 @@ export class Employees {
         );
         const url: string = utils.generateURL(baseURL, "/employees/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.EmployeesRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

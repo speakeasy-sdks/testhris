@@ -18,14 +18,14 @@ import {
   EmploymentsListOrderBy,
   EmploymentsListRemoteFields,
   EmploymentsListResponse,
-  EmploymentsListSecurity,
   EmploymentsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmploymentsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employments.employmentsList({
   xAccountToken: "quaerat",
@@ -43,7 +43,7 @@ sdk.employments.employmentsList({
   remoteFields: EmploymentsListRemoteFields.EmploymentTypeFlsaStatusPayFrequencyPayPeriod,
   remoteId: "tempore",
   showEnumOrigins: EmploymentsListShowEnumOrigins.PayFrequencyPayPeriod,
-}, operationSecurity).then((res: EmploymentsListResponse) => {
+}).then((res: EmploymentsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -52,11 +52,10 @@ sdk.employments.employmentsList({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.EmploymentsListRequest](../../models/operations/employmentslistrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.EmploymentsListSecurity](../../models/operations/employmentslistsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.EmploymentsListRequest](../../models/operations/employmentslistrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
@@ -76,14 +75,14 @@ import {
   EmploymentsRetrieveExpand,
   EmploymentsRetrieveRemoteFields,
   EmploymentsRetrieveResponse,
-  EmploymentsRetrieveSecurity,
   EmploymentsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmploymentsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employments.employmentsRetrieve({
   xAccountToken: "numquam",
@@ -92,7 +91,7 @@ sdk.employments.employmentsRetrieve({
   includeRemoteData: false,
   remoteFields: EmploymentsRetrieveRemoteFields.PayFrequency,
   showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.EmploymentTypeFlsaStatusPayFrequency,
-}, operationSecurity).then((res: EmploymentsRetrieveResponse) => {
+}).then((res: EmploymentsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -101,11 +100,10 @@ sdk.employments.employmentsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.EmploymentsRetrieveRequest](../../models/operations/employmentsretrieverequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.EmploymentsRetrieveSecurity](../../models/operations/employmentsretrievesecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.EmploymentsRetrieveRequest](../../models/operations/employmentsretrieverequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
 
 
 ### Response

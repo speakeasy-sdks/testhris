@@ -6,13 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class PassthroughCreateMultipartSecurity extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        data: "security, scheme=true;type=apiKey;subtype=header;name=Authorization",
-    })
-    tokenAuth: string;
-}
-
 export class PassthroughCreateMultipartRequest extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" })
     dataPassthroughRequest3: shared.DataPassthroughRequest3;

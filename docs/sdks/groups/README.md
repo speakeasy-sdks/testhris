@@ -13,17 +13,13 @@ Returns a list of `Group` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  GroupsListRemoteFields,
-  GroupsListResponse,
-  GroupsListSecurity,
-  GroupsListShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { GroupsListRemoteFields, GroupsListResponse, GroupsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: GroupsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.groups.groupsList({
   xAccountToken: "fugit",
@@ -39,7 +35,7 @@ sdk.groups.groupsList({
   remoteId: "et",
   showEnumOrigins: GroupsListShowEnumOrigins.Type,
   types: "saepe",
-}, operationSecurity).then((res: GroupsListResponse) => {
+}).then((res: GroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -48,11 +44,10 @@ sdk.groups.groupsList({
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GroupsListRequest](../../models/operations/groupslistrequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.GroupsListSecurity](../../models/operations/groupslistsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GroupsListRequest](../../models/operations/groupslistrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response
@@ -71,14 +66,14 @@ import { Hris } from "HRIS";
 import {
   GroupsRetrieveRemoteFields,
   GroupsRetrieveResponse,
-  GroupsRetrieveSecurity,
   GroupsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: GroupsRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.groups.groupsRetrieve({
   xAccountToken: "ipsum",
@@ -86,7 +81,7 @@ sdk.groups.groupsRetrieve({
   includeRemoteData: false,
   remoteFields: GroupsRetrieveRemoteFields.Type,
   showEnumOrigins: GroupsRetrieveShowEnumOrigins.Type,
-}, operationSecurity).then((res: GroupsRetrieveResponse) => {
+}).then((res: GroupsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -95,11 +90,10 @@ sdk.groups.groupsRetrieve({
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GroupsRetrieveRequest](../../models/operations/groupsretrieverequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.GroupsRetrieveSecurity](../../models/operations/groupsretrievesecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GroupsRetrieveRequest](../../models/operations/groupsretrieverequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response

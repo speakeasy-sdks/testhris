@@ -13,12 +13,13 @@ Gets issues.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesListResponse, IssuesListSecurity, IssuesListStatus } from "HRIS/dist/sdk/models/operations";
+import { IssuesListResponse, IssuesListStatus } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: IssuesListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.issues.issuesList({
   accountToken: "quisquam",
@@ -34,7 +35,7 @@ sdk.issues.issuesList({
   pageSize: 486160,
   startDate: "similique",
   status: IssuesListStatus.Resolved,
-}, operationSecurity).then((res: IssuesListResponse) => {
+}).then((res: IssuesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -43,11 +44,10 @@ sdk.issues.issuesList({
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.IssuesListRequest](../../models/operations/issueslistrequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `security`                                                                     | [operations.IssuesListSecurity](../../models/operations/issueslistsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.IssuesListRequest](../../models/operations/issueslistrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
 
 
 ### Response
@@ -63,16 +63,17 @@ Get a specific issue.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesRetrieveResponse, IssuesRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { IssuesRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: IssuesRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.issues.issuesRetrieve({
   id: "d74dd39c-0f5d-42cf-b7c7-0a45626d4368",
-}, operationSecurity).then((res: IssuesRetrieveResponse) => {
+}).then((res: IssuesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -81,11 +82,10 @@ sdk.issues.issuesRetrieve({
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.IssuesRetrieveRequest](../../models/operations/issuesretrieverequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.IssuesRetrieveSecurity](../../models/operations/issuesretrievesecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
-| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.IssuesRetrieveRequest](../../models/operations/issuesretrieverequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response

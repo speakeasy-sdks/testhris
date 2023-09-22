@@ -21,7 +21,6 @@ export class TimeOff {
      */
     async timeOffCreate(
         req: operations.TimeOffCreateRequest,
-        security: operations.TimeOffCreateSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.TimeOffCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -48,10 +47,14 @@ export class TimeOff {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.TimeOffCreateSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -114,7 +117,6 @@ export class TimeOff {
      */
     async timeOffList(
         req: operations.TimeOffListRequest,
-        security: operations.TimeOffListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.TimeOffListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -127,10 +129,14 @@ export class TimeOff {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/time-off";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.TimeOffListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -190,7 +196,6 @@ export class TimeOff {
      */
     async timeOffMetaPostRetrieve(
         req: operations.TimeOffMetaPostRetrieveRequest,
-        security: operations.TimeOffMetaPostRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.TimeOffMetaPostRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -203,10 +208,14 @@ export class TimeOff {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/time-off/meta/post";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.TimeOffMetaPostRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -266,7 +275,6 @@ export class TimeOff {
      */
     async timeOffRetrieve(
         req: operations.TimeOffRetrieveRequest,
-        security: operations.TimeOffRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.TimeOffRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -279,10 +287,14 @@ export class TimeOff {
         );
         const url: string = utils.generateURL(baseURL, "/time-off/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.TimeOffRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

@@ -21,7 +21,6 @@ export class Locations {
      */
     async locationsList(
         req: operations.LocationsListRequest,
-        security: operations.LocationsListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.LocationsListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class Locations {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/locations";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.LocationsListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -97,7 +100,6 @@ export class Locations {
      */
     async locationsRetrieve(
         req: operations.LocationsRetrieveRequest,
-        security: operations.LocationsRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.LocationsRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -110,10 +112,14 @@ export class Locations {
         );
         const url: string = utils.generateURL(baseURL, "/locations/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.LocationsRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

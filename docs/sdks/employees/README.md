@@ -18,7 +18,7 @@ Creates an `Employee` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesCreateResponse, EmployeesCreateSecurity } from "HRIS/dist/sdk/models/operations";
+import { EmployeesCreateResponse } from "HRIS/dist/sdk/models/operations";
 import {
   EmployeeRequestEmploymentStatus,
   EmployeeRequestEthnicity,
@@ -26,10 +26,11 @@ import {
   EmployeeRequestMaritalStatus,
 } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesCreateSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesCreate({
   employeeEndpointRequest: {
@@ -41,22 +42,22 @@ sdk.employees.employeesCreate({
       employeeNumber: "2",
       employmentStatus: EmployeeRequestEmploymentStatus.Inactive,
       employments: [
-        "02a94bb4-f63c-4969-a9a3-efa77dfb14cd",
+        "2a94bb4f-63c9-469e-9a3e-fa77dfb14cd6",
       ],
       ethnicity: EmployeeRequestEthnicity.White,
       firstName: "Greg",
       gender: EmployeeRequestGender.Male,
       groups: [
-        "66ae395e-fb9b-4a88-b3a6-6997074ba446",
+        "6ae395ef-b9ba-488f-ba66-997074ba4469",
       ],
       hireDate: new Date("2020-10-10T00:00:00Z"),
       homeLocation: "d2f972d0-2526-434b-9409-4c3b468e08f0",
       integrationParams: {
-        "natus": "nobis",
+        "nobis": "eum",
       },
       lastName: "Hirsch",
       linkedAccountParams: {
-        "eum": "vero",
+        "vero": "aspernatur",
       },
       manager: "0048ea5b-911e-4dff-9364-92070dea62ff",
       maritalStatus: EmployeeRequestMaritalStatus.Single,
@@ -72,10 +73,10 @@ sdk.employees.employeesCreate({
       workLocation: "9efbc633-3387-4306-aa55-e2c635e6bb4f",
     },
   },
-  xAccountToken: "aspernatur",
+  xAccountToken: "architecto",
   isDebugMode: false,
   runAsync: false,
-}, operationSecurity).then((res: EmployeesCreateResponse) => {
+}).then((res: EmployeesCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -84,11 +85,10 @@ sdk.employees.employeesCreate({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.EmployeesCreateRequest](../../models/operations/employeescreaterequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.EmployeesCreateSecurity](../../models/operations/employeescreatesecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.EmployeesCreateRequest](../../models/operations/employeescreaterequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
@@ -104,21 +104,22 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateFormResponse, EmployeesIgnoreCreateFormSecurity } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateFormResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesIgnoreCreateFormSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesIgnoreCreateForm({
   ignoreCommonModelRequest2: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "architecto",
+    reason: "magnam",
   },
-  xAccountToken: "magnam",
-  modelId: "1959890a-fa56-43e2-916f-e4c8b711e5b7",
-}, operationSecurity).then((res: EmployeesIgnoreCreateFormResponse) => {
+  xAccountToken: "et",
+  modelId: "959890af-a563-4e25-96fe-4c8b711e5b7f",
+}).then((res: EmployeesIgnoreCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -127,11 +128,10 @@ sdk.employees.employeesIgnoreCreateForm({
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.EmployeesIgnoreCreateFormRequest](../../models/operations/employeesignorecreateformrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.EmployeesIgnoreCreateFormSecurity](../../models/operations/employeesignorecreateformsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.EmployeesIgnoreCreateFormRequest](../../models/operations/employeesignorecreateformrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
@@ -147,22 +147,23 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateJsonResponse, EmployeesIgnoreCreateJsonSecurity } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateJsonResponse } from "HRIS/dist/sdk/models/operations";
 import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesIgnoreCreateJsonSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesIgnoreCreateJson({
   ignoreCommonModelRequest: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
     reason: IgnoreCommonModelRequestReason.GeneralCustomerRequest,
   },
-  xAccountToken: "repellat",
-  modelId: "d2ed0289-21cd-4dc6-9260-1fb576b0d5f0",
-}, operationSecurity).then((res: EmployeesIgnoreCreateJsonResponse) => {
+  xAccountToken: "quibusdam",
+  modelId: "2ed02892-1cdd-4c69-a601-fb576b0d5f0d",
+}).then((res: EmployeesIgnoreCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -171,11 +172,10 @@ sdk.employees.employeesIgnoreCreateJson({
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.EmployeesIgnoreCreateJsonRequest](../../models/operations/employeesignorecreatejsonrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.EmployeesIgnoreCreateJsonSecurity](../../models/operations/employeesignorecreatejsonsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.EmployeesIgnoreCreateJsonRequest](../../models/operations/employeesignorecreatejsonrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
@@ -191,21 +191,22 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesIgnoreCreateMultipartResponse, EmployeesIgnoreCreateMultipartSecurity } from "HRIS/dist/sdk/models/operations";
+import { EmployeesIgnoreCreateMultipartResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesIgnoreCreateMultipartSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesIgnoreCreateMultipart({
   ignoreCommonModelRequest2: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "fugiat",
+    reason: "amet",
   },
-  xAccountToken: "amet",
-  modelId: "0c5fbb25-8705-4320-ac73-d5fe9b90c289",
-}, operationSecurity).then((res: EmployeesIgnoreCreateMultipartResponse) => {
+  xAccountToken: "aut",
+  modelId: "c5fbb258-7053-4202-873d-5fe9b90c2890",
+}).then((res: EmployeesIgnoreCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -214,11 +215,10 @@ sdk.employees.employeesIgnoreCreateMultipart({
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.EmployeesIgnoreCreateMultipartRequest](../../models/operations/employeesignorecreatemultipartrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.EmployeesIgnoreCreateMultipartSecurity](../../models/operations/employeesignorecreatemultipartsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.EmployeesIgnoreCreateMultipartRequest](../../models/operations/employeesignorecreatemultipartrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
@@ -239,36 +239,36 @@ import {
   EmployeesListExpand,
   EmployeesListRemoteFields,
   EmployeesListResponse,
-  EmployeesListSecurity,
   EmployeesListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesList({
-  xAccountToken: "eaque",
-  companyId: "occaecati",
-  createdAfter: new Date("2022-07-11T08:07:03.616Z"),
-  createdBefore: new Date("2020-03-14T00:51:21.656Z"),
-  cursor: "modi",
-  displayFullName: "iste",
-  employmentStatus: EmployeesListEmploymentStatus.Pending,
-  expand: EmployeesListExpand.GroupsHomeLocationManager,
-  firstName: "Sam",
-  groups: "provident",
+  xAccountToken: "occaecati",
+  companyId: "rerum",
+  createdAfter: new Date("2022-01-03T18:36:27.259Z"),
+  createdBefore: new Date("2022-03-14T08:20:25.450Z"),
+  cursor: "iste",
+  displayFullName: "dolorum",
+  employmentStatus: EmployeesListEmploymentStatus.Inactive,
+  expand: EmployeesListExpand.HomeLocationWorkLocationManagerTeamPayGroup,
+  firstName: "Lambert",
+  groups: "nobis",
   includeDeletedData: false,
   includeRemoteData: false,
   includeSensitiveFields: false,
-  lastName: "Rolfson",
-  managerId: "libero",
-  modifiedAfter: new Date("2022-01-24T10:05:07.174Z"),
-  modifiedBefore: new Date("2022-03-16T07:10:00.236Z"),
-  pageSize: 212390,
-  payGroupId: "dolorem",
-  personalEmail: "Christy_Erdman73@gmail.com",
+  lastName: "Renner",
+  managerId: "delectus",
+  modifiedAfter: new Date("2022-06-12T16:50:10.090Z"),
+  modifiedBefore: new Date("2022-10-15T11:27:32.342Z"),
+  pageSize: 209843,
+  payGroupId: "dolor",
+  personalEmail: "Dagmar_Welch@gmail.com",
   remoteFields: EmployeesListRemoteFields.EmploymentStatusGenderMaritalStatus,
   remoteId: "dignissimos",
   showEnumOrigins: EmployeesListShowEnumOrigins.MaritalStatus,
@@ -279,7 +279,7 @@ sdk.employees.employeesList({
   terminatedBefore: new Date("2022-09-09T04:40:04.540Z"),
   workEmail: "Maurine_Wolf@hotmail.com",
   workLocationId: "eos",
-}, operationSecurity).then((res: EmployeesListResponse) => {
+}).then((res: EmployeesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -288,11 +288,10 @@ sdk.employees.employeesList({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.EmployeesListRequest](../../models/operations/employeeslistrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.EmployeesListSecurity](../../models/operations/employeeslistsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.EmployeesListRequest](../../models/operations/employeeslistrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -308,16 +307,17 @@ Returns metadata for `Employee` POSTs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeesMetaPostRetrieveResponse, EmployeesMetaPostRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { EmployeesMetaPostRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesMetaPostRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesMetaPostRetrieve({
   xAccountToken: "atque",
-}, operationSecurity).then((res: EmployeesMetaPostRetrieveResponse) => {
+}).then((res: EmployeesMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -326,11 +326,10 @@ sdk.employees.employeesMetaPostRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.EmployeesMetaPostRetrieveRequest](../../models/operations/employeesmetapostretrieverequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.EmployeesMetaPostRetrieveSecurity](../../models/operations/employeesmetapostretrievesecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.EmployeesMetaPostRetrieveRequest](../../models/operations/employeesmetapostretrieverequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
@@ -350,14 +349,14 @@ import {
   EmployeesRetrieveExpand,
   EmployeesRetrieveRemoteFields,
   EmployeesRetrieveResponse,
-  EmployeesRetrieveSecurity,
   EmployeesRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: EmployeesRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.employees.employeesRetrieve({
   xAccountToken: "sit",
@@ -367,7 +366,7 @@ sdk.employees.employeesRetrieve({
   includeSensitiveFields: false,
   remoteFields: EmployeesRetrieveRemoteFields.EmploymentStatus,
   showEnumOrigins: EmployeesRetrieveShowEnumOrigins.GenderMaritalStatus,
-}, operationSecurity).then((res: EmployeesRetrieveResponse) => {
+}).then((res: EmployeesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -376,11 +375,10 @@ sdk.employees.employeesRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.EmployeesRetrieveRequest](../../models/operations/employeesretrieverequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.EmployeesRetrieveSecurity](../../models/operations/employeesretrievesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.EmployeesRetrieveRequest](../../models/operations/employeesretrieverequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `config`                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                               | :heavy_minus_sign:                                                                         | Available config options for making requests.                                              |
 
 
 ### Response

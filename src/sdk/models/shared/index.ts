@@ -70,6 +70,7 @@ export * from "./remotedata";
 export * from "./remotekey";
 export * from "./remotekeyforregenerationrequest";
 export * from "./remoteresponse";
+export * from "./security";
 export * from "./selectivesyncconfigurationsusageenum";
 export * from "./syncstatus";
 export * from "./tax";

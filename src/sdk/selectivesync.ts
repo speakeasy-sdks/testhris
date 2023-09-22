@@ -21,7 +21,6 @@ export class SelectiveSync {
      */
     async selectiveSyncConfigurationsList(
         req: operations.SelectiveSyncConfigurationsListRequest,
-        security: operations.SelectiveSyncConfigurationsListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.SelectiveSyncConfigurationsListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class SelectiveSync {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/selective-sync/configurations";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.SelectiveSyncConfigurationsListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
@@ -100,7 +103,6 @@ export class SelectiveSync {
      */
     async selectiveSyncConfigurationsUpdate(
         req: operations.SelectiveSyncConfigurationsUpdateRequest,
-        security: operations.SelectiveSyncConfigurationsUpdateSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.SelectiveSyncConfigurationsUpdateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -127,10 +129,14 @@ export class SelectiveSync {
             }
         }
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.SelectiveSyncConfigurationsUpdateSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...reqBodyHeaders,
@@ -196,7 +202,6 @@ export class SelectiveSync {
      */
     async selectiveSyncMetaList(
         req: operations.SelectiveSyncMetaListRequest,
-        security: operations.SelectiveSyncMetaListSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.SelectiveSyncMetaListResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -209,10 +214,14 @@ export class SelectiveSync {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/selective-sync/meta";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.SelectiveSyncMetaListSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,

@@ -12,16 +12,13 @@ List linked accounts for your organization.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  LinkedAccountsListCategory,
-  LinkedAccountsListResponse,
-  LinkedAccountsListSecurity,
-} from "HRIS/dist/sdk/models/operations";
+import { LinkedAccountsListCategory, LinkedAccountsListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: LinkedAccountsListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.linkedAccounts.linkedAccountsList({
   category: LinkedAccountsListCategory.Crm,
@@ -37,7 +34,7 @@ sdk.linkedAccounts.linkedAccountsList({
   isTestAccount: "nulla",
   pageSize: 379034,
   status: "libero",
-}, operationSecurity).then((res: LinkedAccountsListResponse) => {
+}).then((res: LinkedAccountsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -46,11 +43,10 @@ sdk.linkedAccounts.linkedAccountsList({
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.LinkedAccountsListRequest](../../models/operations/linkedaccountslistrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.LinkedAccountsListSecurity](../../models/operations/linkedaccountslistsecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.LinkedAccountsListRequest](../../models/operations/linkedaccountslistrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response

@@ -15,13 +15,14 @@ Creates a `TimeOff` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TimeOffCreateResponse, TimeOffCreateSecurity } from "HRIS/dist/sdk/models/operations";
+import { TimeOffCreateResponse } from "HRIS/dist/sdk/models/operations";
 import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffCreateSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOff.timeOffCreate({
   timeOffEndpointRequest: {
@@ -46,7 +47,7 @@ sdk.timeOff.timeOffCreate({
   xAccountToken: "earum",
   isDebugMode: false,
   runAsync: false,
-}, operationSecurity).then((res: TimeOffCreateResponse) => {
+}).then((res: TimeOffCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -55,11 +56,10 @@ sdk.timeOff.timeOffCreate({
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.TimeOffCreateRequest](../../models/operations/timeoffcreaterequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `security`                                                                           | [operations.TimeOffCreateSecurity](../../models/operations/timeoffcreatesecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.TimeOffCreateRequest](../../models/operations/timeoffcreaterequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
@@ -80,15 +80,15 @@ import {
   TimeOffListRemoteFields,
   TimeOffListRequestType,
   TimeOffListResponse,
-  TimeOffListSecurity,
   TimeOffListShowEnumOrigins,
   TimeOffListStatus,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffListSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOff.timeOffList({
   xAccountToken: "facere",
@@ -108,7 +108,7 @@ sdk.timeOff.timeOffList({
   requestType: TimeOffListRequestType.Volunteer,
   showEnumOrigins: TimeOffListShowEnumOrigins.Units,
   status: TimeOffListStatus.Cancelled,
-}, operationSecurity).then((res: TimeOffListResponse) => {
+}).then((res: TimeOffListResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,11 +117,10 @@ sdk.timeOff.timeOffList({
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.TimeOffListRequest](../../models/operations/timeofflistrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `security`                                                                       | [operations.TimeOffListSecurity](../../models/operations/timeofflistsecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.TimeOffListRequest](../../models/operations/timeofflistrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
@@ -137,16 +136,17 @@ Returns metadata for `TimeOff` POSTs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TimeOffMetaPostRetrieveResponse, TimeOffMetaPostRetrieveSecurity } from "HRIS/dist/sdk/models/operations";
+import { TimeOffMetaPostRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffMetaPostRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOff.timeOffMetaPostRetrieve({
   xAccountToken: "corporis",
-}, operationSecurity).then((res: TimeOffMetaPostRetrieveResponse) => {
+}).then((res: TimeOffMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -155,11 +155,10 @@ sdk.timeOff.timeOffMetaPostRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.TimeOffMetaPostRetrieveRequest](../../models/operations/timeoffmetapostretrieverequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.TimeOffMetaPostRetrieveSecurity](../../models/operations/timeoffmetapostretrievesecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.TimeOffMetaPostRetrieveRequest](../../models/operations/timeoffmetapostretrieverequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
@@ -179,14 +178,14 @@ import {
   TimeOffRetrieveExpand,
   TimeOffRetrieveRemoteFields,
   TimeOffRetrieveResponse,
-  TimeOffRetrieveSecurity,
   TimeOffRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris();
-const operationSecurity: TimeOffRetrieveSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.timeOff.timeOffRetrieve({
   xAccountToken: "harum",
@@ -195,7 +194,7 @@ sdk.timeOff.timeOffRetrieve({
   includeRemoteData: false,
   remoteFields: TimeOffRetrieveRemoteFields.RequestTypeUnits,
   showEnumOrigins: TimeOffRetrieveShowEnumOrigins.Units,
-}, operationSecurity).then((res: TimeOffRetrieveResponse) => {
+}).then((res: TimeOffRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -204,11 +203,10 @@ sdk.timeOff.timeOffRetrieve({
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.TimeOffRetrieveRequest](../../models/operations/timeoffretrieverequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.TimeOffRetrieveSecurity](../../models/operations/timeoffretrievesecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.TimeOffRetrieveRequest](../../models/operations/timeoffretrieverequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response

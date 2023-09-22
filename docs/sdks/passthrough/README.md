@@ -14,13 +14,14 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateFormResponse, PassthroughCreateFormSecurity } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateFormResponse } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: PassthroughCreateFormSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.passthrough.passthroughCreateForm({
   dataPassthroughRequest3: {
@@ -44,7 +45,7 @@ sdk.passthrough.passthroughCreateForm({
     requestFormat: "distinctio",
   },
   xAccountToken: "quod",
-}, operationSecurity).then((res: PassthroughCreateFormResponse) => {
+}).then((res: PassthroughCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -53,11 +54,10 @@ sdk.passthrough.passthroughCreateForm({
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PassthroughCreateFormRequest](../../models/operations/passthroughcreateformrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.PassthroughCreateFormSecurity](../../models/operations/passthroughcreateformsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PassthroughCreateFormRequest](../../models/operations/passthroughcreateformrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
@@ -73,17 +73,18 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateJsonResponse, PassthroughCreateJsonSecurity } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateJsonResponse } from "HRIS/dist/sdk/models/operations";
 import {
   DataPassthroughRequestMethod,
   DataPassthroughRequestRequestFormat,
   MultipartFormFieldRequestEncoding,
 } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: PassthroughCreateJsonSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.passthrough.passthroughCreateJson({
   dataPassthroughRequest: {
@@ -107,7 +108,7 @@ sdk.passthrough.passthroughCreateJson({
     requestFormat: DataPassthroughRequestRequestFormat.Json,
   },
   xAccountToken: "totam",
-}, operationSecurity).then((res: PassthroughCreateJsonResponse) => {
+}).then((res: PassthroughCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,11 +117,10 @@ sdk.passthrough.passthroughCreateJson({
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PassthroughCreateJsonRequest](../../models/operations/passthroughcreatejsonrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.PassthroughCreateJsonSecurity](../../models/operations/passthroughcreatejsonsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PassthroughCreateJsonRequest](../../models/operations/passthroughcreatejsonrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
@@ -136,13 +136,14 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateMultipartResponse, PassthroughCreateMultipartSecurity } from "HRIS/dist/sdk/models/operations";
+import { PassthroughCreateMultipartResponse } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris();
-const operationSecurity: PassthroughCreateMultipartSecurity = {
-  tokenAuth: "",
-};
+const sdk = new Hris({
+  security: {
+    tokenAuth: "",
+  },
+});
 
 sdk.passthrough.passthroughCreateMultipart({
   dataPassthroughRequest3: {
@@ -166,7 +167,7 @@ sdk.passthrough.passthroughCreateMultipart({
     requestFormat: "commodi",
   },
   xAccountToken: "sapiente",
-}, operationSecurity).then((res: PassthroughCreateMultipartResponse) => {
+}).then((res: PassthroughCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -175,11 +176,10 @@ sdk.passthrough.passthroughCreateMultipart({
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PassthroughCreateMultipartRequest](../../models/operations/passthroughcreatemultipartrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.PassthroughCreateMultipartSecurity](../../models/operations/passthroughcreatemultipartsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.PassthroughCreateMultipartRequest](../../models/operations/passthroughcreatemultipartrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response

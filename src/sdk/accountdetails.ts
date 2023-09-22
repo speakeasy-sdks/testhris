@@ -21,7 +21,6 @@ export class AccountDetails {
      */
     async accountDetailsRetrieve(
         req: operations.AccountDetailsRetrieveRequest,
-        security: operations.AccountDetailsRetrieveSecurity,
         config?: AxiosRequestConfig
     ): Promise<operations.AccountDetailsRetrieveResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
@@ -34,10 +33,14 @@ export class AccountDetails {
         );
         const url: string = baseURL.replace(/\/$/, "") + "/account-details";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        if (!(security instanceof utils.SpeakeasyBase)) {
-            security = new operations.AccountDetailsRetrieveSecurity(security);
+        let globalSecurity = this.sdkConfiguration.security;
+        if (typeof globalSecurity === "function") {
+            globalSecurity = await globalSecurity();
         }
-        const properties = utils.parseSecurityProperties(security);
+        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
+            globalSecurity = new shared.Security(globalSecurity);
+        }
+        const properties = utils.parseSecurityProperties(globalSecurity);
         const headers: RawAxiosRequestHeaders = {
             ...utils.getHeadersFromRequest(req),
             ...config?.headers,
