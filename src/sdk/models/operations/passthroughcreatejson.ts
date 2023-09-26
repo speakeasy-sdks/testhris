@@ -18,15 +18,24 @@ export class PassthroughCreateJsonRequest extends SpeakeasyBase {
 }
 
 export class PassthroughCreateJsonResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
     @SpeakeasyMetadata()
     remoteResponse?: shared.RemoteResponse;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }

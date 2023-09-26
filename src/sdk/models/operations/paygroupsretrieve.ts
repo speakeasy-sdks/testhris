@@ -24,15 +24,24 @@ export class PayGroupsRetrieveRequest extends SpeakeasyBase {
 }
 
 export class PayGroupsRetrieveResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
     @SpeakeasyMetadata()
     payGroup?: shared.PayGroup;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }

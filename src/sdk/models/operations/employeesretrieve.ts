@@ -353,15 +353,24 @@ export class EmployeesRetrieveRequest extends SpeakeasyBase {
 }
 
 export class EmployeesRetrieveResponse extends SpeakeasyBase {
+    /**
+     * HTTP response content type for this operation
+     */
     @SpeakeasyMetadata()
     contentType: string;
 
     @SpeakeasyMetadata()
     employee?: shared.Employee;
 
+    /**
+     * HTTP response status code for this operation
+     */
     @SpeakeasyMetadata()
     statusCode: number;
 
+    /**
+     * Raw HTTP response; suitable for custom response parsing
+     */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
 }
