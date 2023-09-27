@@ -42,43 +42,43 @@ sdk.accountDetails.accountDetailsRetrieve({
 ## Available Resources and Operations
 
 
-### [AccountDetails](docs/sdks/accountdetails/README.md)
+### [accountDetails](docs/sdks/accountdetails/README.md)
 
 * [accountDetailsRetrieve](docs/sdks/accountdetails/README.md#accountdetailsretrieve) - Get details for a linked account.
 
-### [AccountToken](docs/sdks/accounttoken/README.md)
+### [accountToken](docs/sdks/accounttoken/README.md)
 
 * [accountTokenRetrieve](docs/sdks/accounttoken/README.md#accounttokenretrieve) - Returns the account token for the end user with the provided public token.
 
-### [AvailableActions](docs/sdks/availableactions/README.md)
+### [availableActions](docs/sdks/availableactions/README.md)
 
 * [availableActionsRetrieve](docs/sdks/availableactions/README.md#availableactionsretrieve) - Returns a list of models and actions available for an account.
 
-### [BankInfo](docs/sdks/bankinfo/README.md)
+### [bankInfo](docs/sdks/bankinfo/README.md)
 
 * [bankInfoList](docs/sdks/bankinfo/README.md#bankinfolist) - Returns a list of `BankInfo` objects.
 * [bankInfoRetrieve](docs/sdks/bankinfo/README.md#bankinforetrieve) - Returns a `BankInfo` object with the given `id`.
 
-### [Benefits](docs/sdks/benefits/README.md)
+### [benefits](docs/sdks/benefits/README.md)
 
 * [benefitsList](docs/sdks/benefits/README.md#benefitslist) - Returns a list of `Benefit` objects.
 * [benefitsRetrieve](docs/sdks/benefits/README.md#benefitsretrieve) - Returns a `Benefit` object with the given `id`.
 
-### [Companies](docs/sdks/companies/README.md)
+### [companies](docs/sdks/companies/README.md)
 
 * [companiesList](docs/sdks/companies/README.md#companieslist) - Returns a list of `Company` objects.
 * [companiesRetrieve](docs/sdks/companies/README.md#companiesretrieve) - Returns a `Company` object with the given `id`.
 
-### [DeleteAccount](docs/sdks/deleteaccount/README.md)
+### [deleteAccount](docs/sdks/deleteaccount/README.md)
 
 * [deleteAccountCreate](docs/sdks/deleteaccount/README.md#deleteaccountcreate) - Delete a linked account.
 
-### [EmployeePayrollRuns](docs/sdks/employeepayrollruns/README.md)
+### [employeePayrollRuns](docs/sdks/employeepayrollruns/README.md)
 
 * [employeePayrollRunsList](docs/sdks/employeepayrollruns/README.md#employeepayrollrunslist) - Returns a list of `EmployeePayrollRun` objects.
 * [employeePayrollRunsRetrieve](docs/sdks/employeepayrollruns/README.md#employeepayrollrunsretrieve) - Returns an `EmployeePayrollRun` object with the given `id`.
 
-### [Employees](docs/sdks/employees/README.md)
+### [employees](docs/sdks/employees/README.md)
 
 * [employeesCreate](docs/sdks/employees/README.md#employeescreate) - Creates an `Employee` object with the given values.
 * [employeesIgnoreCreateForm](docs/sdks/employees/README.md#employeesignorecreateform) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
@@ -88,90 +88,90 @@ sdk.accountDetails.accountDetailsRetrieve({
 * [employeesMetaPostRetrieve](docs/sdks/employees/README.md#employeesmetapostretrieve) - Returns metadata for `Employee` POSTs.
 * [employeesRetrieve](docs/sdks/employees/README.md#employeesretrieve) - Returns an `Employee` object with the given `id`.
 
-### [Employments](docs/sdks/employments/README.md)
+### [employments](docs/sdks/employments/README.md)
 
 * [employmentsList](docs/sdks/employments/README.md#employmentslist) - Returns a list of `Employment` objects.
 * [employmentsRetrieve](docs/sdks/employments/README.md#employmentsretrieve) - Returns an `Employment` object with the given `id`.
 
-### [ForceResync](docs/sdks/forceresync/README.md)
+### [forceResync](docs/sdks/forceresync/README.md)
 
 * [syncStatusResyncCreate](docs/sdks/forceresync/README.md#syncstatusresynccreate) - Force re-sync of all models. This is available for all organizations via the dashboard. Force re-sync is also available programmatically via API for monthly, quarterly, and highest sync frequency customers on the Core, Professional, or Enterprise plans. Doing so will consume a sync credit for the relevant linked account.
 
-### [GenerateKey](docs/sdks/generatekey/README.md)
+### [generateKey](docs/sdks/generatekey/README.md)
 
 * [generateKeyCreate](docs/sdks/generatekey/README.md#generatekeycreate) - Create a remote key.
 
-### [Groups](docs/sdks/groups/README.md)
+### [groups](docs/sdks/groups/README.md)
 
 * [groupsList](docs/sdks/groups/README.md#groupslist) - Returns a list of `Group` objects.
 * [groupsRetrieve](docs/sdks/groups/README.md#groupsretrieve) - Returns a `Group` object with the given `id`.
 
-### [Issues](docs/sdks/issues/README.md)
+### [issues](docs/sdks/issues/README.md)
 
 * [issuesList](docs/sdks/issues/README.md#issueslist) - Gets issues.
 * [issuesRetrieve](docs/sdks/issues/README.md#issuesretrieve) - Get a specific issue.
 
-### [LinkToken](docs/sdks/linktoken/README.md)
+### [linkToken](docs/sdks/linktoken/README.md)
 
 * [linkTokenCreate](docs/sdks/linktoken/README.md#linktokencreate) - Creates a link token to be used when linking a new end user.
 
-### [LinkedAccounts](docs/sdks/linkedaccounts/README.md)
+### [linkedAccounts](docs/sdks/linkedaccounts/README.md)
 
 * [linkedAccountsList](docs/sdks/linkedaccounts/README.md#linkedaccountslist) - List linked accounts for your organization.
 
-### [Locations](docs/sdks/locations/README.md)
+### [locations](docs/sdks/locations/README.md)
 
 * [locationsList](docs/sdks/locations/README.md#locationslist) - Returns a list of `Location` objects.
 * [locationsRetrieve](docs/sdks/locations/README.md#locationsretrieve) - Returns a `Location` object with the given `id`.
 
-### [Passthrough](docs/sdks/passthrough/README.md)
+### [passthrough](docs/sdks/passthrough/README.md)
 
 * [passthroughCreateForm](docs/sdks/passthrough/README.md#passthroughcreateform) - Pull data from an endpoint not currently supported by Merge.
 * [passthroughCreateJson](docs/sdks/passthrough/README.md#passthroughcreatejson) - Pull data from an endpoint not currently supported by Merge.
 * [passthroughCreateMultipart](docs/sdks/passthrough/README.md#passthroughcreatemultipart) - Pull data from an endpoint not currently supported by Merge.
 
-### [PayGroups](docs/sdks/paygroups/README.md)
+### [payGroups](docs/sdks/paygroups/README.md)
 
 * [payGroupsList](docs/sdks/paygroups/README.md#paygroupslist) - Returns a list of `PayGroup` objects.
 * [payGroupsRetrieve](docs/sdks/paygroups/README.md#paygroupsretrieve) - Returns a `PayGroup` object with the given `id`.
 
-### [PayrollRuns](docs/sdks/payrollruns/README.md)
+### [payrollRuns](docs/sdks/payrollruns/README.md)
 
 * [payrollRunsList](docs/sdks/payrollruns/README.md#payrollrunslist) - Returns a list of `PayrollRun` objects.
 * [payrollRunsRetrieve](docs/sdks/payrollruns/README.md#payrollrunsretrieve) - Returns a `PayrollRun` object with the given `id`.
 
-### [RegenerateKey](docs/sdks/regeneratekey/README.md)
+### [regenerateKey](docs/sdks/regeneratekey/README.md)
 
 * [regenerateKeyCreate](docs/sdks/regeneratekey/README.md#regeneratekeycreate) - Exchange remote keys.
 
-### [SelectiveSync](docs/sdks/selectivesync/README.md)
+### [selectiveSync](docs/sdks/selectivesync/README.md)
 
 * [selectiveSyncConfigurationsList](docs/sdks/selectivesync/README.md#selectivesyncconfigurationslist) - Get a linked account's selective syncs.
 * [selectiveSyncConfigurationsUpdate](docs/sdks/selectivesync/README.md#selectivesyncconfigurationsupdate) - Replace a linked account's selective syncs.
 * [selectiveSyncMetaList](docs/sdks/selectivesync/README.md#selectivesyncmetalist) - Get metadata for the conditions available to a linked account.
 
-### [SyncStatus](docs/sdks/syncstatus/README.md)
+### [syncStatus](docs/sdks/syncstatus/README.md)
 
 * [syncStatusList](docs/sdks/syncstatus/README.md#syncstatuslist) - Get syncing status. Possible values: `DISABLED`, `DONE`, `FAILED`, `PARTIALLY_SYNCED`, `PAUSED`, `SYNCING`
 
-### [Teams](docs/sdks/teams/README.md)
+### [teams](docs/sdks/teams/README.md)
 
 * [teamsList](docs/sdks/teams/README.md#teamslist) - Returns a list of `Team` objects.
 * [teamsRetrieve](docs/sdks/teams/README.md#teamsretrieve) - Returns a `Team` object with the given `id`.
 
-### [TimeOff](docs/sdks/timeoff/README.md)
+### [timeOff](docs/sdks/timeoff/README.md)
 
 * [timeOffCreate](docs/sdks/timeoff/README.md#timeoffcreate) - Creates a `TimeOff` object with the given values.
 * [timeOffList](docs/sdks/timeoff/README.md#timeofflist) - Returns a list of `TimeOff` objects.
 * [timeOffMetaPostRetrieve](docs/sdks/timeoff/README.md#timeoffmetapostretrieve) - Returns metadata for `TimeOff` POSTs.
 * [timeOffRetrieve](docs/sdks/timeoff/README.md#timeoffretrieve) - Returns a `TimeOff` object with the given `id`.
 
-### [TimeOffBalances](docs/sdks/timeoffbalances/README.md)
+### [timeOffBalances](docs/sdks/timeoffbalances/README.md)
 
 * [timeOffBalancesList](docs/sdks/timeoffbalances/README.md#timeoffbalanceslist) - Returns a list of `TimeOffBalance` objects.
 * [timeOffBalancesRetrieve](docs/sdks/timeoffbalances/README.md#timeoffbalancesretrieve) - Returns a `TimeOffBalance` object with the given `id`.
 
-### [WebhookReceivers](docs/sdks/webhookreceivers/README.md)
+### [webhookReceivers](docs/sdks/webhookreceivers/README.md)
 
 * [webhookReceiversCreate](docs/sdks/webhookreceivers/README.md#webhookreceiverscreate) - Creates a `WebhookReceiver` object with the given values.
 * [webhookReceiversList](docs/sdks/webhookreceivers/README.md#webhookreceiverslist) - Returns a list of `WebhookReceiver` objects.
