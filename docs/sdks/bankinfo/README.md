@@ -30,22 +30,22 @@ const sdk = new Hris({
 });
 
 sdk.bankInfo.bankInfoList({
-  xAccountToken: "nulla",
-  accountType: BankInfoListAccountType.Savings,
-  bankName: "illum",
-  createdAfter: new Date("2022-05-18T09:34:54.894Z"),
-  createdBefore: new Date("2022-03-26T09:37:56.283Z"),
-  cursor: "iure",
-  employeeId: "magnam",
+  xAccountToken: "Folding Global",
+  accountType: BankInfoListAccountType.Checking,
+  bankName: "creation throughout Customer",
+  createdAfter: new Date("2023-07-31T04:40:27.701Z"),
+  createdBefore: new Date("2023-06-26T20:20:13.786Z"),
+  cursor: "disposer Northwest Velda",
+  employeeId: "RAM Garden",
   expand: BankInfoListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-10-30T21:34:57.850Z"),
-  modifiedBefore: new Date("2022-03-08T10:35:32.561Z"),
-  orderBy: BankInfoListOrderBy.MinusRemoteCreatedAt,
-  pageSize: 477665,
+  modifiedAfter: new Date("2021-02-03T09:23:09.266Z"),
+  modifiedBefore: new Date("2023-10-10T15:11:55.201Z"),
+  orderBy: BankInfoListOrderBy.RemoteCreatedAt,
+  pageSize: 183846,
   remoteFields: BankInfoListRemoteFields.AccountType,
-  remoteId: "minus",
+  remoteId: "Central",
   showEnumOrigins: BankInfoListShowEnumOrigins.AccountType,
 }).then((res: BankInfoListResponse) => {
   if (res.statusCode == 200) {
@@ -89,9 +89,9 @@ const sdk = new Hris({
 });
 
 sdk.bankInfo.bankInfoRetrieve({
-  xAccountToken: "placeat",
+  xAccountToken: "haptic Soap cluttered",
   expand: BankInfoRetrieveExpand.Employee,
-  id: "8796ed15-1a05-4dfc-addf-7cc78ca1ba92",
+  id: "73932cf4-9920-4096-a347-1089d9a5fd7a",
   includeRemoteData: false,
   remoteFields: BankInfoRetrieveRemoteFields.AccountType,
   showEnumOrigins: BankInfoRetrieveShowEnumOrigins.AccountType,

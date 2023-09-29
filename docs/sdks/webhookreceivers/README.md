@@ -24,11 +24,11 @@ const sdk = new Hris({
 
 sdk.webhookReceivers.webhookReceiversCreate({
   webhookReceiverRequest: {
-    event: "reiciendis",
+    event: "overbook Islands",
     isActive: false,
-    key: "ex",
+    key: "<key>",
   },
-  xAccountToken: "sit",
+  xAccountToken: "Kia female",
 }).then((res: WebhookReceiversCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Hris({
 });
 
 sdk.webhookReceivers.webhookReceiversList({
-  xAccountToken: "non",
+  xAccountToken: "Mini internal capacitor",
 }).then((res: WebhookReceiversListResponse) => {
   if (res.statusCode == 200) {
     // handle response

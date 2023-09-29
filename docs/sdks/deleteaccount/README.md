@@ -22,7 +22,7 @@ const sdk = new Hris({
 });
 
 sdk.deleteAccount.deleteAccountCreate({
-  xAccountToken: "nihil",
+  xAccountToken: "flexibility",
 }).then((res: DeleteAccountCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response

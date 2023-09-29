@@ -43,22 +43,22 @@ sdk.employees.employeesCreate({
       employeeNumber: "2",
       employmentStatus: EmployeeRequestEmploymentStatus.Inactive,
       employments: [
-        "2a94bb4f-63c9-469e-9a3e-fa77dfb14cd6",
+        "78053f6f-9158-4442-a8d9-ec64d4239460",
       ],
       ethnicity: EmployeeRequestEthnicity.White,
       firstName: "Greg",
       gender: EmployeeRequestGender.Male,
       groups: [
-        "6ae395ef-b9ba-488f-ba66-997074ba4469",
+        "9b3fdbda-3b7a-4b08-995d-c4d589e1d6a6",
       ],
       hireDate: new Date("2020-10-10T00:00:00Z"),
       homeLocation: "d2f972d0-2526-434b-9409-4c3b468e08f0",
       integrationParams: {
-        "nobis": "eum",
+        "occaecati": "program",
       },
       lastName: "Hirsch",
       linkedAccountParams: {
-        "vero": "aspernatur",
+        "eos": "San",
       },
       manager: "0048ea5b-911e-4dff-9364-92070dea62ff",
       maritalStatus: EmployeeRequestMaritalStatus.Single,
@@ -74,7 +74,7 @@ sdk.employees.employeesCreate({
       workLocation: "9efbc633-3387-4306-aa55-e2c635e6bb4f",
     },
   },
-  xAccountToken: "architecto",
+  xAccountToken: "quis group",
   isDebugMode: false,
   runAsync: false,
 }).then((res: EmployeesCreateResponse) => {
@@ -114,12 +114,12 @@ const sdk = new Hris({
 });
 
 sdk.employees.employeesIgnoreCreateForm({
-  ignoreCommonModelRequest2: {
+  ignoreCommonModelRequest1: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "magnam",
+    reason: "turquoise",
   },
-  xAccountToken: "et",
-  modelId: "959890af-a563-4e25-96fe-4c8b711e5b7f",
+  xAccountToken: "even",
+  modelId: "26567718-4b15-4d60-9e01-c9116e04a788",
 }).then((res: EmployeesIgnoreCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -162,8 +162,8 @@ sdk.employees.employeesIgnoreCreateJson({
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
     reason: IgnoreCommonModelRequestReason.GeneralCustomerRequest,
   },
-  xAccountToken: "quibusdam",
-  modelId: "2ed02892-1cdd-4c69-a601-fb576b0d5f0d",
+  xAccountToken: "XML Assurance",
+  modelId: "5300c2b8-daeb-45f9-8721-d56763138ba6",
 }).then((res: EmployeesIgnoreCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -201,12 +201,12 @@ const sdk = new Hris({
 });
 
 sdk.employees.employeesIgnoreCreateMultipart({
-  ignoreCommonModelRequest2: {
+  ignoreCommonModelRequest1: {
     message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-    reason: "amet",
+    reason: "BMW",
   },
-  xAccountToken: "aut",
-  modelId: "c5fbb258-7053-4202-873d-5fe9b90c2890",
+  xAccountToken: "Pop",
+  modelId: "62637733-58aa-42e8-983b-f79dc18e8344",
 }).then((res: EmployeesIgnoreCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -250,36 +250,36 @@ const sdk = new Hris({
 });
 
 sdk.employees.employeesList({
-  xAccountToken: "occaecati",
-  companyId: "rerum",
-  createdAfter: new Date("2022-01-03T18:36:27.259Z"),
-  createdBefore: new Date("2022-03-14T08:20:25.450Z"),
-  cursor: "iste",
-  displayFullName: "dolorum",
-  employmentStatus: EmployeesListEmploymentStatus.Inactive,
-  expand: EmployeesListExpand.HomeLocationWorkLocationManagerTeamPayGroup,
-  firstName: "Lambert",
-  groups: "nobis",
+  xAccountToken: "Madagascar North Hyundai",
+  companyId: "sky Tuna",
+  createdAfter: new Date("2023-09-03T04:09:46.231Z"),
+  createdBefore: new Date("2022-12-18T17:51:19.372Z"),
+  cursor: "mad capacitor",
+  displayFullName: "inasmuch Vietnam Pound",
+  employmentStatus: EmployeesListEmploymentStatus.Pending,
+  expand: EmployeesListExpand.EmploymentsGroupsHomeLocationWorkLocationManagerTeamCompanyPayGroup,
+  firstName: "Deshaun",
+  groups: "Credit",
   includeDeletedData: false,
   includeRemoteData: false,
   includeSensitiveFields: false,
-  lastName: "Renner",
-  managerId: "delectus",
-  modifiedAfter: new Date("2022-06-12T16:50:10.090Z"),
-  modifiedBefore: new Date("2022-10-15T11:27:32.342Z"),
-  pageSize: 209843,
-  payGroupId: "dolor",
-  personalEmail: "Dagmar_Welch@gmail.com",
-  remoteFields: EmployeesListRemoteFields.EmploymentStatusGenderMaritalStatus,
-  remoteId: "dignissimos",
+  lastName: "Stehr",
+  managerId: "Birr matrix",
+  modifiedAfter: new Date("2021-07-12T11:31:25.582Z"),
+  modifiedBefore: new Date("2023-09-26T04:03:56.632Z"),
+  pageSize: 236970,
+  payGroupId: "indigo Southwest methodical",
+  personalEmail: "Carolanne32@gmail.com",
+  remoteFields: EmployeesListRemoteFields.Gender,
+  remoteId: "Northeast Innovative South",
   showEnumOrigins: EmployeesListShowEnumOrigins.MaritalStatus,
-  startedAfter: new Date("2022-04-27T14:25:42.204Z"),
-  startedBefore: new Date("2022-11-30T20:48:38.083Z"),
-  teamId: "ipsa",
-  terminatedAfter: new Date("2022-07-26T10:30:36.625Z"),
-  terminatedBefore: new Date("2022-09-09T04:40:04.540Z"),
-  workEmail: "Maurine_Wolf@hotmail.com",
-  workLocationId: "eos",
+  startedAfter: new Date("2021-12-30T23:01:36.795Z"),
+  startedBefore: new Date("2022-08-03T10:02:46.111Z"),
+  teamId: "defiantly Towels",
+  terminatedAfter: new Date("2022-07-10T12:00:29.418Z"),
+  terminatedBefore: new Date("2023-12-20T22:31:52.600Z"),
+  workEmail: "Ewald_Shanahan94@hotmail.com",
+  workLocationId: "Analyst Auto",
 }).then((res: EmployeesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -317,7 +317,7 @@ const sdk = new Hris({
 });
 
 sdk.employees.employeesMetaPostRetrieve({
-  xAccountToken: "atque",
+  xAccountToken: "maroon Handmade",
 }).then((res: EmployeesMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -360,13 +360,13 @@ const sdk = new Hris({
 });
 
 sdk.employees.employeesRetrieve({
-  xAccountToken: "sit",
-  expand: EmployeesRetrieveExpand.HomeLocationWorkLocationManagerTeam,
-  id: "1ba77a89-ebf7-437a-a420-3ce5e6a95d8a",
+  xAccountToken: "Convertible",
+  expand: EmployeesRetrieveExpand.EmploymentsGroupsHomeLocation,
+  id: "6e21c403-5d22-4c47-be44-b63a37d856a1",
   includeRemoteData: false,
   includeSensitiveFields: false,
-  remoteFields: EmployeesRetrieveRemoteFields.EmploymentStatus,
-  showEnumOrigins: EmployeesRetrieveShowEnumOrigins.GenderMaritalStatus,
+  remoteFields: EmployeesRetrieveRemoteFields.EthnicityMaritalStatus,
+  showEnumOrigins: EmployeesRetrieveShowEnumOrigins.EmploymentStatusGender,
 }).then((res: EmployeesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

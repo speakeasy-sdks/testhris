@@ -23,18 +23,18 @@ const sdk = new Hris({
 });
 
 sdk.benefits.benefitsList({
-  xAccountToken: "deleniti",
-  createdAfter: new Date("2020-09-22T07:34:53.140Z"),
-  createdBefore: new Date("2022-10-15T16:29:54.554Z"),
-  cursor: "commodi",
-  employeeId: "molestiae",
+  xAccountToken: "Handmade Coordinator bright",
+  createdAfter: new Date("2021-02-08T13:13:35.095Z"),
+  createdBefore: new Date("2021-07-26T10:16:55.229Z"),
+  cursor: "digital",
+  employeeId: "superior upon",
   expand: BenefitsListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-10-24T23:43:42.369Z"),
-  modifiedBefore: new Date("2020-10-16T01:47:24.760Z"),
-  pageSize: 456150,
-  remoteId: "ipsum",
+  modifiedAfter: new Date("2022-10-04T21:08:28.837Z"),
+  modifiedBefore: new Date("2021-07-28T10:59:37.746Z"),
+  pageSize: 951207,
+  remoteId: "flex concerned Generic",
 }).then((res: BenefitsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -72,9 +72,9 @@ const sdk = new Hris({
 });
 
 sdk.benefits.benefitsRetrieve({
-  xAccountToken: "excepturi",
+  xAccountToken: "extranet",
   expand: BenefitsRetrieveExpand.Employee,
-  id: "20592939-6fea-4759-aeb1-0faaa2352c59",
+  id: "7de81b28-fe68-4ca5-bdee-1e8a699d0dc0",
   includeRemoteData: false,
 }).then((res: BenefitsRetrieveResponse) => {
   if (res.statusCode == 200) {

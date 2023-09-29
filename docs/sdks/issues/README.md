@@ -23,19 +23,19 @@ const sdk = new Hris({
 });
 
 sdk.issues.issuesList({
-  accountToken: "quisquam",
-  cursor: "vero",
-  endDate: "omnis",
-  endUserOrganizationName: "quis",
-  firstIncidentTimeAfter: new Date("2022-01-15T00:38:43.469Z"),
-  firstIncidentTimeBefore: new Date("2022-10-08T10:17:36.770Z"),
-  includeMuted: "vero",
-  integrationName: "tenetur",
-  lastIncidentTimeAfter: new Date("2022-01-22T09:31:52.637Z"),
-  lastIncidentTimeBefore: new Date("2021-05-27T13:58:14.379Z"),
-  pageSize: 486160,
-  startDate: "similique",
-  status: IssuesListStatus.Resolved,
+  accountToken: "Loan methodologies",
+  cursor: "Research vel EXE",
+  endDate: "indexing",
+  endUserOrganizationName: "female frame Ford",
+  firstIncidentTimeAfter: new Date("2022-04-12T05:28:41.124Z"),
+  firstIncidentTimeBefore: new Date("2021-03-22T10:33:10.478Z"),
+  includeMuted: "Legacy sit Northwest",
+  integrationName: "person",
+  lastIncidentTimeAfter: new Date("2022-03-11T08:31:26.748Z"),
+  lastIncidentTimeBefore: new Date("2023-05-19T12:16:04.512Z"),
+  pageSize: 823561,
+  startDate: "Oregon seriously Saudi",
+  status: IssuesListStatus.Ongoing,
 }).then((res: IssuesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -73,7 +73,7 @@ const sdk = new Hris({
 });
 
 sdk.issues.issuesRetrieve({
-  id: "d74dd39c-0f5d-42cf-b7c7-0a45626d4368",
+  id: "afe72258-f46d-4572-b194-a000d9ba8a35",
 }).then((res: IssuesRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

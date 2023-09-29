@@ -23,16 +23,16 @@ const sdk = new Hris({
 });
 
 sdk.payGroups.payGroupsList({
-  xAccountToken: "dolores",
-  createdAfter: new Date("2022-01-19T00:55:43.636Z"),
-  createdBefore: new Date("2022-03-20T23:14:37.473Z"),
-  cursor: "eum",
+  xAccountToken: "Customer cribbage",
+  createdAfter: new Date("2023-09-08T23:42:16.685Z"),
+  createdBefore: new Date("2023-01-01T06:47:42.981Z"),
+  cursor: "Unbranded",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2021-12-24T16:30:16.544Z"),
-  modifiedBefore: new Date("2022-06-19T07:05:05.913Z"),
-  pageSize: 143829,
-  remoteId: "fuga",
+  modifiedAfter: new Date("2023-01-03T13:58:47.747Z"),
+  modifiedBefore: new Date("2021-09-03T11:03:40.869Z"),
+  pageSize: 313867,
+  remoteId: "Bedfordshire parse",
 }).then((res: PayGroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -70,8 +70,8 @@ const sdk = new Hris({
 });
 
 sdk.payGroups.payGroupsRetrieve({
-  xAccountToken: "mollitia",
-  id: "482562f2-22e9-4817-ae17-cbe61e6b7b95",
+  xAccountToken: "North newton",
+  id: "5d67c803-d66d-4576-b84b-db69e62e0d80",
   includeRemoteData: false,
 }).then((res: PayGroupsRetrieveResponse) => {
   if (res.statusCode == 200) {

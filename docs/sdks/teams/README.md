@@ -23,18 +23,18 @@ const sdk = new Hris({
 });
 
 sdk.teams.teamsList({
-  xAccountToken: "asperiores",
-  createdAfter: new Date("2022-08-04T16:41:09.494Z"),
-  createdBefore: new Date("2022-11-02T12:31:08.461Z"),
-  cursor: "repellendus",
+  xAccountToken: "reinforce Tyler Intelligent",
+  createdAfter: new Date("2021-02-06T01:28:51.322Z"),
+  createdBefore: new Date("2022-06-01T00:35:02.048Z"),
+  cursor: "commodi Royce",
   expand: TeamsListExpand.ParentTeam,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2021-05-21T20:57:35.388Z"),
-  modifiedBefore: new Date("2022-05-12T09:23:17.883Z"),
-  pageSize: 989410,
-  parentTeamId: "nemo",
-  remoteId: "quae",
+  modifiedAfter: new Date("2022-07-28T11:35:43.959Z"),
+  modifiedBefore: new Date("2023-12-16T22:54:16.247Z"),
+  pageSize: 895120,
+  parentTeamId: "microchip female",
+  remoteId: "blue for",
 }).then((res: TeamsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -72,9 +72,9 @@ const sdk = new Hris({
 });
 
 sdk.teams.teamsRetrieve({
-  xAccountToken: "quaerat",
+  xAccountToken: "SMTP holistic",
   expand: TeamsRetrieveExpand.ParentTeam,
-  id: "cc413aa6-3aae-48d6-b864-dbb675fd5e60",
+  id: "dde6730f-60e0-41d6-a3ae-3bbe560bf04d",
   includeRemoteData: false,
 }).then((res: TeamsRetrieveResponse) => {
   if (res.statusCode == 200) {

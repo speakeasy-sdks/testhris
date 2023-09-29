@@ -23,23 +23,23 @@ const sdk = new Hris({
 });
 
 sdk.employeePayrollRuns.employeePayrollRunsList({
-  xAccountToken: "praesentium",
-  createdAfter: new Date("2022-10-31T23:49:03.388Z"),
-  createdBefore: new Date("2022-02-05T15:41:25.512Z"),
-  cursor: "cum",
-  employeeId: "perferendis",
-  endedAfter: new Date("2022-07-23T18:36:43.822Z"),
-  endedBefore: new Date("2022-01-08T10:49:12.847Z"),
-  expand: EmployeePayrollRunsListExpand.Employee,
+  xAccountToken: "Granite SAS Music",
+  createdAfter: new Date("2021-04-30T02:40:35.398Z"),
+  createdBefore: new Date("2022-03-09T23:15:33.585Z"),
+  cursor: "female tan grow",
+  employeeId: "synthesizing",
+  endedAfter: new Date("2022-07-20T10:27:21.146Z"),
+  endedBefore: new Date("2022-06-28T12:48:20.693Z"),
+  expand: EmployeePayrollRunsListExpand.EmployeePayrollRun,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-09-14T21:48:41.971Z"),
-  modifiedBefore: new Date("2022-11-18T15:56:41.921Z"),
-  pageSize: 688661,
-  payrollRunId: "enim",
-  remoteId: "accusamus",
-  startedAfter: new Date("2022-01-30T20:15:26.045Z"),
-  startedBefore: new Date("2022-10-13T20:38:16.426Z"),
+  modifiedAfter: new Date("2022-09-13T12:31:00.057Z"),
+  modifiedBefore: new Date("2023-04-10T02:47:15.345Z"),
+  pageSize: 282179,
+  payrollRunId: "Plastic",
+  remoteId: "Guadeloupe Virginia Gender",
+  startedAfter: new Date("2021-11-13T01:51:58.347Z"),
+  startedBefore: new Date("2022-01-26T09:53:27.960Z"),
 }).then((res: EmployeePayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -77,9 +77,9 @@ const sdk = new Hris({
 });
 
 sdk.employeePayrollRuns.employeePayrollRunsRetrieve({
-  xAccountToken: "quidem",
-  expand: EmployeePayrollRunsRetrieveExpand.EmployeePayrollRun,
-  id: "9d488e1e-91e4-450a-92ab-d44269802d50",
+  xAccountToken: "Gender generate",
+  expand: EmployeePayrollRunsRetrieveExpand.Employee,
+  id: "5b4640c6-9206-4862-ba17-03c31315faeb",
   includeRemoteData: false,
 }).then((res: EmployeePayrollRunsRetrieveResponse) => {
   if (res.statusCode == 200) {

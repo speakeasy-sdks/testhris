@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 
 export class EmployeesIgnoreCreateMultipartRequest extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" })
-    ignoreCommonModelRequest2: shared.IgnoreCommonModelRequest2;
+    ignoreCommonModelRequest1: shared.IgnoreCommonModelRequest1;
 
     /**
      * Token identifying the end user.

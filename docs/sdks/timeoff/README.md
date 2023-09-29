@@ -34,10 +34,10 @@ sdk.timeOff.timeOffCreate({
       employeeNote: "Moving into the new apartment Kendall Roy gave me!",
       endTime: new Date("2020-11-17T00:00:00Z"),
       integrationParams: {
-        "cum": "consectetur",
+        "dolores": "National",
       },
       linkedAccountParams: {
-        "in": "exercitationem",
+        "rerum": "Bicycle",
       },
       requestType: TimeOffRequestRequestType.Vacation,
       startTime: new Date("2020-11-10T00:00:00Z"),
@@ -45,7 +45,7 @@ sdk.timeOff.timeOffCreate({
       units: TimeOffRequestUnits.Days,
     },
   },
-  xAccountToken: "earum",
+  xAccountToken: "Tuna Charles Sedan",
   isDebugMode: false,
   runAsync: false,
 }).then((res: TimeOffCreateResponse) => {
@@ -92,23 +92,23 @@ const sdk = new Hris({
 });
 
 sdk.timeOff.timeOffList({
-  xAccountToken: "facere",
-  approverId: "numquam",
-  createdAfter: new Date("2021-11-08T23:21:08.200Z"),
-  createdBefore: new Date("2020-11-28T15:07:06.228Z"),
-  cursor: "saepe",
-  employeeId: "necessitatibus",
-  expand: TimeOffListExpand.Approver,
+  xAccountToken: "mint South Modern",
+  approverId: "users Funk",
+  createdAfter: new Date("2022-08-31T13:40:58.356Z"),
+  createdBefore: new Date("2022-04-25T08:05:08.417Z"),
+  cursor: "even",
+  employeeId: "Paraguay World",
+  expand: TimeOffListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-01-03T21:58:53.395Z"),
-  modifiedBefore: new Date("2022-10-01T23:04:48.771Z"),
-  pageSize: 228263,
-  remoteFields: TimeOffListRemoteFields.RequestType,
-  remoteId: "dignissimos",
-  requestType: TimeOffListRequestType.Volunteer,
-  showEnumOrigins: TimeOffListShowEnumOrigins.Units,
-  status: TimeOffListStatus.Cancelled,
+  modifiedAfter: new Date("2021-09-06T09:20:12.407Z"),
+  modifiedBefore: new Date("2023-09-29T10:19:03.646Z"),
+  pageSize: 186090,
+  remoteFields: TimeOffListRemoteFields.RequestTypeStatusUnits,
+  remoteId: "haptic West functionalities",
+  requestType: TimeOffListRequestType.Personal,
+  showEnumOrigins: TimeOffListShowEnumOrigins.StatusUnits,
+  status: TimeOffListStatus.Approved,
 }).then((res: TimeOffListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -146,7 +146,7 @@ const sdk = new Hris({
 });
 
 sdk.timeOff.timeOffMetaPostRetrieve({
-  xAccountToken: "corporis",
+  xAccountToken: "Well weber",
 }).then((res: TimeOffMetaPostRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -189,12 +189,12 @@ const sdk = new Hris({
 });
 
 sdk.timeOff.timeOffRetrieve({
-  xAccountToken: "harum",
-  expand: TimeOffRetrieveExpand.Employee,
-  id: "0eb1ea42-6555-4ba3-8287-44ed53b88f3a",
+  xAccountToken: "Northwest Aruba HDD",
+  expand: TimeOffRetrieveExpand.EmployeeApprover,
+  id: "def5fcfe-2bbb-4a7c-b2c2-9e53f2fdc02f",
   includeRemoteData: false,
-  remoteFields: TimeOffRetrieveRemoteFields.RequestTypeUnits,
-  showEnumOrigins: TimeOffRetrieveShowEnumOrigins.Units,
+  remoteFields: TimeOffRetrieveRemoteFields.StatusUnits,
+  showEnumOrigins: TimeOffRetrieveShowEnumOrigins.StatusUnits,
 }).then((res: TimeOffRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -23,19 +23,19 @@ const sdk = new Hris({
 });
 
 sdk.groups.groupsList({
-  xAccountToken: "fugit",
-  createdAfter: new Date("2022-07-06T20:37:36.497Z"),
-  createdBefore: new Date("2022-08-24T04:49:56.144Z"),
-  cursor: "nam",
+  xAccountToken: "Representative Assistant",
+  createdAfter: new Date("2022-01-10T12:34:33.975Z"),
+  createdBefore: new Date("2021-11-13T07:32:12.685Z"),
+  cursor: "Oriental salmon VGA",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-11-28T15:41:44.846Z"),
-  modifiedBefore: new Date("2020-10-05T00:59:28.911Z"),
-  pageSize: 748664,
+  modifiedAfter: new Date("2022-12-01T12:36:52.247Z"),
+  modifiedBefore: new Date("2023-10-16T13:58:43.476Z"),
+  pageSize: 23296,
   remoteFields: GroupsListRemoteFields.Type,
-  remoteId: "et",
+  remoteId: "systematic technologies Metal",
   showEnumOrigins: GroupsListShowEnumOrigins.Type,
-  types: "saepe",
+  types: "West",
 }).then((res: GroupsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -77,8 +77,8 @@ const sdk = new Hris({
 });
 
 sdk.groups.groupsRetrieve({
-  xAccountToken: "ipsum",
-  id: "1b8b90f3-443a-4110-8e0a-dcf4b921879f",
+  xAccountToken: "Chair Northeast Diesel",
+  id: "b255daad-b078-4367-a3cd-8961d91b4b8b",
   includeRemoteData: false,
   remoteFields: GroupsRetrieveRemoteFields.Type,
   showEnumOrigins: GroupsRetrieveShowEnumOrigins.Type,

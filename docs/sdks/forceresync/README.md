@@ -22,7 +22,7 @@ const sdk = new Hris({
 });
 
 sdk.forceResync.syncStatusResyncCreate({
-  xAccountToken: "neque",
+  xAccountToken: "furiously East",
 }).then((res: SyncStatusResyncCreateResponse) => {
   if (res.statusCode == 200) {
     // handle response

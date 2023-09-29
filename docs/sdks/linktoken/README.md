@@ -24,24 +24,24 @@ const sdk = new Hris({
 
 sdk.linkToken.linkTokenCreate({
   categories: [
-    CategoriesEnum.Hris,
+    CategoriesEnum.Mktg,
   ],
   commonModels: [
     {
       disabledFields: [
-        "dolor",
+        "Pickup",
       ],
       enabledActions: [
-        EnabledActionsEnum.Write,
+        EnabledActionsEnum.Read,
       ],
       modelId: "hris.Employee",
     },
   ],
-  endUserEmailAddress: "quasi",
-  endUserOrganizationName: "ex",
-  endUserOriginId: "nulla",
-  integration: "excepturi",
-  linkExpiryMins: 972920,
+  endUserEmailAddress: "Dam pascal Product",
+  endUserOrganizationName: "West Waterbury female",
+  endUserOriginId: "bypassing condemn",
+  integration: "since Northeast Genderqueer",
+  linkExpiryMins: 219620,
   shouldCreateMagicLinkUrl: false,
 }).then((res: LinkTokenCreateResponse) => {
   if (res.statusCode == 200) {

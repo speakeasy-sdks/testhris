@@ -15,7 +15,7 @@ import { MultipartFormFieldRequest } from "./multipartformfieldrequest";
  * ### Usage Example
  * Create a `DataPassthrough` to get team hierarchies from your Rippling integration.
  */
-export class DataPassthroughRequest3 extends SpeakeasyBase {
+export class DataPassthroughRequest1 extends SpeakeasyBase {
     @SpeakeasyMetadata({
         data: "form, name=base_url_override, multipart_form, name=base_url_override",
     })

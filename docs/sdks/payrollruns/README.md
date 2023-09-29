@@ -28,23 +28,23 @@ const sdk = new Hris({
 });
 
 sdk.payrollRuns.payrollRunsList({
-  xAccountToken: "distinctio",
-  createdAfter: new Date("2022-12-02T08:37:36.325Z"),
-  createdBefore: new Date("2021-07-16T01:55:06.595Z"),
-  cursor: "adipisci",
-  endedAfter: new Date("2022-07-09T05:02:22.250Z"),
-  endedBefore: new Date("2022-03-16T07:36:38.247Z"),
+  xAccountToken: "Virtual index",
+  createdAfter: new Date("2022-05-07T09:57:09.474Z"),
+  createdBefore: new Date("2023-04-16T16:36:33.026Z"),
+  cursor: "Plastic possimus",
+  endedAfter: new Date("2023-10-01T12:19:59.636Z"),
+  endedBefore: new Date("2021-08-06T17:34:56.514Z"),
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-01-15T21:42:01.969Z"),
-  modifiedBefore: new Date("2022-07-17T18:42:13.476Z"),
-  pageSize: 503427,
-  remoteFields: PayrollRunsListRemoteFields.RunStateRunType,
-  remoteId: "a",
-  runType: PayrollRunsListRunType.Termination,
+  modifiedAfter: new Date("2021-11-24T06:23:52.477Z"),
+  modifiedBefore: new Date("2023-01-21T18:08:54.956Z"),
+  pageSize: 201585,
+  remoteFields: PayrollRunsListRemoteFields.RunState,
+  remoteId: "Cargo generate Web",
+  runType: PayrollRunsListRunType.SignOnBonus,
   showEnumOrigins: PayrollRunsListShowEnumOrigins.RunStateRunType,
-  startedAfter: new Date("2022-11-26T10:10:26.600Z"),
-  startedBefore: new Date("2021-02-19T06:17:20.977Z"),
+  startedAfter: new Date("2021-02-10T20:34:06.963Z"),
+  startedBefore: new Date("2022-08-29T14:06:30.491Z"),
 }).then((res: PayrollRunsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -86,8 +86,8 @@ const sdk = new Hris({
 });
 
 sdk.payrollRuns.payrollRunsRetrieve({
-  xAccountToken: "sint",
-  id: "dd2efd12-1aa6-4f1e-a74b-db04f1575608",
+  xAccountToken: "Yemen Hermaphrodite Gibraltar",
+  id: "a17ceded-36a3-45ad-bc07-d0ae903fe612",
   includeRemoteData: false,
   remoteFields: PayrollRunsRetrieveRemoteFields.RunState,
   showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunType,

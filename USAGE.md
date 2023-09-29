@@ -12,7 +12,7 @@ const sdk = new Hris({
 });
 
 sdk.accountDetails.accountDetailsRetrieve({
-  xAccountToken: "corrupti",
+  xAccountToken: "Officer Books Liaison",
 }).then((res: AccountDetailsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

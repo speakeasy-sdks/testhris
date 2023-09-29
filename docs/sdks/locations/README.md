@@ -23,17 +23,17 @@ const sdk = new Hris({
 });
 
 sdk.locations.locationsList({
-  xAccountToken: "quasi",
-  createdAfter: new Date("2022-09-29T12:13:01.368Z"),
-  createdBefore: new Date("2022-05-29T22:38:52.265Z"),
-  cursor: "ipsa",
+  xAccountToken: "Trans reinvent Minivan",
+  createdAfter: new Date("2023-11-07T02:12:00.765Z"),
+  createdBefore: new Date("2022-04-10T22:33:50.562Z"),
+  cursor: "Borders fate",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-09-12T21:59:44.784Z"),
-  modifiedBefore: new Date("2022-09-27T07:50:41.350Z"),
-  pageSize: 458515,
+  modifiedAfter: new Date("2021-12-03T14:07:35.788Z"),
+  modifiedBefore: new Date("2021-01-28T15:08:15.874Z"),
+  pageSize: 983641,
   remoteFields: LocationsListRemoteFields.LocationType,
-  remoteId: "esse",
+  remoteId: "East neque",
   showEnumOrigins: LocationsListShowEnumOrigins.LocationType,
 }).then((res: LocationsListResponse) => {
   if (res.statusCode == 200) {
@@ -76,8 +76,8 @@ const sdk = new Hris({
 });
 
 sdk.locations.locationsRetrieve({
-  xAccountToken: "rem",
-  id: "a7bd466d-28c1-40ab-bcdc-a4251904e523",
+  xAccountToken: "cultivate Assistant",
+  id: "06cc8d98-9b4d-4b9c-8574-d8c8b728ec05",
   includeRemoteData: false,
   remoteFields: LocationsRetrieveRemoteFields.LocationType,
   showEnumOrigins: LocationsRetrieveShowEnumOrigins.LocationType,

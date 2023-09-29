@@ -29,20 +29,20 @@ const sdk = new Hris({
 });
 
 sdk.timeOffBalances.timeOffBalancesList({
-  xAccountToken: "totam",
-  createdAfter: new Date("2021-12-15T01:59:29.520Z"),
-  createdBefore: new Date("2022-12-05T00:59:14.180Z"),
-  cursor: "rerum",
-  employeeId: "sed",
+  xAccountToken: "Hawaii Bedfordshire",
+  createdAfter: new Date("2023-12-13T11:53:18.710Z"),
+  createdBefore: new Date("2023-07-23T13:40:14.865Z"),
+  cursor: "Factors stunning",
+  employeeId: "Extended",
   expand: TimeOffBalancesListExpand.Employee,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-08-09T14:55:41.766Z"),
-  modifiedBefore: new Date("2020-11-16T19:55:44.497Z"),
-  pageSize: 451822,
-  policyType: TimeOffBalancesListPolicyType.Vacation,
+  modifiedAfter: new Date("2022-03-09T15:48:56.144Z"),
+  modifiedBefore: new Date("2023-11-30T04:39:20.833Z"),
+  pageSize: 804722,
+  policyType: TimeOffBalancesListPolicyType.JuryDuty,
   remoteFields: TimeOffBalancesListRemoteFields.PolicyType,
-  remoteId: "ab",
+  remoteId: "Northwest",
   showEnumOrigins: TimeOffBalancesListShowEnumOrigins.PolicyType,
 }).then((res: TimeOffBalancesListResponse) => {
   if (res.statusCode == 200) {
@@ -86,9 +86,9 @@ const sdk = new Hris({
 });
 
 sdk.timeOffBalances.timeOffBalancesRetrieve({
-  xAccountToken: "iste",
+  xAccountToken: "Martin",
   expand: TimeOffBalancesRetrieveExpand.Employee,
-  id: "4a276b26-916f-4e1f-88f4-294e3698f447",
+  id: "d575df78-c430-4b81-a680-66ab9d39a5f2",
   includeRemoteData: false,
   remoteFields: TimeOffBalancesRetrieveRemoteFields.PolicyType,
   showEnumOrigins: TimeOffBalancesRetrieveShowEnumOrigins.PolicyType,

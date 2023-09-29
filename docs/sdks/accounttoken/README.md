@@ -22,7 +22,7 @@ const sdk = new Hris({
 });
 
 sdk.accountToken.accountTokenRetrieve({
-  publicToken: "quibusdam",
+  publicToken: "Gorgeous",
 }).then((res: AccountTokenRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

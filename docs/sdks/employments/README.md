@@ -29,21 +29,21 @@ const sdk = new Hris({
 });
 
 sdk.employments.employmentsList({
-  xAccountToken: "quaerat",
-  createdAfter: new Date("2022-07-29T17:02:39.743Z"),
-  createdBefore: new Date("2020-05-06T13:19:34.143Z"),
-  cursor: "qui",
-  employeeId: "dolorum",
-  expand: EmploymentsListExpand.PayGroup,
+  xAccountToken: "opium",
+  createdAfter: new Date("2022-08-13T02:01:49.138Z"),
+  createdBefore: new Date("2022-08-10T08:20:34.102Z"),
+  cursor: "Granite global",
+  employeeId: "SDR",
+  expand: EmploymentsListExpand.EmployeePayGroup,
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2022-04-25T01:36:09.517Z"),
-  modifiedBefore: new Date("2022-10-14T08:09:09.090Z"),
-  orderBy: EmploymentsListOrderBy.EffectiveDate,
-  pageSize: 947371,
-  remoteFields: EmploymentsListRemoteFields.EmploymentTypeFlsaStatusPayFrequencyPayPeriod,
-  remoteId: "tempore",
-  showEnumOrigins: EmploymentsListShowEnumOrigins.PayFrequencyPayPeriod,
+  modifiedAfter: new Date("2022-11-07T23:00:32.727Z"),
+  modifiedBefore: new Date("2022-04-03T10:25:20.319Z"),
+  orderBy: EmploymentsListOrderBy.MinusEffectiveDate,
+  pageSize: 588146,
+  remoteFields: EmploymentsListRemoteFields.EmploymentTypePayPeriod,
+  remoteId: "Agent Product South",
+  showEnumOrigins: EmploymentsListShowEnumOrigins.EmploymentTypeFlsaStatusPayPeriod,
 }).then((res: EmploymentsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -86,12 +86,12 @@ const sdk = new Hris({
 });
 
 sdk.employments.employmentsRetrieve({
-  xAccountToken: "numquam",
-  expand: EmploymentsRetrieveExpand.Employee,
-  id: "3f870b32-6b5a-4734-a9cd-b1a8422bb679",
+  xAccountToken: "Crest",
+  expand: EmploymentsRetrieveExpand.PayGroup,
+  id: "fa36b1cb-d926-4eb5-9f7a-98c39fd25176",
   includeRemoteData: false,
-  remoteFields: EmploymentsRetrieveRemoteFields.PayFrequency,
-  showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.EmploymentTypeFlsaStatusPayFrequency,
+  remoteFields: EmploymentsRetrieveRemoteFields.FlsaStatusPayFrequency,
+  showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.EmploymentTypeFlsaStatus,
 }).then((res: EmploymentsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

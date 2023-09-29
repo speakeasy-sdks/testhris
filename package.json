@@ -1,6 +1,6 @@
 {
   "name": "HRIS",
-  "version": "1.14.1",
+  "version": "1.15.0",
   "author": "Test",
   "scripts": {
     "prepare": "tsc --build"

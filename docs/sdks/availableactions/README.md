@@ -22,7 +22,7 @@ const sdk = new Hris({
 });
 
 sdk.availableActions.availableActionsRetrieve({
-  xAccountToken: "unde",
+  xAccountToken: "Marshall Account",
 }).then((res: AvailableActionsRetrieveResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 
-export class IgnoreCommonModelRequest2 extends SpeakeasyBase {
+export class IgnoreCommonModelRequest1 extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "form, name=message, multipart_form, name=message" })
     message?: string;
 

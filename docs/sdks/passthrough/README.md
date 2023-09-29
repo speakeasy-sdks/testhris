@@ -25,13 +25,13 @@ const sdk = new Hris({
 });
 
 sdk.passthrough.passthroughCreateForm({
-  dataPassthroughRequest3: {
-    baseUrlOverride: "quo",
-    data: "{"company": "Lime", "model": "Gen 2.5"}",
+  dataPassthroughRequest1: {
+    baseUrlOverride: "New whiteboard optimal",
+    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
     headers: {
-      "esse": "recusandae",
+      "consequatur": "Rubber",
     },
-    method: "aperiam",
+    method: "cyan",
     multipartFormData: [
       {
         contentType: "application/pdf",
@@ -43,9 +43,9 @@ sdk.passthrough.passthroughCreateForm({
     ],
     normalizeResponse: false,
     path: "/scooters",
-    requestFormat: "distinctio",
+    requestFormat: "Hybrid",
   },
-  xAccountToken: "quod",
+  xAccountToken: "pink",
 }).then((res: PassthroughCreateFormResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -89,10 +89,10 @@ const sdk = new Hris({
 
 sdk.passthrough.passthroughCreateJson({
   dataPassthroughRequest: {
-    baseUrlOverride: "dignissimos",
-    data: "{"company": "Lime", "model": "Gen 2.5"}",
+    baseUrlOverride: "Granite after",
+    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
     headers: {
-      "inventore": "nihil",
+      "tempora": "Rap",
     },
     method: DataPassthroughRequestMethod.Post,
     multipartFormData: [
@@ -108,7 +108,7 @@ sdk.passthrough.passthroughCreateJson({
     path: "/scooters",
     requestFormat: DataPassthroughRequestRequestFormat.Json,
   },
-  xAccountToken: "totam",
+  xAccountToken: "Northwest payment",
 }).then((res: PassthroughCreateJsonResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -147,13 +147,13 @@ const sdk = new Hris({
 });
 
 sdk.passthrough.passthroughCreateMultipart({
-  dataPassthroughRequest3: {
-    baseUrlOverride: "accusamus",
-    data: "{"company": "Lime", "model": "Gen 2.5"}",
+  dataPassthroughRequest1: {
+    baseUrlOverride: "Generic",
+    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
     headers: {
-      "aliquam": "odio",
+      "est": "West",
     },
-    method: "occaecati",
+    method: "sunt",
     multipartFormData: [
       {
         contentType: "application/pdf",
@@ -165,9 +165,9 @@ sdk.passthrough.passthroughCreateMultipart({
     ],
     normalizeResponse: false,
     path: "/scooters",
-    requestFormat: "commodi",
+    requestFormat: "Hybrid",
   },
-  xAccountToken: "sapiente",
+  xAccountToken: "Bogisich",
 }).then((res: PassthroughCreateMultipartResponse) => {
   if (res.statusCode == 200) {
     // handle response

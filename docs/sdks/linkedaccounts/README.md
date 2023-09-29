@@ -22,19 +22,19 @@ const sdk = new Hris({
 });
 
 sdk.linkedAccounts.linkedAccountsList({
-  category: LinkedAccountsListCategory.Crm,
-  cursor: "sapiente",
-  endUserEmailAddress: "quisquam",
-  endUserOrganizationName: "saepe",
-  endUserOriginId: "ea",
-  endUserOriginIds: "impedit",
-  id: "556146c3-e250-4fb0-88c4-2e141aac366c",
-  ids: "quas",
+  category: LinkedAccountsListCategory.Ats,
+  cursor: "female",
+  endUserEmailAddress: "wireless Card",
+  endUserOrganizationName: "Jordanian hug ea",
+  endUserOriginId: "Northwest API",
+  endUserOriginIds: "Computer executive",
+  id: "0e3ff994-ca52-47d3-b04f-f21dcccc885b",
+  ids: "network Wellington Bicycle",
   includeDuplicates: false,
-  integrationName: "assumenda",
-  isTestAccount: "nulla",
-  pageSize: 379034,
-  status: "libero",
+  integrationName: "deposit",
+  isTestAccount: "Horizontal",
+  pageSize: 48529,
+  status: "Florissant",
 }).then((res: LinkedAccountsListResponse) => {
   if (res.statusCode == 200) {
     // handle response

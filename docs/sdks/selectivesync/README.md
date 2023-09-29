@@ -24,7 +24,7 @@ const sdk = new Hris({
 });
 
 sdk.selectiveSync.selectiveSyncConfigurationsList({
-  xAccountToken: "ex",
+  xAccountToken: "Incredible",
 }).then((res: SelectiveSyncConfigurationsListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -67,15 +67,15 @@ sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
       {
         linkedAccountConditions: [
           {
-            conditionSchemaId: "8ea19f1d-1705-4133-9d08-086a1840394c",
-            operator: "explicabo",
-            value: "voluptas",
+            conditionSchemaId: "1d101b05-1b27-4bb3-8005-3fdfb3b8ef10",
+            operator: "Convertible Checking",
+            value: "yahoo",
           },
         ],
       },
     ],
   },
-  xAccountToken: "aut",
+  xAccountToken: "Division Rubber",
 }).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -113,10 +113,10 @@ const sdk = new Hris({
 });
 
 sdk.selectiveSync.selectiveSyncMetaList({
-  xAccountToken: "dignissimos",
-  commonModel: "dicta",
-  cursor: "maiores",
-  pageSize: 618480,
+  xAccountToken: "Funk",
+  commonModel: "Pants",
+  cursor: "deposit Gasoline lime",
+  pageSize: 993266,
 }).then((res: SelectiveSyncMetaListResponse) => {
   if (res.statusCode == 200) {
     // handle response

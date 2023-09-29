@@ -23,16 +23,16 @@ const sdk = new Hris({
 });
 
 sdk.companies.companiesList({
-  xAccountToken: "nemo",
-  createdAfter: new Date("2022-06-06T21:04:34.044Z"),
-  createdBefore: new Date("2022-07-24T21:51:02.112Z"),
-  cursor: "culpa",
+  xAccountToken: "Northwest",
+  createdAfter: new Date("2021-11-22T08:04:33.605Z"),
+  createdBefore: new Date("2022-01-16T18:58:48.537Z"),
+  cursor: "quash Planner",
   includeDeletedData: false,
   includeRemoteData: false,
-  modifiedAfter: new Date("2020-02-15T22:48:47.492Z"),
-  modifiedBefore: new Date("2022-05-07T17:33:24.154Z"),
-  pageSize: 208876,
-  remoteId: "culpa",
+  modifiedAfter: new Date("2021-01-19T23:47:11.330Z"),
+  modifiedBefore: new Date("2022-05-13T14:25:52.378Z"),
+  pageSize: 955379,
+  remoteId: "Forward",
 }).then((res: CompaniesListResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -70,8 +70,8 @@ const sdk = new Hris({
 });
 
 sdk.companies.companiesRetrieve({
-  xAccountToken: "consequuntur",
-  id: "fa946773-9251-4aa5-ac3f-5ad019da1ffe",
+  xAccountToken: "Loan Southwest Gasoline",
+  id: "929a25e5-dab9-44fe-beac-92c97845978e",
   includeRemoteData: false,
 }).then((res: CompaniesRetrieveResponse) => {
   if (res.statusCode == 200) {

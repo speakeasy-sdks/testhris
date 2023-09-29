@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 
 export class PassthroughCreateFormRequest extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
-    dataPassthroughRequest3: shared.DataPassthroughRequest3;
+    dataPassthroughRequest1: shared.DataPassthroughRequest1;
 
     /**
      * Token identifying the end user.

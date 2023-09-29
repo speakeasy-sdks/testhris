@@ -22,9 +22,9 @@ const sdk = new Hris({
 });
 
 sdk.syncStatus.syncStatusList({
-  xAccountToken: "velit",
-  cursor: "voluptatibus",
-  pageSize: 374323,
+  xAccountToken: "Representative",
+  cursor: "Peso",
+  pageSize: 560158,
 }).then((res: SyncStatusListResponse) => {
   if (res.statusCode == 200) {
     // handle response
