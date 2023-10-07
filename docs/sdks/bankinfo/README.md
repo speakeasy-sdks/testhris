@@ -19,39 +19,24 @@ import {
   BankInfoListExpand,
   BankInfoListOrderBy,
   BankInfoListRemoteFields,
-  BankInfoListResponse,
   BankInfoListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.bankInfo.bankInfoList({
-  xAccountToken: "Folding Global",
-  accountType: BankInfoListAccountType.Checking,
-  bankName: "creation throughout Customer",
-  createdAfter: new Date("2023-07-31T04:40:27.701Z"),
-  createdBefore: new Date("2023-06-26T20:20:13.786Z"),
-  cursor: "disposer Northwest Velda",
-  employeeId: "RAM Garden",
-  expand: BankInfoListExpand.Employee,
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2021-02-03T09:23:09.266Z"),
-  modifiedBefore: new Date("2023-10-10T15:11:55.201Z"),
-  orderBy: BankInfoListOrderBy.RemoteCreatedAt,
-  pageSize: 183846,
-  remoteFields: BankInfoListRemoteFields.AccountType,
-  remoteId: "Central",
-  showEnumOrigins: BankInfoListShowEnumOrigins.AccountType,
-}).then((res: BankInfoListResponse) => {
+  const res = await sdk.bankInfo.bankInfoList({
+    xAccountToken: "Folding Global",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -78,28 +63,25 @@ import { Hris } from "HRIS";
 import {
   BankInfoRetrieveExpand,
   BankInfoRetrieveRemoteFields,
-  BankInfoRetrieveResponse,
   BankInfoRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.bankInfo.bankInfoRetrieve({
-  xAccountToken: "haptic Soap cluttered",
-  expand: BankInfoRetrieveExpand.Employee,
-  id: "73932cf4-9920-4096-a347-1089d9a5fd7a",
-  includeRemoteData: false,
-  remoteFields: BankInfoRetrieveRemoteFields.AccountType,
-  showEnumOrigins: BankInfoRetrieveShowEnumOrigins.AccountType,
-}).then((res: BankInfoRetrieveResponse) => {
+  const res = await sdk.bankInfo.bankInfoRetrieve({
+    xAccountToken: "haptic Soap cluttered",
+    id: "73932cf4-9920-4096-a347-1089d9a5fd7a",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

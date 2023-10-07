@@ -14,32 +14,23 @@ Returns a list of `Location` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LocationsListRemoteFields, LocationsListResponse, LocationsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import { LocationsListRemoteFields, LocationsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.locations.locationsList({
-  xAccountToken: "Trans reinvent Minivan",
-  createdAfter: new Date("2023-11-07T02:12:00.765Z"),
-  createdBefore: new Date("2022-04-10T22:33:50.562Z"),
-  cursor: "Borders fate",
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2021-12-03T14:07:35.788Z"),
-  modifiedBefore: new Date("2021-01-28T15:08:15.874Z"),
-  pageSize: 983641,
-  remoteFields: LocationsListRemoteFields.LocationType,
-  remoteId: "East neque",
-  showEnumOrigins: LocationsListShowEnumOrigins.LocationType,
-}).then((res: LocationsListResponse) => {
+  const res = await sdk.locations.locationsList({
+    xAccountToken: "Trans reinvent Minivan",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -63,29 +54,24 @@ Returns a `Location` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  LocationsRetrieveRemoteFields,
-  LocationsRetrieveResponse,
-  LocationsRetrieveShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { LocationsRetrieveRemoteFields, LocationsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.locations.locationsRetrieve({
-  xAccountToken: "cultivate Assistant",
-  id: "06cc8d98-9b4d-4b9c-8574-d8c8b728ec05",
-  includeRemoteData: false,
-  remoteFields: LocationsRetrieveRemoteFields.LocationType,
-  showEnumOrigins: LocationsRetrieveShowEnumOrigins.LocationType,
-}).then((res: LocationsRetrieveResponse) => {
+  const res = await sdk.locations.locationsRetrieve({
+    xAccountToken: "cultivate Assistant",
+    id: "06cc8d98-9b4d-4b9c-8574-d8c8b728ec05",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

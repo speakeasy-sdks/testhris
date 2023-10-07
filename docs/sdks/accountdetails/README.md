@@ -13,21 +13,22 @@ Get details for a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AccountDetailsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.accountDetails.accountDetailsRetrieve({
-  xAccountToken: "Officer Books Liaison",
-}).then((res: AccountDetailsRetrieveResponse) => {
+  const res = await sdk.accountDetails.accountDetailsRetrieve({
+    xAccountToken: "Officer Books Liaison",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

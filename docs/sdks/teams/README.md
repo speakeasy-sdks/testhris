@@ -14,32 +14,23 @@ Returns a list of `Team` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsListExpand, TeamsListResponse } from "HRIS/dist/sdk/models/operations";
+import { TeamsListExpand } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.teams.teamsList({
-  xAccountToken: "reinforce Tyler Intelligent",
-  createdAfter: new Date("2021-02-06T01:28:51.322Z"),
-  createdBefore: new Date("2022-06-01T00:35:02.048Z"),
-  cursor: "commodi Royce",
-  expand: TeamsListExpand.ParentTeam,
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2022-07-28T11:35:43.959Z"),
-  modifiedBefore: new Date("2023-12-16T22:54:16.247Z"),
-  pageSize: 895120,
-  parentTeamId: "microchip female",
-  remoteId: "blue for",
-}).then((res: TeamsListResponse) => {
+  const res = await sdk.teams.teamsList({
+    xAccountToken: "reinforce Tyler Intelligent",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -63,24 +54,24 @@ Returns a `Team` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsRetrieveExpand, TeamsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { TeamsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.teams.teamsRetrieve({
-  xAccountToken: "SMTP holistic",
-  expand: TeamsRetrieveExpand.ParentTeam,
-  id: "dde6730f-60e0-41d6-a3ae-3bbe560bf04d",
-  includeRemoteData: false,
-}).then((res: TeamsRetrieveResponse) => {
+  const res = await sdk.teams.teamsRetrieve({
+    xAccountToken: "SMTP holistic",
+    id: "dde6730f-60e0-41d6-a3ae-3bbe560bf04d",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

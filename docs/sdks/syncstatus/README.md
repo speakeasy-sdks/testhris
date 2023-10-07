@@ -13,23 +13,22 @@ Get syncing status. Possible values: `DISABLED`, `DONE`, `FAILED`, `PARTIALLY_SY
 
 ```typescript
 import { Hris } from "HRIS";
-import { SyncStatusListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.syncStatus.syncStatusList({
-  xAccountToken: "Representative",
-  cursor: "Peso",
-  pageSize: 560158,
-}).then((res: SyncStatusListResponse) => {
+  const res = await sdk.syncStatus.syncStatusList({
+    xAccountToken: "Representative",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

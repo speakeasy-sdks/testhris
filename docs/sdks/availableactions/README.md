@@ -13,21 +13,22 @@ Returns a list of models and actions available for an account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AvailableActionsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.availableActions.availableActionsRetrieve({
-  xAccountToken: "Marshall Account",
-}).then((res: AvailableActionsRetrieveResponse) => {
+  const res = await sdk.availableActions.availableActionsRetrieve({
+    xAccountToken: "Marshall Account",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

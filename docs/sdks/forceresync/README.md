@@ -13,21 +13,22 @@ Force re-sync of all models. This is available for all organizations via the das
 
 ```typescript
 import { Hris } from "HRIS";
-import { SyncStatusResyncCreateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.forceResync.syncStatusResyncCreate({
-  xAccountToken: "furiously East",
-}).then((res: SyncStatusResyncCreateResponse) => {
+  const res = await sdk.forceResync.syncStatusResyncCreate({
+    xAccountToken: "furiously East",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

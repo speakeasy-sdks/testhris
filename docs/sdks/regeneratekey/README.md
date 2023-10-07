@@ -13,21 +13,22 @@ Exchange remote keys.
 
 ```typescript
 import { Hris } from "HRIS";
-import { RegenerateKeyCreateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.regenerateKey.regenerateKeyCreate({
-  name: "Remote Deployment Key 1",
-}).then((res: RegenerateKeyCreateResponse) => {
+  const res = await sdk.regenerateKey.regenerateKeyCreate({
+    name: "Remote Deployment Key 1",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

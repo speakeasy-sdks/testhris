@@ -14,26 +14,26 @@ Creates a `WebhookReceiver` object with the given values.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversCreateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.webhookReceivers.webhookReceiversCreate({
-  webhookReceiverRequest: {
-    event: "overbook Islands",
-    isActive: false,
-    key: "<key>",
-  },
-  xAccountToken: "Kia female",
-}).then((res: WebhookReceiversCreateResponse) => {
+  const res = await sdk.webhookReceivers.webhookReceiversCreate({
+    webhookReceiverRequest: {
+      event: "overbook Islands",
+      isActive: false,
+    },
+    xAccountToken: "Kia female",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -57,21 +57,22 @@ Returns a list of `WebhookReceiver` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { WebhookReceiversListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.webhookReceivers.webhookReceiversList({
-  xAccountToken: "Mini internal capacitor",
-}).then((res: WebhookReceiversListResponse) => {
+  const res = await sdk.webhookReceivers.webhookReceiversList({
+    xAccountToken: "Mini internal capacitor",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

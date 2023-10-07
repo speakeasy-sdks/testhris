@@ -14,37 +14,23 @@ Returns a list of `EmployeePayrollRun` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsListExpand, EmployeePayrollRunsListResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeePayrollRunsListExpand } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.employeePayrollRuns.employeePayrollRunsList({
-  xAccountToken: "Granite SAS Music",
-  createdAfter: new Date("2021-04-30T02:40:35.398Z"),
-  createdBefore: new Date("2022-03-09T23:15:33.585Z"),
-  cursor: "female tan grow",
-  employeeId: "synthesizing",
-  endedAfter: new Date("2022-07-20T10:27:21.146Z"),
-  endedBefore: new Date("2022-06-28T12:48:20.693Z"),
-  expand: EmployeePayrollRunsListExpand.EmployeePayrollRun,
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2022-09-13T12:31:00.057Z"),
-  modifiedBefore: new Date("2023-04-10T02:47:15.345Z"),
-  pageSize: 282179,
-  payrollRunId: "Plastic",
-  remoteId: "Guadeloupe Virginia Gender",
-  startedAfter: new Date("2021-11-13T01:51:58.347Z"),
-  startedBefore: new Date("2022-01-26T09:53:27.960Z"),
-}).then((res: EmployeePayrollRunsListResponse) => {
+  const res = await sdk.employeePayrollRuns.employeePayrollRunsList({
+    xAccountToken: "Granite SAS Music",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -68,24 +54,24 @@ Returns an `EmployeePayrollRun` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsRetrieveExpand, EmployeePayrollRunsRetrieveResponse } from "HRIS/dist/sdk/models/operations";
+import { EmployeePayrollRunsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.employeePayrollRuns.employeePayrollRunsRetrieve({
-  xAccountToken: "Gender generate",
-  expand: EmployeePayrollRunsRetrieveExpand.Employee,
-  id: "5b4640c6-9206-4862-ba17-03c31315faeb",
-  includeRemoteData: false,
-}).then((res: EmployeePayrollRunsRetrieveResponse) => {
+  const res = await sdk.employeePayrollRuns.employeePayrollRunsRetrieve({
+    xAccountToken: "Gender generate",
+    id: "15b4640c-6920-4686-a7a1-703c31315fae",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

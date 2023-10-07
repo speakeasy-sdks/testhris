@@ -16,40 +16,25 @@ Returns a list of `PayrollRun` objects.
 import { Hris } from "HRIS";
 import {
   PayrollRunsListRemoteFields,
-  PayrollRunsListResponse,
   PayrollRunsListRunType,
   PayrollRunsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.payrollRuns.payrollRunsList({
-  xAccountToken: "Virtual index",
-  createdAfter: new Date("2022-05-07T09:57:09.474Z"),
-  createdBefore: new Date("2023-04-16T16:36:33.026Z"),
-  cursor: "Plastic possimus",
-  endedAfter: new Date("2023-10-01T12:19:59.636Z"),
-  endedBefore: new Date("2021-08-06T17:34:56.514Z"),
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2021-11-24T06:23:52.477Z"),
-  modifiedBefore: new Date("2023-01-21T18:08:54.956Z"),
-  pageSize: 201585,
-  remoteFields: PayrollRunsListRemoteFields.RunState,
-  remoteId: "Cargo generate Web",
-  runType: PayrollRunsListRunType.SignOnBonus,
-  showEnumOrigins: PayrollRunsListShowEnumOrigins.RunStateRunType,
-  startedAfter: new Date("2021-02-10T20:34:06.963Z"),
-  startedBefore: new Date("2022-08-29T14:06:30.491Z"),
-}).then((res: PayrollRunsListResponse) => {
+  const res = await sdk.payrollRuns.payrollRunsList({
+    xAccountToken: "Virtual index",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -73,29 +58,24 @@ Returns a `PayrollRun` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  PayrollRunsRetrieveRemoteFields,
-  PayrollRunsRetrieveResponse,
-  PayrollRunsRetrieveShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { PayrollRunsRetrieveRemoteFields, PayrollRunsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.payrollRuns.payrollRunsRetrieve({
-  xAccountToken: "Yemen Hermaphrodite Gibraltar",
-  id: "a17ceded-36a3-45ad-bc07-d0ae903fe612",
-  includeRemoteData: false,
-  remoteFields: PayrollRunsRetrieveRemoteFields.RunState,
-  showEnumOrigins: PayrollRunsRetrieveShowEnumOrigins.RunType,
-}).then((res: PayrollRunsRetrieveResponse) => {
+  const res = await sdk.payrollRuns.payrollRunsRetrieve({
+    xAccountToken: "Yemen Hermaphrodite Gibraltar",
+    id: "a17ceded-36a3-45ad-bc07-d0ae903fe612",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

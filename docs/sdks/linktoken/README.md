@@ -13,41 +13,40 @@ Creates a link token to be used when linking a new end user.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkTokenCreateResponse } from "HRIS/dist/sdk/models/operations";
 import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
-
-sdk.linkToken.linkTokenCreate({
-  categories: [
-    CategoriesEnum.Mktg,
-  ],
-  commonModels: [
-    {
-      disabledFields: [
-        "Pickup",
-      ],
-      enabledActions: [
-        EnabledActionsEnum.Read,
-      ],
-      modelId: "hris.Employee",
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
     },
-  ],
-  endUserEmailAddress: "Dam pascal Product",
-  endUserOrganizationName: "West Waterbury female",
-  endUserOriginId: "bypassing condemn",
-  integration: "since Northeast Genderqueer",
-  linkExpiryMins: 219620,
-  shouldCreateMagicLinkUrl: false,
-}).then((res: LinkTokenCreateResponse) => {
+  });
+
+  const res = await sdk.linkToken.linkTokenCreate({
+    categories: [
+      CategoriesEnum.Mktg,
+    ],
+    commonModels: [
+      {
+        disabledFields: [
+          "first_name",
+        ],
+        enabledActions: [
+          EnabledActionsEnum.Read,
+          EnabledActionsEnum.Write,
+        ],
+        modelId: "hris.Employee",
+      },
+    ],
+    endUserEmailAddress: "innovate mobile Dam",
+    endUserOrganizationName: "reinvent infrastructures adjudge",
+    endUserOriginId: "Waterbury female firewall",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -14,33 +14,21 @@ Gets issues.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesListResponse, IssuesListStatus } from "HRIS/dist/sdk/models/operations";
+import { IssuesListStatus } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.issues.issuesList({
-  accountToken: "Loan methodologies",
-  cursor: "Research vel EXE",
-  endDate: "indexing",
-  endUserOrganizationName: "female frame Ford",
-  firstIncidentTimeAfter: new Date("2022-04-12T05:28:41.124Z"),
-  firstIncidentTimeBefore: new Date("2021-03-22T10:33:10.478Z"),
-  includeMuted: "Legacy sit Northwest",
-  integrationName: "person",
-  lastIncidentTimeAfter: new Date("2022-03-11T08:31:26.748Z"),
-  lastIncidentTimeBefore: new Date("2023-05-19T12:16:04.512Z"),
-  pageSize: 823561,
-  startDate: "Oregon seriously Saudi",
-  status: IssuesListStatus.Ongoing,
-}).then((res: IssuesListResponse) => {
+  const res = await sdk.issues.issuesList({});
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,21 +52,22 @@ Get a specific issue.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.issues.issuesRetrieve({
-  id: "afe72258-f46d-4572-b194-a000d9ba8a35",
-}).then((res: IssuesRetrieveResponse) => {
+  const res = await sdk.issues.issuesRetrieve({
+    id: "afe72258-f46d-4572-b194-a000d9ba8a35",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

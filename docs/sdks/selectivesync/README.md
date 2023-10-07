@@ -15,21 +15,22 @@ Get a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncConfigurationsListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.selectiveSync.selectiveSyncConfigurationsList({
-  xAccountToken: "Incredible",
-}).then((res: SelectiveSyncConfigurationsListResponse) => {
+  const res = await sdk.selectiveSync.selectiveSyncConfigurationsList({
+    xAccountToken: "Incredible",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -53,34 +54,35 @@ Replace a linked account's selective syncs.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncConfigurationsUpdateResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
-  linkedAccountSelectiveSyncConfigurationListRequest: {
-    syncConfigurations: [
-      {
-        linkedAccountConditions: [
-          {
-            conditionSchemaId: "1d101b05-1b27-4bb3-8005-3fdfb3b8ef10",
-            operator: "Convertible Checking",
-            value: "yahoo",
-          },
-        ],
-      },
-    ],
-  },
-  xAccountToken: "Division Rubber",
-}).then((res: SelectiveSyncConfigurationsUpdateResponse) => {
+  const res = await sdk.selectiveSync.selectiveSyncConfigurationsUpdate({
+    linkedAccountSelectiveSyncConfigurationListRequest: {
+      syncConfigurations: [
+        {
+          linkedAccountConditions: [
+            {
+              conditionSchemaId: "1d101b05-1b27-4bb3-8005-3fdfb3b8ef10",
+              operator: "Convertible Checking",
+              value: "yahoo",
+            },
+          ],
+        },
+      ],
+    },
+    xAccountToken: "Division Rubber",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -104,24 +106,22 @@ Get metadata for the conditions available to a linked account.
 
 ```typescript
 import { Hris } from "HRIS";
-import { SelectiveSyncMetaListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.selectiveSync.selectiveSyncMetaList({
-  xAccountToken: "Funk",
-  commonModel: "Pants",
-  cursor: "deposit Gasoline lime",
-  pageSize: 993266,
-}).then((res: SelectiveSyncMetaListResponse) => {
+  const res = await sdk.selectiveSync.selectiveSyncMetaList({
+    xAccountToken: "Funk",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

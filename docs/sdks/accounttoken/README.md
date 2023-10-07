@@ -13,21 +13,22 @@ Returns the account token for the end user with the provided public token.
 
 ```typescript
 import { Hris } from "HRIS";
-import { AccountTokenRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.accountToken.accountTokenRetrieve({
-  publicToken: "Gorgeous",
-}).then((res: AccountTokenRetrieveResponse) => {
+  const res = await sdk.accountToken.accountTokenRetrieve({
+    publicToken: "Gorgeous",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

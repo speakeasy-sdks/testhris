@@ -13,33 +13,21 @@ List linked accounts for your organization.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkedAccountsListCategory, LinkedAccountsListResponse } from "HRIS/dist/sdk/models/operations";
+import { LinkedAccountsListCategory } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.linkedAccounts.linkedAccountsList({
-  category: LinkedAccountsListCategory.Ats,
-  cursor: "female",
-  endUserEmailAddress: "wireless Card",
-  endUserOrganizationName: "Jordanian hug ea",
-  endUserOriginId: "Northwest API",
-  endUserOriginIds: "Computer executive",
-  id: "0e3ff994-ca52-47d3-b04f-f21dcccc885b",
-  ids: "network Wellington Bicycle",
-  includeDuplicates: false,
-  integrationName: "deposit",
-  isTestAccount: "Horizontal",
-  pageSize: 48529,
-  status: "Florissant",
-}).then((res: LinkedAccountsListResponse) => {
+  const res = await sdk.linkedAccounts.linkedAccountsList({});
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

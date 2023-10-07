@@ -14,30 +14,22 @@ Returns a list of `Company` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { CompaniesListResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.companies.companiesList({
-  xAccountToken: "Northwest",
-  createdAfter: new Date("2021-11-22T08:04:33.605Z"),
-  createdBefore: new Date("2022-01-16T18:58:48.537Z"),
-  cursor: "quash Planner",
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2021-01-19T23:47:11.330Z"),
-  modifiedBefore: new Date("2022-05-13T14:25:52.378Z"),
-  pageSize: 955379,
-  remoteId: "Forward",
-}).then((res: CompaniesListResponse) => {
+  const res = await sdk.companies.companiesList({
+    xAccountToken: "Northwest",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,23 +53,23 @@ Returns a `Company` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { CompaniesRetrieveResponse } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.companies.companiesRetrieve({
-  xAccountToken: "Loan Southwest Gasoline",
-  id: "929a25e5-dab9-44fe-beac-92c97845978e",
-  includeRemoteData: false,
-}).then((res: CompaniesRetrieveResponse) => {
+  const res = await sdk.companies.companiesRetrieve({
+    xAccountToken: "Loan Southwest Gasoline",
+    id: "929a25e5-dab9-44fe-beac-92c97845978e",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

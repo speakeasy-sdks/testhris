@@ -15,42 +15,41 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateFormResponse } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
-
-sdk.passthrough.passthroughCreateForm({
-  dataPassthroughRequest1: {
-    baseUrlOverride: "New whiteboard optimal",
-    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
-    headers: {
-      "consequatur": "Rubber",
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
     },
-    method: "cyan",
-    multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
+  });
+
+  const res = await sdk.passthrough.passthroughCreateForm({
+    dataPassthroughRequest1: {
+      data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
+      headers: {
+        "EXTRA-HEADER": "woot",
       },
-    ],
-    normalizeResponse: false,
-    path: "/scooters",
-    requestFormat: "Hybrid",
-  },
-  xAccountToken: "pink",
-}).then((res: PassthroughCreateFormResponse) => {
+      method: "POST",
+      multipartFormData: [
+        {
+          contentType: "application/pdf",
+          data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
+          encoding: MultipartFormFieldRequestEncoding.Base64,
+          fileName: "resume.pdf",
+          name: "resume",
+        },
+      ],
+      path: "/scooters",
+      requestFormat: "JSON",
+    },
+    xAccountToken: "Highway East woman",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -74,46 +73,45 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateJsonResponse } from "HRIS/dist/sdk/models/operations";
 import {
   DataPassthroughRequestMethod,
   DataPassthroughRequestRequestFormat,
   MultipartFormFieldRequestEncoding,
 } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
-
-sdk.passthrough.passthroughCreateJson({
-  dataPassthroughRequest: {
-    baseUrlOverride: "Granite after",
-    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
-    headers: {
-      "tempora": "Rap",
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
     },
-    method: DataPassthroughRequestMethod.Post,
-    multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
+  });
+
+  const res = await sdk.passthrough.passthroughCreateJson({
+    dataPassthroughRequest: {
+      data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
+      headers: {
+        "EXTRA-HEADER": "deposit",
       },
-    ],
-    normalizeResponse: false,
-    path: "/scooters",
-    requestFormat: DataPassthroughRequestRequestFormat.Json,
-  },
-  xAccountToken: "Northwest payment",
-}).then((res: PassthroughCreateJsonResponse) => {
+      method: DataPassthroughRequestMethod.Post,
+      multipartFormData: [
+        {
+          contentType: "application/pdf",
+          data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
+          encoding: MultipartFormFieldRequestEncoding.Base64,
+          fileName: "resume.pdf",
+          name: "resume",
+        },
+      ],
+      path: "/scooters",
+      requestFormat: DataPassthroughRequestRequestFormat.Json,
+    },
+    xAccountToken: "after Bespoke",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,42 +135,41 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PassthroughCreateMultipartResponse } from "HRIS/dist/sdk/models/operations";
 import { MultipartFormFieldRequestEncoding } from "HRIS/dist/sdk/models/shared";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
-
-sdk.passthrough.passthroughCreateMultipart({
-  dataPassthroughRequest1: {
-    baseUrlOverride: "Generic",
-    data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
-    headers: {
-      "est": "West",
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
     },
-    method: "sunt",
-    multipartFormData: [
-      {
-        contentType: "application/pdf",
-        data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-        encoding: MultipartFormFieldRequestEncoding.Base64,
-        fileName: "resume.pdf",
-        name: "resume",
+  });
+
+  const res = await sdk.passthrough.passthroughCreateMultipart({
+    dataPassthroughRequest1: {
+      data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
+      headers: {
+        "EXTRA-HEADER": "East",
       },
-    ],
-    normalizeResponse: false,
-    path: "/scooters",
-    requestFormat: "Hybrid",
-  },
-  xAccountToken: "Bogisich",
-}).then((res: PassthroughCreateMultipartResponse) => {
+      method: "POST",
+      multipartFormData: [
+        {
+          contentType: "application/pdf",
+          data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
+          encoding: MultipartFormFieldRequestEncoding.Base64,
+          fileName: "resume.pdf",
+          name: "resume",
+        },
+      ],
+      path: "/scooters",
+      requestFormat: "JSON",
+    },
+    xAccountToken: "Lead Hybrid",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

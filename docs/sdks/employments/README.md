@@ -18,37 +18,24 @@ import {
   EmploymentsListExpand,
   EmploymentsListOrderBy,
   EmploymentsListRemoteFields,
-  EmploymentsListResponse,
   EmploymentsListShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.employments.employmentsList({
-  xAccountToken: "opium",
-  createdAfter: new Date("2022-08-13T02:01:49.138Z"),
-  createdBefore: new Date("2022-08-10T08:20:34.102Z"),
-  cursor: "Granite global",
-  employeeId: "SDR",
-  expand: EmploymentsListExpand.EmployeePayGroup,
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2022-11-07T23:00:32.727Z"),
-  modifiedBefore: new Date("2022-04-03T10:25:20.319Z"),
-  orderBy: EmploymentsListOrderBy.MinusEffectiveDate,
-  pageSize: 588146,
-  remoteFields: EmploymentsListRemoteFields.EmploymentTypePayPeriod,
-  remoteId: "Agent Product South",
-  showEnumOrigins: EmploymentsListShowEnumOrigins.EmploymentTypeFlsaStatusPayPeriod,
-}).then((res: EmploymentsListResponse) => {
+  const res = await sdk.employments.employmentsList({
+    xAccountToken: "opium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -75,28 +62,25 @@ import { Hris } from "HRIS";
 import {
   EmploymentsRetrieveExpand,
   EmploymentsRetrieveRemoteFields,
-  EmploymentsRetrieveResponse,
   EmploymentsRetrieveShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.employments.employmentsRetrieve({
-  xAccountToken: "Crest",
-  expand: EmploymentsRetrieveExpand.PayGroup,
-  id: "fa36b1cb-d926-4eb5-9f7a-98c39fd25176",
-  includeRemoteData: false,
-  remoteFields: EmploymentsRetrieveRemoteFields.FlsaStatusPayFrequency,
-  showEnumOrigins: EmploymentsRetrieveShowEnumOrigins.EmploymentTypeFlsaStatus,
-}).then((res: EmploymentsRetrieveResponse) => {
+  const res = await sdk.employments.employmentsRetrieve({
+    xAccountToken: "Crest",
+    id: "dfa36b1c-bd92-46eb-99f7-a98c39fd2517",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -14,33 +14,23 @@ Returns a list of `Group` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { GroupsListRemoteFields, GroupsListResponse, GroupsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import { GroupsListRemoteFields, GroupsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.groups.groupsList({
-  xAccountToken: "Representative Assistant",
-  createdAfter: new Date("2022-01-10T12:34:33.975Z"),
-  createdBefore: new Date("2021-11-13T07:32:12.685Z"),
-  cursor: "Oriental salmon VGA",
-  includeDeletedData: false,
-  includeRemoteData: false,
-  modifiedAfter: new Date("2022-12-01T12:36:52.247Z"),
-  modifiedBefore: new Date("2023-10-16T13:58:43.476Z"),
-  pageSize: 23296,
-  remoteFields: GroupsListRemoteFields.Type,
-  remoteId: "systematic technologies Metal",
-  showEnumOrigins: GroupsListShowEnumOrigins.Type,
-  types: "West",
-}).then((res: GroupsListResponse) => {
+  const res = await sdk.groups.groupsList({
+    xAccountToken: "Representative Assistant",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,29 +54,24 @@ Returns a `Group` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  GroupsRetrieveRemoteFields,
-  GroupsRetrieveResponse,
-  GroupsRetrieveShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { GroupsRetrieveRemoteFields, GroupsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-const sdk = new Hris({
-  security: {
-    tokenAuth: "",
-  },
-});
+(async() => {
+  const sdk = new Hris({
+    security: {
+      tokenAuth: "",
+    },
+  });
 
-sdk.groups.groupsRetrieve({
-  xAccountToken: "Chair Northeast Diesel",
-  id: "b255daad-b078-4367-a3cd-8961d91b4b8b",
-  includeRemoteData: false,
-  remoteFields: GroupsRetrieveRemoteFields.Type,
-  showEnumOrigins: GroupsRetrieveShowEnumOrigins.Type,
-}).then((res: GroupsRetrieveResponse) => {
+  const res = await sdk.groups.groupsRetrieve({
+    xAccountToken: "Chair Northeast Diesel",
+    id: "b255daad-b078-4367-a3cd-8961d91b4b8b",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
