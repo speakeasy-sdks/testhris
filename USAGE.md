@@ -4,20 +4,21 @@
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
-  const sdk = new Hris({
-    security: {
-      tokenAuth: "",
-    },
-  });
+(async () => {
+    const sdk = new Hris({
+        security: {
+            tokenAuth: "",
+        },
+    });
 
-  const res = await sdk.accountDetails.accountDetailsRetrieve({
-    xAccountToken: "Officer Books Liaison",
-  });
+    const res = await sdk.accountDetails.accountDetailsRetrieve({
+        xAccountToken: "string",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->

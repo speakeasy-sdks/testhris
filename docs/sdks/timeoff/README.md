@@ -34,10 +34,10 @@ import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } 
         employeeNote: "Moving into the new apartment Kendall Roy gave me!",
         endTime: new Date("2020-11-17T00:00:00Z"),
         integrationParams: {
-          "unique_integration_field": "olive",
+          "unique_integration_field": "string",
         },
         linkedAccountParams: {
-          "unique_linked_account_field": "fooey",
+          "unique_linked_account_field": "string",
         },
         requestType: TimeOffRequestRequestType.Vacation,
         startTime: new Date("2020-11-10T00:00:00Z"),
@@ -45,7 +45,7 @@ import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } 
         units: TimeOffRequestUnits.Days,
       },
     },
-    xAccountToken: "Bicycle Bicycle Charles",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -91,7 +91,7 @@ import {
   });
 
   const res = await sdk.timeOff.timeOffList({
-    xAccountToken: "mint South Modern",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -130,7 +130,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.timeOff.timeOffMetaPostRetrieve({
-    xAccountToken: "Well weber",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -174,8 +174,8 @@ import {
   });
 
   const res = await sdk.timeOff.timeOffRetrieve({
-    xAccountToken: "Northwest Aruba HDD",
-    id: "ddef5fcf-e2bb-4ba7-832c-29e53f2fdc02",
+    xAccountToken: "string",
+    id: "a170075d-def5-4fcf-a2bb-ba7c32c29e53",
   });
 
   if (res.statusCode == 200) {

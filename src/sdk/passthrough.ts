@@ -19,106 +19,12 @@ export class Passthrough {
     /**
      * Pull data from an endpoint not currently supported by Merge.
      */
-    async passthroughCreateForm(
-        req: operations.PassthroughCreateFormRequest,
+    async passthroughCreate(
+        req: operations.PassthroughCreateRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.PassthroughCreateFormResponse> {
+    ): Promise<operations.PassthroughCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PassthroughCreateFormRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const url: string = baseURL.replace(/\/$/, "") + "/passthrough";
-
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
-
-        try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "dataPassthroughRequest1",
-                "form"
-            );
-        } catch (e: unknown) {
-            if (e instanceof Error) {
-                throw new Error(`Error serializing request body, cause: ${e.message}`);
-            }
-        }
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = {
-            ...utils.getHeadersFromRequest(req),
-            ...reqBodyHeaders,
-            ...config?.headers,
-            ...properties.headers,
-        };
-        if (reqBody == null) throw new Error("request body is required");
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: url,
-            method: "post",
-            headers: headers,
-            responseType: "arraybuffer",
-            data: reqBody,
-            ...config,
-        });
-
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.PassthroughCreateFormResponse =
-            new operations.PassthroughCreateFormResponse({
-                statusCode: httpRes.status,
-                contentType: contentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
-                    res.remoteResponse = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.RemoteResponse
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Pull data from an endpoint not currently supported by Merge.
-     */
-    async passthroughCreateJson(
-        req: operations.PassthroughCreateJsonRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.PassthroughCreateJsonResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PassthroughCreateJsonRequest(req);
+            req = new operations.PassthroughCreateRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
@@ -176,106 +82,11 @@ export class Passthrough {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.PassthroughCreateJsonResponse =
-            new operations.PassthroughCreateJsonResponse({
-                statusCode: httpRes.status,
-                contentType: contentType,
-                rawResponse: httpRes,
-            });
-        const decodedRes = new TextDecoder().decode(httpRes?.data);
-        switch (true) {
-            case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
-                    res.remoteResponse = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.RemoteResponse
-                    );
-                } else {
-                    throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
-                        httpRes.status,
-                        decodedRes,
-                        httpRes
-                    );
-                }
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Pull data from an endpoint not currently supported by Merge.
-     */
-    async passthroughCreateMultipart(
-        req: operations.PassthroughCreateMultipartRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.PassthroughCreateMultipartResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.PassthroughCreateMultipartRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const url: string = baseURL.replace(/\/$/, "") + "/passthrough";
-
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
-
-        try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "dataPassthroughRequest1",
-                "multipart"
-            );
-        } catch (e: unknown) {
-            if (e instanceof Error) {
-                throw new Error(`Error serializing request body, cause: ${e.message}`);
-            }
-        }
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = {
-            ...utils.getHeadersFromRequest(req),
-            ...reqBodyHeaders,
-            ...config?.headers,
-            ...properties.headers,
-        };
-        if (reqBody == null) throw new Error("request body is required");
-        headers["Accept"] = "application/json";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: url,
-            method: "post",
-            headers: headers,
-            responseType: "arraybuffer",
-            data: reqBody,
-            ...config,
+        const res: operations.PassthroughCreateResponse = new operations.PassthroughCreateResponse({
+            statusCode: httpRes.status,
+            contentType: contentType,
+            rawResponse: httpRes,
         });
-
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.PassthroughCreateMultipartResponse =
-            new operations.PassthroughCreateMultipartResponse({
-                statusCode: httpRes.status,
-                contentType: contentType,
-                rawResponse: httpRes,
-            });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:

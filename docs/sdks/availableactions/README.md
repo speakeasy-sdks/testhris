@@ -22,7 +22,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.availableActions.availableActionsRetrieve({
-    xAccountToken: "Marshall Account",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

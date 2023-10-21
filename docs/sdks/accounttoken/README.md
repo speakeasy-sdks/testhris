@@ -22,7 +22,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.accountToken.accountTokenRetrieve({
-    publicToken: "Gorgeous",
+    publicToken: "string",
   });
 
   if (res.statusCode == 200) {

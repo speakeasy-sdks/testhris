@@ -24,10 +24,10 @@ import { Hris } from "HRIS";
 
   const res = await sdk.webhookReceivers.webhookReceiversCreate({
     webhookReceiverRequest: {
-      event: "overbook Islands",
+      event: "string",
       isActive: false,
     },
-    xAccountToken: "Kia female",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -66,7 +66,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.webhookReceivers.webhookReceiversList({
-    xAccountToken: "Mini internal capacitor",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

@@ -22,7 +22,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.accountDetails.accountDetailsRetrieve({
-    xAccountToken: "Officer Books Liaison",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

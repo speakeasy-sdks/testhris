@@ -24,7 +24,7 @@ import { EmployeePayrollRunsListExpand } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.employeePayrollRuns.employeePayrollRunsList({
-    xAccountToken: "Granite SAS Music",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -64,8 +64,8 @@ import { EmployeePayrollRunsRetrieveExpand } from "HRIS/dist/sdk/models/operatio
   });
 
   const res = await sdk.employeePayrollRuns.employeePayrollRunsRetrieve({
-    xAccountToken: "Gender generate",
-    id: "15b4640c-6920-4686-a7a1-703c31315fae",
+    xAccountToken: "string",
+    id: "99668815-b464-40c6-9206-8627a1703c31",
   });
 
   if (res.statusCode == 200) {

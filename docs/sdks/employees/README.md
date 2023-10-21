@@ -4,9 +4,7 @@
 ### Available Operations
 
 * [employeesCreate](#employeescreate) - Creates an `Employee` object with the given values.
-* [employeesIgnoreCreateForm](#employeesignorecreateform) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-* [employeesIgnoreCreateJson](#employeesignorecreatejson) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-* [employeesIgnoreCreateMultipart](#employeesignorecreatemultipart) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
+* [employeesIgnoreCreate](#employeesignorecreate) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
 * [employeesList](#employeeslist) - Returns a list of `Employee` objects.
 * [employeesMetaPostRetrieve](#employeesmetapostretrieve) - Returns metadata for `Employee` POSTs.
 * [employeesRetrieve](#employeesretrieve) - Returns an `Employee` object with the given `id`.
@@ -54,11 +52,11 @@ import {
         hireDate: new Date("2020-10-10T00:00:00Z"),
         homeLocation: "d2f972d0-2526-434b-9409-4c3b468e08f0",
         integrationParams: {
-          "unique_integration_field": "payment",
+          "unique_integration_field": "string",
         },
         lastName: "Hirsch",
         linkedAccountParams: {
-          "unique_linked_account_field": "Folsom",
+          "unique_linked_account_field": "string",
         },
         manager: "0048ea5b-911e-4dff-9364-92070dea62ff",
         maritalStatus: EmployeeRequestMaritalStatus.Single,
@@ -74,7 +72,7 @@ import {
         workLocation: "9efbc633-3387-4306-aa55-e2c635e6bb4f",
       },
     },
-    xAccountToken: "height",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -96,51 +94,7 @@ import {
 **Promise<[operations.EmployeesCreateResponse](../../models/operations/employeescreateresponse.md)>**
 
 
-## employeesIgnoreCreateForm
-
-Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-
-### Example Usage
-
-```typescript
-import { Hris } from "HRIS";
-
-(async() => {
-  const sdk = new Hris({
-    security: {
-      tokenAuth: "",
-    },
-  });
-
-  const res = await sdk.employees.employeesIgnoreCreateForm({
-    ignoreCommonModelRequest1: {
-      message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-      reason: "GENERAL_CUSTOMER_REQUEST",
-    },
-    xAccountToken: "EXE",
-    modelId: "e3265677-184b-415d-a09e-01c9116e04a7",
-  });
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
-})();
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EmployeesIgnoreCreateFormRequest](../../models/operations/employeesignorecreateformrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
-
-
-### Response
-
-**Promise<[operations.EmployeesIgnoreCreateFormResponse](../../models/operations/employeesignorecreateformresponse.md)>**
-
-
-## employeesIgnoreCreateJson
+## employeesIgnoreCreate
 
 Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
 
@@ -157,13 +111,13 @@ import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
     },
   });
 
-  const res = await sdk.employees.employeesIgnoreCreateJson({
+  const res = await sdk.employees.employeesIgnoreCreate({
     ignoreCommonModelRequest: {
       message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
       reason: IgnoreCommonModelRequestReason.GeneralCustomerRequest,
     },
-    xAccountToken: "XML Assurance",
-    modelId: "5300c2b8-daeb-45f9-8721-d56763138ba6",
+    xAccountToken: "string",
+    modelId: "2a18e15d-530c-4d29-b14b-b6aaa7629957",
   });
 
   if (res.statusCode == 200) {
@@ -174,59 +128,15 @@ import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.EmployeesIgnoreCreateJsonRequest](../../models/operations/employeesignorecreatejsonrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.EmployeesIgnoreCreateRequest](../../models/operations/employeesignorecreaterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.EmployeesIgnoreCreateJsonResponse](../../models/operations/employeesignorecreatejsonresponse.md)>**
-
-
-## employeesIgnoreCreateMultipart
-
-Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-
-### Example Usage
-
-```typescript
-import { Hris } from "HRIS";
-
-(async() => {
-  const sdk = new Hris({
-    security: {
-      tokenAuth: "",
-    },
-  });
-
-  const res = await sdk.employees.employeesIgnoreCreateMultipart({
-    ignoreCommonModelRequest1: {
-      message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-      reason: "GENERAL_CUSTOMER_REQUEST",
-    },
-    xAccountToken: "Arizona Pop circuit",
-    modelId: "63773358-aa2e-48d8-bbf7-9dc18e834450",
-  });
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
-})();
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.EmployeesIgnoreCreateMultipartRequest](../../models/operations/employeesignorecreatemultipartrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
-
-
-### Response
-
-**Promise<[operations.EmployeesIgnoreCreateMultipartResponse](../../models/operations/employeesignorecreatemultipartresponse.md)>**
+**Promise<[operations.EmployeesIgnoreCreateResponse](../../models/operations/employeesignorecreateresponse.md)>**
 
 
 ## employeesList
@@ -252,7 +162,7 @@ import {
   });
 
   const res = await sdk.employees.employeesList({
-    xAccountToken: "Madagascar North Hyundai",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -291,7 +201,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.employees.employeesMetaPostRetrieve({
-    xAccountToken: "maroon Handmade",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -335,8 +245,8 @@ import {
   });
 
   const res = await sdk.employees.employeesRetrieve({
-    xAccountToken: "Convertible",
-    id: "06e21c40-35d2-42c4-b7e4-4b63a37d856a",
+    xAccountToken: "string",
+    id: "1d206e21-c403-45d2-ac47-7e44b63a37d8",
   });
 
   if (res.statusCode == 200) {

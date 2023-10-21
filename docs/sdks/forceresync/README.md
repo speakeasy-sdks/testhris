@@ -22,7 +22,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.forceResync.syncStatusResyncCreate({
-    xAccountToken: "furiously East",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

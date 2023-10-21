@@ -21,21 +21,22 @@ yarn add https://github.com/speakeasy-sdks/testhris
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
-  const sdk = new Hris({
-    security: {
-      tokenAuth: "",
-    },
-  });
+(async () => {
+    const sdk = new Hris({
+        security: {
+            tokenAuth: "",
+        },
+    });
 
-  const res = await sdk.accountDetails.accountDetailsRetrieve({
-    xAccountToken: "Officer Books Liaison",
-  });
+    const res = await sdk.accountDetails.accountDetailsRetrieve({
+        xAccountToken: "string",
+    });
 
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
 <!-- End SDK Example Usage -->
 
@@ -82,9 +83,7 @@ import { Hris } from "HRIS";
 ### [employees](docs/sdks/employees/README.md)
 
 * [employeesCreate](docs/sdks/employees/README.md#employeescreate) - Creates an `Employee` object with the given values.
-* [employeesIgnoreCreateForm](docs/sdks/employees/README.md#employeesignorecreateform) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-* [employeesIgnoreCreateJson](docs/sdks/employees/README.md#employeesignorecreatejson) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-* [employeesIgnoreCreateMultipart](docs/sdks/employees/README.md#employeesignorecreatemultipart) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
+* [employeesIgnoreCreate](docs/sdks/employees/README.md#employeesignorecreate) - Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
 * [employeesList](docs/sdks/employees/README.md#employeeslist) - Returns a list of `Employee` objects.
 * [employeesMetaPostRetrieve](docs/sdks/employees/README.md#employeesmetapostretrieve) - Returns metadata for `Employee` POSTs.
 * [employeesRetrieve](docs/sdks/employees/README.md#employeesretrieve) - Returns an `Employee` object with the given `id`.
@@ -127,9 +126,7 @@ import { Hris } from "HRIS";
 
 ### [passthrough](docs/sdks/passthrough/README.md)
 
-* [passthroughCreateForm](docs/sdks/passthrough/README.md#passthroughcreateform) - Pull data from an endpoint not currently supported by Merge.
-* [passthroughCreateJson](docs/sdks/passthrough/README.md#passthroughcreatejson) - Pull data from an endpoint not currently supported by Merge.
-* [passthroughCreateMultipart](docs/sdks/passthrough/README.md#passthroughcreatemultipart) - Pull data from an endpoint not currently supported by Merge.
+* [passthroughCreate](docs/sdks/passthrough/README.md#passthroughcreate) - Pull data from an endpoint not currently supported by Merge.
 
 ### [payGroups](docs/sdks/paygroups/README.md)
 

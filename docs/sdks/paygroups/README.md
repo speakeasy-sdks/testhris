@@ -23,7 +23,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.payGroups.payGroupsList({
-    xAccountToken: "Customer cribbage",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -62,8 +62,8 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.payGroups.payGroupsRetrieve({
-    xAccountToken: "North newton",
-    id: "5d67c803-d66d-4576-b84b-db69e62e0d80",
+    xAccountToken: "string",
+    id: "a02c55d6-7c80-43d6-ad57-6784bdb69e62",
   });
 
   if (res.statusCode == 200) {

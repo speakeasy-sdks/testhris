@@ -23,7 +23,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.companies.companiesList({
-    xAccountToken: "Northwest",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -62,8 +62,8 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.companies.companiesRetrieve({
-    xAccountToken: "Loan Southwest Gasoline",
-    id: "929a25e5-dab9-44fe-beac-92c97845978e",
+    xAccountToken: "string",
+    id: "f6981dd8-929a-425e-9dab-94febeac92c9",
   });
 
   if (res.statusCode == 200) {

@@ -24,7 +24,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.selectiveSync.selectiveSyncConfigurationsList({
-    xAccountToken: "Incredible",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -69,14 +69,14 @@ import { Hris } from "HRIS";
           linkedAccountConditions: [
             {
               conditionSchemaId: "1d101b05-1b27-4bb3-8005-3fdfb3b8ef10",
-              operator: "Convertible Checking",
-              value: "yahoo",
+              operator: "string",
+              value: "string",
             },
           ],
         },
       ],
     },
-    xAccountToken: "Division Rubber",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -115,7 +115,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.selectiveSync.selectiveSyncMetaList({
-    xAccountToken: "Funk",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

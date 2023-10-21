@@ -24,7 +24,7 @@ import { GroupsListRemoteFields, GroupsListShowEnumOrigins } from "HRIS/dist/sdk
   });
 
   const res = await sdk.groups.groupsList({
-    xAccountToken: "Representative Assistant",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -64,8 +64,8 @@ import { GroupsRetrieveRemoteFields, GroupsRetrieveShowEnumOrigins } from "HRIS/
   });
 
   const res = await sdk.groups.groupsRetrieve({
-    xAccountToken: "Chair Northeast Diesel",
-    id: "b255daad-b078-4367-a3cd-8961d91b4b8b",
+    xAccountToken: "string",
+    id: "f30195ec-1b25-45da-adb0-7836763cd896",
   });
 
   if (res.statusCode == 200) {

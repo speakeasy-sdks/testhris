@@ -29,7 +29,7 @@ import {
   });
 
   const res = await sdk.timeOffBalances.timeOffBalancesList({
-    xAccountToken: "Hawaii Bedfordshire",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -73,8 +73,8 @@ import {
   });
 
   const res = await sdk.timeOffBalances.timeOffBalancesRetrieve({
-    xAccountToken: "Martin",
-    id: "d575df78-c430-4b81-a680-66ab9d39a5f2",
+    xAccountToken: "string",
+    id: "1d09d575-df78-4c43-8b81-268066ab9d39",
   });
 
   if (res.statusCode == 200) {

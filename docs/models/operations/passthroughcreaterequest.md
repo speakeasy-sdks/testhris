@@ -1,4 +1,4 @@
-# PassthroughCreateJsonRequest
+# PassthroughCreateRequest
 
 
 ## Fields

@@ -113,92 +113,12 @@ export class Employees {
     /**
      * Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
      */
-    async employeesIgnoreCreateForm(
-        req: operations.EmployeesIgnoreCreateFormRequest,
+    async employeesIgnoreCreate(
+        req: operations.EmployeesIgnoreCreateRequest,
         config?: AxiosRequestConfig
-    ): Promise<operations.EmployeesIgnoreCreateFormResponse> {
+    ): Promise<operations.EmployeesIgnoreCreateResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.EmployeesIgnoreCreateFormRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const url: string = utils.generateURL(baseURL, "/employees/ignore/{model_id}", req);
-
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
-
-        try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "ignoreCommonModelRequest1",
-                "form"
-            );
-        } catch (e: unknown) {
-            if (e instanceof Error) {
-                throw new Error(`Error serializing request body, cause: ${e.message}`);
-            }
-        }
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = {
-            ...utils.getHeadersFromRequest(req),
-            ...reqBodyHeaders,
-            ...config?.headers,
-            ...properties.headers,
-        };
-        if (reqBody == null) throw new Error("request body is required");
-        headers["Accept"] = "*/*";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: url,
-            method: "post",
-            headers: headers,
-            responseType: "arraybuffer",
-            data: reqBody,
-            ...config,
-        });
-
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.EmployeesIgnoreCreateFormResponse =
-            new operations.EmployeesIgnoreCreateFormResponse({
-                statusCode: httpRes.status,
-                contentType: contentType,
-                rawResponse: httpRes,
-            });
-        switch (true) {
-            case httpRes?.status == 200:
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-     */
-    async employeesIgnoreCreateJson(
-        req: operations.EmployeesIgnoreCreateJsonRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.EmployeesIgnoreCreateJsonResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.EmployeesIgnoreCreateJsonRequest(req);
+            req = new operations.EmployeesIgnoreCreateRequest(req);
         }
 
         const baseURL: string = utils.templateUrl(
@@ -256,88 +176,8 @@ export class Employees {
             throw new Error(`status code not found in response: ${httpRes}`);
         }
 
-        const res: operations.EmployeesIgnoreCreateJsonResponse =
-            new operations.EmployeesIgnoreCreateJsonResponse({
-                statusCode: httpRes.status,
-                contentType: contentType,
-                rawResponse: httpRes,
-            });
-        switch (true) {
-            case httpRes?.status == 200:
-                break;
-        }
-
-        return res;
-    }
-
-    /**
-     * Ignores a specific row based on the `model_id` in the url. These records will have their properties set to null, and will not be updated in future syncs. The "reason" and "message" fields in the request body will be stored for audit purposes.
-     */
-    async employeesIgnoreCreateMultipart(
-        req: operations.EmployeesIgnoreCreateMultipartRequest,
-        config?: AxiosRequestConfig
-    ): Promise<operations.EmployeesIgnoreCreateMultipartResponse> {
-        if (!(req instanceof utils.SpeakeasyBase)) {
-            req = new operations.EmployeesIgnoreCreateMultipartRequest(req);
-        }
-
-        const baseURL: string = utils.templateUrl(
-            this.sdkConfiguration.serverURL,
-            this.sdkConfiguration.serverDefaults
-        );
-        const url: string = utils.generateURL(baseURL, "/employees/ignore/{model_id}", req);
-
-        let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
-
-        try {
-            [reqBodyHeaders, reqBody] = utils.serializeRequestBody(
-                req,
-                "ignoreCommonModelRequest1",
-                "multipart"
-            );
-        } catch (e: unknown) {
-            if (e instanceof Error) {
-                throw new Error(`Error serializing request body, cause: ${e.message}`);
-            }
-        }
-        const client: AxiosInstance = this.sdkConfiguration.defaultClient;
-        let globalSecurity = this.sdkConfiguration.security;
-        if (typeof globalSecurity === "function") {
-            globalSecurity = await globalSecurity();
-        }
-        if (!(globalSecurity instanceof utils.SpeakeasyBase)) {
-            globalSecurity = new shared.Security(globalSecurity);
-        }
-        const properties = utils.parseSecurityProperties(globalSecurity);
-        const headers: RawAxiosRequestHeaders = {
-            ...utils.getHeadersFromRequest(req),
-            ...reqBodyHeaders,
-            ...config?.headers,
-            ...properties.headers,
-        };
-        if (reqBody == null) throw new Error("request body is required");
-        headers["Accept"] = "*/*";
-
-        headers["user-agent"] = this.sdkConfiguration.userAgent;
-
-        const httpRes: AxiosResponse = await client.request({
-            validateStatus: () => true,
-            url: url,
-            method: "post",
-            headers: headers,
-            responseType: "arraybuffer",
-            data: reqBody,
-            ...config,
-        });
-
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) {
-            throw new Error(`status code not found in response: ${httpRes}`);
-        }
-
-        const res: operations.EmployeesIgnoreCreateMultipartResponse =
-            new operations.EmployeesIgnoreCreateMultipartResponse({
+        const res: operations.EmployeesIgnoreCreateResponse =
+            new operations.EmployeesIgnoreCreateResponse({
                 statusCode: httpRes.status,
                 contentType: contentType,
                 rawResponse: httpRes,

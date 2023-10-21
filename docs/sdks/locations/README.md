@@ -24,7 +24,7 @@ import { LocationsListRemoteFields, LocationsListShowEnumOrigins } from "HRIS/di
   });
 
   const res = await sdk.locations.locationsList({
-    xAccountToken: "Trans reinvent Minivan",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -64,8 +64,8 @@ import { LocationsRetrieveRemoteFields, LocationsRetrieveShowEnumOrigins } from 
   });
 
   const res = await sdk.locations.locationsRetrieve({
-    xAccountToken: "cultivate Assistant",
-    id: "06cc8d98-9b4d-4b9c-8574-d8c8b728ec05",
+    xAccountToken: "string",
+    id: "74ebd06c-c8d9-489b-8db9-cc574d8c8b72",
   });
 
   if (res.statusCode == 200) {

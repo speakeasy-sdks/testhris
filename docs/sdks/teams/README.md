@@ -24,7 +24,7 @@ import { TeamsListExpand } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.teams.teamsList({
-    xAccountToken: "reinforce Tyler Intelligent",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -64,8 +64,8 @@ import { TeamsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.teams.teamsRetrieve({
-    xAccountToken: "SMTP holistic",
-    id: "dde6730f-60e0-41d6-a3ae-3bbe560bf04d",
+    xAccountToken: "string",
+    id: "77b57dde-6730-4f60-a01d-623ae3bbe560",
   });
 
   if (res.statusCode == 200) {

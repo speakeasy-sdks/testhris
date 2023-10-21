@@ -19,11 +19,11 @@ export enum IgnoreCommonModelRequestReason {
 }
 
 export class IgnoreCommonModelRequest extends SpeakeasyBase {
-    @SpeakeasyMetadata()
+    @SpeakeasyMetadata({ data: "form, name=message, multipart_form, name=message" })
     @Expose({ name: "message" })
     message?: string;
 
-    @SpeakeasyMetadata()
+    @SpeakeasyMetadata({ data: "form, name=reason, multipart_form, name=reason" })
     @Expose({ name: "reason" })
     reason: IgnoreCommonModelRequestReason;
 }

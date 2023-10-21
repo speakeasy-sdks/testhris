@@ -28,7 +28,7 @@ import {
   });
 
   const res = await sdk.payrollRuns.payrollRunsList({
-    xAccountToken: "Virtual index",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -68,8 +68,8 @@ import { PayrollRunsRetrieveRemoteFields, PayrollRunsRetrieveShowEnumOrigins } f
   });
 
   const res = await sdk.payrollRuns.payrollRunsRetrieve({
-    xAccountToken: "Yemen Hermaphrodite Gibraltar",
-    id: "a17ceded-36a3-45ad-bc07-d0ae903fe612",
+    xAccountToken: "string",
+    id: "d0f9705a-17ce-4ded-b6a3-5adfc07d0ae9",
   });
 
   if (res.statusCode == 200) {

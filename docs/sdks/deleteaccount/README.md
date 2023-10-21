@@ -22,7 +22,7 @@ import { Hris } from "HRIS";
   });
 
   const res = await sdk.deleteAccount.deleteAccountCreate({
-    xAccountToken: "flexibility",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {

@@ -38,9 +38,9 @@ import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared"
         modelId: "hris.Employee",
       },
     ],
-    endUserEmailAddress: "innovate mobile Dam",
-    endUserOrganizationName: "reinvent infrastructures adjudge",
-    endUserOriginId: "Waterbury female firewall",
+    endUserEmailAddress: "string",
+    endUserOrganizationName: "string",
+    endUserOriginId: "string",
   });
 
   if (res.statusCode == 200) {

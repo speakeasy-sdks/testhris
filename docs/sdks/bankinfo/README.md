@@ -30,7 +30,7 @@ import {
   });
 
   const res = await sdk.bankInfo.bankInfoList({
-    xAccountToken: "Folding Global",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -74,8 +74,8 @@ import {
   });
 
   const res = await sdk.bankInfo.bankInfoRetrieve({
-    xAccountToken: "haptic Soap cluttered",
-    id: "73932cf4-9920-4096-a347-1089d9a5fd7a",
+    xAccountToken: "string",
+    id: "d7839d27-3932-4cf4-9920-09663471089d",
   });
 
   if (res.statusCode == 200) {

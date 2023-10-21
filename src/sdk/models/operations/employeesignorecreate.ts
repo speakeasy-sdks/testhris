@@ -6,26 +6,26 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
-export class PassthroughCreateMultipartRequest extends SpeakeasyBase {
-    @SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" })
-    dataPassthroughRequest1: shared.DataPassthroughRequest1;
+export class EmployeesIgnoreCreateRequest extends SpeakeasyBase {
+    @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+    ignoreCommonModelRequest: shared.IgnoreCommonModelRequest;
 
     /**
      * Token identifying the end user.
      */
     @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Account-Token" })
     xAccountToken: string;
+
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=model_id" })
+    modelId: string;
 }
 
-export class PassthroughCreateMultipartResponse extends SpeakeasyBase {
+export class EmployeesIgnoreCreateResponse extends SpeakeasyBase {
     /**
      * HTTP response content type for this operation
      */
     @SpeakeasyMetadata()
     contentType: string;
-
-    @SpeakeasyMetadata()
-    remoteResponse?: shared.RemoteResponse;
 
     /**
      * HTTP response status code for this operation

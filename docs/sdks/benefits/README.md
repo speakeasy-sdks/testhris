@@ -24,7 +24,7 @@ import { BenefitsListExpand } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.benefits.benefitsList({
-    xAccountToken: "Handmade Coordinator bright",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -64,8 +64,8 @@ import { BenefitsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.benefits.benefitsRetrieve({
-    xAccountToken: "extranet",
-    id: "7de81b28-fe68-4ca5-bdee-1e8a699d0dc0",
+    xAccountToken: "string",
+    id: "0647de81-b28f-4e68-8a5f-dee1e8a699d0",
   });
 
   if (res.statusCode == 200) {

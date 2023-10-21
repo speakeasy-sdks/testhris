@@ -29,7 +29,7 @@ import {
   });
 
   const res = await sdk.employments.employmentsList({
-    xAccountToken: "opium",
+    xAccountToken: "string",
   });
 
   if (res.statusCode == 200) {
@@ -73,8 +73,8 @@ import {
   });
 
   const res = await sdk.employments.employmentsRetrieve({
-    xAccountToken: "Crest",
-    id: "dfa36b1c-bd92-46eb-99f7-a98c39fd2517",
+    xAccountToken: "string",
+    id: "02842cdf-a36b-41cb-9926-eb59f7a98c39",
   });
 
   if (res.statusCode == 200) {
