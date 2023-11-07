@@ -12,7 +12,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * @remarks
  * * `CHECKING` - CHECKING
  */
-export enum BankInfoAccountType {
+export enum AccountType {
     Savings = "SAVINGS",
     Checking = "CHECKING",
 }
@@ -45,7 +45,7 @@ export class BankInfo extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "account_type" })
-    accountType?: BankInfoAccountType;
+    accountType?: AccountType;
 
     /**
      * The bank name.

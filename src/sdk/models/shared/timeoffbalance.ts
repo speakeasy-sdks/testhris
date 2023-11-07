@@ -16,7 +16,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `VOLUNTEER` - VOLUNTEER
  * * `BEREAVEMENT` - BEREAVEMENT
  */
-export enum TimeOffBalancePolicyType {
+export enum PolicyType {
     Vacation = "VACATION",
     Sick = "SICK",
     Personal = "PERSONAL",
@@ -80,7 +80,7 @@ export class TimeOffBalance extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "policy_type" })
-    policyType?: TimeOffBalancePolicyType;
+    policyType?: PolicyType;
 
     @SpeakeasyMetadata({ elemType: RemoteData })
     @Expose({ name: "remote_data" })

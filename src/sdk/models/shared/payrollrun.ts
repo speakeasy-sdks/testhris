@@ -15,7 +15,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `FAILED` - FAILED
  * * `CLOSED` - CLOSED
  */
-export enum PayrollRunRunState {
+export enum RunState {
     Paid = "PAID",
     Draft = "DRAFT",
     Approved = "APPROVED",
@@ -32,7 +32,7 @@ export enum PayrollRunRunState {
  * * `TERMINATION` - TERMINATION
  * * `SIGN_ON_BONUS` - SIGN_ON_BONUS
  */
-export enum PayrollRunRunType {
+export enum RunType {
     Regular = "REGULAR",
     OffCycle = "OFF_CYCLE",
     Correction = "CORRECTION",
@@ -115,7 +115,7 @@ export class PayrollRun extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "run_state" })
-    runState?: PayrollRunRunState;
+    runState?: RunState;
 
     /**
      * The type of the payroll run
@@ -130,7 +130,7 @@ export class PayrollRun extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "run_type" })
-    runType?: PayrollRunRunType;
+    runType?: RunType;
 
     /**
      * The day and time the payroll run started.

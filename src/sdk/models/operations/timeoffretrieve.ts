@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum TimeOffRetrieveExpand {
+export enum TimeOffRetrieveQueryParamExpand {
     Approver = "approver",
     Employee = "employee",
     EmployeeApprover = "employee,approver",
@@ -18,7 +18,7 @@ export enum TimeOffRetrieveExpand {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum TimeOffRetrieveRemoteFields {
+export enum TimeOffRetrieveQueryParamRemoteFields {
     RequestType = "request_type",
     RequestTypeStatus = "request_type,status",
     RequestTypeStatusUnits = "request_type,status,units",
@@ -31,7 +31,7 @@ export enum TimeOffRetrieveRemoteFields {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum TimeOffRetrieveShowEnumOrigins {
+export enum TimeOffRetrieveQueryParamShowEnumOrigins {
     RequestType = "request_type",
     RequestTypeStatus = "request_type,status",
     RequestTypeStatusUnits = "request_type,status,units",
@@ -52,7 +52,7 @@ export class TimeOffRetrieveRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: TimeOffRetrieveExpand;
+    expand?: TimeOffRetrieveQueryParamExpand;
 
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
@@ -67,13 +67,13 @@ export class TimeOffRetrieveRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: TimeOffRetrieveRemoteFields;
+    remoteFields?: TimeOffRetrieveQueryParamRemoteFields;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: TimeOffRetrieveShowEnumOrigins;
+    showEnumOrigins?: TimeOffRetrieveQueryParamShowEnumOrigins;
 }
 
 export class TimeOffRetrieveResponse extends SpeakeasyBase {

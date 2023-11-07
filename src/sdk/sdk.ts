@@ -3,6 +3,7 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { AccountDetails } from "./accountdetails";
 import { AccountToken } from "./accounttoken";
 import { AvailableActions } from "./availableactions";
@@ -20,7 +21,6 @@ import { Issues } from "./issues";
 import { LinkedAccounts } from "./linkedaccounts";
 import { LinkToken } from "./linktoken";
 import { Locations } from "./locations";
-import * as shared from "./models/shared";
 import { Passthrough } from "./passthrough";
 import { PayGroups } from "./paygroups";
 import { PayrollRuns } from "./payrollruns";
@@ -84,9 +84,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "1.19.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 1.19.0 2.171.0 1.0 HRIS";
+    sdkVersion = "2.0.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 1.0 HRIS";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -107,7 +107,6 @@ export class Hris {
     public employeePayrollRuns: EmployeePayrollRuns;
     public employees: Employees;
     public employments: Employments;
-    public forceResync: ForceResync;
     public generateKey: GenerateKey;
     public groups: Groups;
     public issues: Issues;
@@ -120,6 +119,7 @@ export class Hris {
     public regenerateKey: RegenerateKey;
     public selectiveSync: SelectiveSync;
     public syncStatus: SyncStatus;
+    public forceResync: ForceResync;
     public teams: Teams;
     public timeOff: TimeOff;
     public timeOffBalances: TimeOffBalances;
@@ -153,7 +153,6 @@ export class Hris {
         this.employeePayrollRuns = new EmployeePayrollRuns(this.sdkConfiguration);
         this.employees = new Employees(this.sdkConfiguration);
         this.employments = new Employments(this.sdkConfiguration);
-        this.forceResync = new ForceResync(this.sdkConfiguration);
         this.generateKey = new GenerateKey(this.sdkConfiguration);
         this.groups = new Groups(this.sdkConfiguration);
         this.issues = new Issues(this.sdkConfiguration);
@@ -166,6 +165,7 @@ export class Hris {
         this.regenerateKey = new RegenerateKey(this.sdkConfiguration);
         this.selectiveSync = new SelectiveSync(this.sdkConfiguration);
         this.syncStatus = new SyncStatus(this.sdkConfiguration);
+        this.forceResync = new ForceResync(this.sdkConfiguration);
         this.teams = new Teams(this.sdkConfiguration);
         this.timeOff = new TimeOff(this.sdkConfiguration);
         this.timeOffBalances = new TimeOffBalances(this.sdkConfiguration);

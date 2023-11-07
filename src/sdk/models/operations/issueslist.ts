@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
@@ -14,7 +14,7 @@ import { AxiosResponse } from "axios";
  * * `ONGOING` - ONGOING
  * * `RESOLVED` - RESOLVED
  */
-export enum IssuesListStatus {
+export enum Status {
     Ongoing = "ONGOING",
     Resolved = "RESOLVED",
 }
@@ -102,7 +102,7 @@ export class IssuesListRequest extends SpeakeasyBase {
      * * `RESOLVED` - RESOLVED
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" })
-    status?: IssuesListStatus;
+    status?: Status;
 }
 
 export class IssuesListResponse extends SpeakeasyBase {

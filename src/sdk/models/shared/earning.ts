@@ -14,7 +14,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `OVERTIME` - OVERTIME
  * * `BONUS` - BONUS
  */
-export enum EarningType {
+export enum TypeT {
     Salary = "SALARY",
     Reimbursement = "REIMBURSEMENT",
     Overtime = "OVERTIME",
@@ -90,5 +90,5 @@ export class Earning extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: EarningType;
+    type?: TypeT;
 }

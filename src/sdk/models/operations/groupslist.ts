@@ -3,20 +3,20 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum GroupsListRemoteFields {
+export enum GroupsListQueryParamRemoteFields {
     Type = "type",
 }
 
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum GroupsListShowEnumOrigins {
+export enum GroupsListQueryParamShowEnumOrigins {
     Type = "type",
 }
 
@@ -79,7 +79,7 @@ export class GroupsListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: GroupsListRemoteFields;
+    remoteFields?: GroupsListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -91,7 +91,7 @@ export class GroupsListRequest extends SpeakeasyBase {
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: GroupsListShowEnumOrigins;
+    showEnumOrigins?: GroupsListQueryParamShowEnumOrigins;
 
     /**
      * If provided, will only return groups of these types. Multiple values can be separated by commas.

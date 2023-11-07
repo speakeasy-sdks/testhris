@@ -16,7 +16,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `VOLUNTEER` - VOLUNTEER
  * * `BEREAVEMENT` - BEREAVEMENT
  */
-export enum TimeOffRequestType {
+export enum RequestType {
     Vacation = "VACATION",
     Sick = "SICK",
     Personal = "PERSONAL",
@@ -48,7 +48,7 @@ export enum TimeOffStatus {
  * @remarks
  * * `DAYS` - DAYS
  */
-export enum TimeOffUnits {
+export enum Units {
     Hours = "HOURS",
     Days = "DAYS",
 }
@@ -146,7 +146,7 @@ export class TimeOff extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "request_type" })
-    requestType?: TimeOffRequestType;
+    requestType?: RequestType;
 
     /**
      * The day and time of the start of the time requested off.
@@ -181,5 +181,5 @@ export class TimeOff extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "units" })
-    units?: TimeOffUnits;
+    units?: Units;
 }

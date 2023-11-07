@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class SyncStatusResyncCreateRequest extends SpeakeasyBase {
@@ -34,5 +34,5 @@ export class SyncStatusResyncCreateResponse extends SpeakeasyBase {
     rawResponse?: AxiosResponse;
 
     @SpeakeasyMetadata({ elemType: shared.SyncStatus })
-    syncStatuses?: shared.SyncStatus[];
+    classes?: shared.SyncStatus[];
 }

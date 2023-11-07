@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum EmploymentsRetrieveExpand {
+export enum EmploymentsRetrieveQueryParamExpand {
     Employee = "employee",
     EmployeePayGroup = "employee,pay_group",
     PayGroup = "pay_group",
@@ -18,7 +18,7 @@ export enum EmploymentsRetrieveExpand {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum EmploymentsRetrieveRemoteFields {
+export enum EmploymentsRetrieveQueryParamRemoteFields {
     EmploymentType = "employment_type",
     EmploymentTypeFlsaStatus = "employment_type,flsa_status",
     EmploymentTypeFlsaStatusPayFrequency = "employment_type,flsa_status,pay_frequency",
@@ -39,7 +39,7 @@ export enum EmploymentsRetrieveRemoteFields {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum EmploymentsRetrieveShowEnumOrigins {
+export enum EmploymentsRetrieveQueryParamShowEnumOrigins {
     EmploymentType = "employment_type",
     EmploymentTypeFlsaStatus = "employment_type,flsa_status",
     EmploymentTypeFlsaStatusPayFrequency = "employment_type,flsa_status,pay_frequency",
@@ -68,7 +68,7 @@ export class EmploymentsRetrieveRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: EmploymentsRetrieveExpand;
+    expand?: EmploymentsRetrieveQueryParamExpand;
 
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
@@ -83,13 +83,13 @@ export class EmploymentsRetrieveRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: EmploymentsRetrieveRemoteFields;
+    remoteFields?: EmploymentsRetrieveQueryParamRemoteFields;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: EmploymentsRetrieveShowEnumOrigins;
+    showEnumOrigins?: EmploymentsRetrieveQueryParamShowEnumOrigins;
 }
 
 export class EmploymentsRetrieveResponse extends SpeakeasyBase {

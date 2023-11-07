@@ -259,7 +259,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `ZM` - Zambia
  * * `ZW` - Zimbabwe
  */
-export enum LocationCountry {
+export enum Country {
     Af = "AF",
     Ax = "AX",
     Al = "AL",
@@ -517,7 +517,7 @@ export enum LocationCountry {
  * @remarks
  * * `WORK` - WORK
  */
-export enum LocationLocationType {
+export enum LocationType {
     Home = "HOME",
     Work = "WORK",
 }
@@ -797,7 +797,7 @@ export class Location extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "country" })
-    country?: LocationCountry;
+    country?: Country;
 
     @SpeakeasyMetadata()
     @Expose({ name: "field_mappings" })
@@ -817,7 +817,7 @@ export class Location extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "location_type" })
-    locationType?: LocationLocationType;
+    locationType?: LocationType;
 
     /**
      * This is the datetime that this object was last updated by Merge

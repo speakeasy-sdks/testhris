@@ -34,7 +34,7 @@ export enum AccountDetailsAndActionsCategory {
  * * `INCOMPLETE` - INCOMPLETE
  * * `RELINK_NEEDED` - RELINK_NEEDED
  */
-export enum AccountDetailsAndActionsStatus {
+export enum Status {
     Complete = "COMPLETE",
     Incomplete = "INCOMPLETE",
     RelinkNeeded = "RELINK_NEEDED",
@@ -85,7 +85,7 @@ export class AccountDetailsAndActions extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })
-    status: AccountDetailsAndActionsStatus;
+    status: Status;
 
     @SpeakeasyMetadata()
     @Expose({ name: "status_detail" })

@@ -1,5 +1,5 @@
 # TimeOff
-(*timeOff*)
+(*.timeOff*)
 
 ### Available Operations
 
@@ -48,6 +48,7 @@ import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } 
     xAccountToken: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -76,11 +77,11 @@ Returns a list of `TimeOff` objects.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  TimeOffListExpand,
-  TimeOffListRemoteFields,
-  TimeOffListRequestType,
-  TimeOffListShowEnumOrigins,
-  TimeOffListStatus,
+  QueryParamStatus,
+  RequestType,
+  TimeOffListQueryParamExpand,
+  TimeOffListQueryParamRemoteFields,
+  TimeOffListQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -93,6 +94,7 @@ import {
   const res = await sdk.timeOff.timeOffList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -133,6 +135,7 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -161,9 +164,9 @@ Returns a `TimeOff` object with the given `id`.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  TimeOffRetrieveExpand,
-  TimeOffRetrieveRemoteFields,
-  TimeOffRetrieveShowEnumOrigins,
+  TimeOffRetrieveQueryParamExpand,
+  TimeOffRetrieveQueryParamRemoteFields,
+  TimeOffRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -177,6 +180,7 @@ import {
     xAccountToken: "string",
     id: "a170075d-def5-4fcf-a2bb-ba7c32c29e53",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

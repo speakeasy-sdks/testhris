@@ -15,7 +15,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `CONTRACTOR` - CONTRACTOR
  * * `FREELANCE` - FREELANCE
  */
-export enum EmploymentEmploymentType {
+export enum EmploymentType {
     FullTime = "FULL_TIME",
     PartTime = "PART_TIME",
     Intern = "INTERN",
@@ -31,7 +31,7 @@ export enum EmploymentEmploymentType {
  * * `NONEXEMPT` - NONEXEMPT
  * * `OWNER` - OWNER
  */
-export enum EmploymentFlsaStatus {
+export enum FlsaStatus {
     Exempt = "EXEMPT",
     SalariedNonexempt = "SALARIED_NONEXEMPT",
     Nonexempt = "NONEXEMPT",
@@ -348,7 +348,7 @@ export enum EmploymentFlsaStatus {
  * * `ZWR` - Zimbabwean Dollar (2008)
  * * `ZWL` - Zimbabwean Dollar (2009)
  */
-export enum EmploymentPayCurrency {
+export enum PayCurrency {
     Xua = "XUA",
     Afn = "AFN",
     Afa = "AFA",
@@ -670,7 +670,7 @@ export enum EmploymentPayCurrency {
  * * `PRO_RATA` - PRO_RATA
  * * `SEMIMONTHLY` - SEMIMONTHLY
  */
-export enum EmploymentPayFrequency {
+export enum PayFrequency {
     Weekly = "WEEKLY",
     Biweekly = "BIWEEKLY",
     Monthly = "MONTHLY",
@@ -695,7 +695,7 @@ export enum EmploymentPayFrequency {
  * * `EVERY_SIX_MONTHS` - EVERY_SIX_MONTHS
  * * `YEAR` - YEAR
  */
-export enum EmploymentPayPeriod {
+export enum PayPeriod {
     Hour = "HOUR",
     Day = "DAY",
     Week = "WEEK",
@@ -748,7 +748,7 @@ export class Employment extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "employment_type" })
-    employmentType?: EmploymentEmploymentType;
+    employmentType?: EmploymentType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "field_mappings" })
@@ -766,7 +766,7 @@ export class Employment extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "flsa_status" })
-    flsaStatus?: EmploymentFlsaStatus;
+    flsaStatus?: FlsaStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -1101,7 +1101,7 @@ export class Employment extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "pay_currency" })
-    payCurrency?: EmploymentPayCurrency;
+    payCurrency?: PayCurrency;
 
     /**
      * The position's pay frequency.
@@ -1120,7 +1120,7 @@ export class Employment extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "pay_frequency" })
-    payFrequency?: EmploymentPayFrequency;
+    payFrequency?: PayFrequency;
 
     /**
      * The employment's pay group
@@ -1146,7 +1146,7 @@ export class Employment extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "pay_period" })
-    payPeriod?: EmploymentPayPeriod;
+    payPeriod?: PayPeriod;
 
     /**
      * The position's pay rate in dollars.

@@ -1,5 +1,5 @@
 # Employees
-(*employees*)
+(*.employees*)
 
 ### Available Operations
 
@@ -75,6 +75,7 @@ import {
     xAccountToken: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -102,7 +103,7 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 
 ```typescript
 import { Hris } from "HRIS";
-import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
+import { Reason } from "HRIS/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Hris({
@@ -114,11 +115,12 @@ import { IgnoreCommonModelRequestReason } from "HRIS/dist/sdk/models/shared";
   const res = await sdk.employees.employeesIgnoreCreate({
     ignoreCommonModelRequest: {
       message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
-      reason: IgnoreCommonModelRequestReason.GeneralCustomerRequest,
+      reason: Reason.GeneralCustomerRequest,
     },
     xAccountToken: "string",
     modelId: "2a18e15d-530c-4d29-b14b-b6aaa7629957",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -148,10 +150,10 @@ Returns a list of `Employee` objects.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  EmployeesListEmploymentStatus,
-  EmployeesListExpand,
-  EmployeesListRemoteFields,
-  EmployeesListShowEnumOrigins,
+  EmployeesListQueryParamExpand,
+  EmployeesListQueryParamRemoteFields,
+  EmployeesListQueryParamShowEnumOrigins,
+  EmploymentStatus,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -164,6 +166,7 @@ import {
   const res = await sdk.employees.employeesList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -204,6 +207,7 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -232,9 +236,9 @@ Returns an `Employee` object with the given `id`.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  EmployeesRetrieveExpand,
-  EmployeesRetrieveRemoteFields,
-  EmployeesRetrieveShowEnumOrigins,
+  EmployeesRetrieveQueryParamExpand,
+  EmployeesRetrieveQueryParamRemoteFields,
+  EmployeesRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -248,6 +252,7 @@ import {
     xAccountToken: "string",
     id: "1d206e21-c403-45d2-ac47-7e44b63a37d8",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

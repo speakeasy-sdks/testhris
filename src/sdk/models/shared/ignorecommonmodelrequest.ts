@@ -12,7 +12,7 @@ import { Expose } from "class-transformer";
  * * `GDPR` - GDPR
  * * `OTHER` - OTHER
  */
-export enum IgnoreCommonModelRequestReason {
+export enum Reason {
     GeneralCustomerRequest = "GENERAL_CUSTOMER_REQUEST",
     Gdpr = "GDPR",
     Other = "OTHER",
@@ -25,5 +25,5 @@ export class IgnoreCommonModelRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata({ data: "form, name=reason, multipart_form, name=reason" })
     @Expose({ name: "reason" })
-    reason: IgnoreCommonModelRequestReason;
+    reason: Reason;
 }

@@ -16,7 +16,7 @@ import { Expose } from "class-transformer";
  * * `mktg` - mktg
  * * `filestorage` - filestorage
  */
-export enum AccountDetailsCategory {
+export enum Category {
     Hris = "hris",
     Ats = "ats",
     Accounting = "accounting",
@@ -29,7 +29,7 @@ export enum AccountDetailsCategory {
 export class AccountDetails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
-    category?: AccountDetailsCategory;
+    category?: Category;
 
     @SpeakeasyMetadata()
     @Expose({ name: "end_user_email_address" })

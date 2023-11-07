@@ -3,20 +3,20 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum LocationsRetrieveRemoteFields {
+export enum LocationsRetrieveQueryParamRemoteFields {
     LocationType = "location_type",
 }
 
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum LocationsRetrieveShowEnumOrigins {
+export enum LocationsRetrieveQueryParamShowEnumOrigins {
     LocationType = "location_type",
 }
 
@@ -40,13 +40,13 @@ export class LocationsRetrieveRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: LocationsRetrieveRemoteFields;
+    remoteFields?: LocationsRetrieveQueryParamRemoteFields;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: LocationsRetrieveShowEnumOrigins;
+    showEnumOrigins?: LocationsRetrieveQueryParamShowEnumOrigins;
 }
 
 export class LocationsRetrieveResponse extends SpeakeasyBase {

@@ -1,5 +1,5 @@
 # SelectiveSync
-(*selectiveSync*)
+(*.selectiveSync*)
 
 ### Available Operations
 
@@ -26,6 +26,7 @@ import { Hris } from "HRIS";
   const res = await sdk.selectiveSync.selectiveSyncConfigurationsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,6 +80,7 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,6 +119,7 @@ import { Hris } from "HRIS";
   const res = await sdk.selectiveSync.selectiveSyncMetaList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

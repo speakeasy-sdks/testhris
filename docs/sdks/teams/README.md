@@ -1,5 +1,5 @@
 # Teams
-(*teams*)
+(*.teams*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Returns a list of `Team` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsListExpand } from "HRIS/dist/sdk/models/operations";
+import { TeamsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -26,6 +26,7 @@ import { TeamsListExpand } from "HRIS/dist/sdk/models/operations";
   const res = await sdk.teams.teamsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -54,7 +55,7 @@ Returns a `Team` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { TeamsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
+import { TeamsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -67,6 +68,7 @@ import { TeamsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
     xAccountToken: "string",
     id: "77b57dde-6730-4f60-a01d-623ae3bbe560",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Companies
-(*companies*)
+(*.companies*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Hris } from "HRIS";
   const res = await sdk.companies.companiesList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
     id: "f6981dd8-929a-425e-9dab-94febeac92c9",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

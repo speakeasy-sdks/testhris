@@ -1,5 +1,5 @@
 # AvailableActions
-(*availableActions*)
+(*.availableActions*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.availableActions.availableActionsRetrieve({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

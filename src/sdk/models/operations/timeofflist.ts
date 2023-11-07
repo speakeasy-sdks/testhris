@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum TimeOffListExpand {
+export enum TimeOffListQueryParamExpand {
     Approver = "approver",
     Employee = "employee",
     EmployeeApprover = "employee,approver",
@@ -18,7 +18,7 @@ export enum TimeOffListExpand {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum TimeOffListRemoteFields {
+export enum TimeOffListQueryParamRemoteFields {
     RequestType = "request_type",
     RequestTypeStatus = "request_type,status",
     RequestTypeStatusUnits = "request_type,status,units",
@@ -40,7 +40,7 @@ export enum TimeOffListRemoteFields {
  * * `VOLUNTEER` - VOLUNTEER
  * * `BEREAVEMENT` - BEREAVEMENT
  */
-export enum TimeOffListRequestType {
+export enum RequestType {
     Bereavement = "BEREAVEMENT",
     JuryDuty = "JURY_DUTY",
     Personal = "PERSONAL",
@@ -52,7 +52,7 @@ export enum TimeOffListRequestType {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum TimeOffListShowEnumOrigins {
+export enum TimeOffListQueryParamShowEnumOrigins {
     RequestType = "request_type",
     RequestTypeStatus = "request_type,status",
     RequestTypeStatusUnits = "request_type,status,units",
@@ -73,7 +73,7 @@ export enum TimeOffListShowEnumOrigins {
  * * `CANCELLED` - CANCELLED
  * * `DELETED` - DELETED
  */
-export enum TimeOffListStatus {
+export enum QueryParamStatus {
     Approved = "APPROVED",
     Cancelled = "CANCELLED",
     Declined = "DECLINED",
@@ -122,7 +122,7 @@ export class TimeOffListRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: TimeOffListExpand;
+    expand?: TimeOffListQueryParamExpand;
 
     /**
      * Whether to include data that was marked as deleted by third party webhooks.
@@ -158,7 +158,7 @@ export class TimeOffListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: TimeOffListRemoteFields;
+    remoteFields?: TimeOffListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -179,13 +179,13 @@ export class TimeOffListRequest extends SpeakeasyBase {
      * * `BEREAVEMENT` - BEREAVEMENT
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=request_type" })
-    requestType?: TimeOffListRequestType;
+    requestType?: RequestType;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: TimeOffListShowEnumOrigins;
+    showEnumOrigins?: TimeOffListQueryParamShowEnumOrigins;
 
     /**
      * If provided, will only return TimeOff with this status. Options: ('REQUESTED', 'APPROVED', 'DECLINED', 'CANCELLED', 'DELETED')
@@ -199,7 +199,7 @@ export class TimeOffListRequest extends SpeakeasyBase {
      * * `DELETED` - DELETED
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" })
-    status?: TimeOffListStatus;
+    status?: QueryParamStatus;
 }
 
 export class TimeOffListResponse extends SpeakeasyBase {

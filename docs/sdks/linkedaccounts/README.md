@@ -1,5 +1,5 @@
 # LinkedAccounts
-(*linkedAccounts*)
+(*.linkedAccounts*)
 
 ### Available Operations
 
@@ -13,7 +13,7 @@ List linked accounts for your organization.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LinkedAccountsListCategory } from "HRIS/dist/sdk/models/operations";
+import { Category } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -23,6 +23,7 @@ import { LinkedAccountsListCategory } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.linkedAccounts.linkedAccountsList({});
+
 
   if (res.statusCode == 200) {
     // handle response

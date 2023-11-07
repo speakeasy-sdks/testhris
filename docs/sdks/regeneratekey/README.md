@@ -1,5 +1,5 @@
 # RegenerateKey
-(*regenerateKey*)
+(*.regenerateKey*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.regenerateKey.regenerateKeyCreate({
     name: "Remote Deployment Key 1",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

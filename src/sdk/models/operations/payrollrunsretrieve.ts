@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum PayrollRunsRetrieveRemoteFields {
+export enum PayrollRunsRetrieveQueryParamRemoteFields {
     RunState = "run_state",
     RunStateRunType = "run_state,run_type",
     RunType = "run_type",
@@ -18,7 +18,7 @@ export enum PayrollRunsRetrieveRemoteFields {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum PayrollRunsRetrieveShowEnumOrigins {
+export enum PayrollRunsRetrieveQueryParamShowEnumOrigins {
     RunState = "run_state",
     RunStateRunType = "run_state,run_type",
     RunType = "run_type",
@@ -44,13 +44,13 @@ export class PayrollRunsRetrieveRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: PayrollRunsRetrieveRemoteFields;
+    remoteFields?: PayrollRunsRetrieveQueryParamRemoteFields;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: PayrollRunsRetrieveShowEnumOrigins;
+    showEnumOrigins?: PayrollRunsRetrieveQueryParamShowEnumOrigins;
 }
 
 export class PayrollRunsRetrieveResponse extends SpeakeasyBase {

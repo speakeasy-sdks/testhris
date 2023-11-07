@@ -1,5 +1,5 @@
 # SyncStatus
-(*syncStatus*)
+(*.syncStatus*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.syncStatus.syncStatusList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

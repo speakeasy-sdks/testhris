@@ -12,7 +12,7 @@ import { Expose } from "class-transformer";
  * * `BASE64` - BASE64
  * * `GZIP_BASE64` - GZIP_BASE64
  */
-export enum MultipartFormFieldRequestEncoding {
+export enum Encoding {
     Raw = "RAW",
     Base64 = "BASE64",
     GzipBase64 = "GZIP_BASE64",
@@ -54,7 +54,7 @@ export class MultipartFormFieldRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "encoding" })
-    encoding?: MultipartFormFieldRequestEncoding;
+    encoding?: Encoding;
 
     /**
      * The file name of the form field, if the field is for a file.

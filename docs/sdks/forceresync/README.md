@@ -1,5 +1,5 @@
 # ForceResync
-(*forceResync*)
+(*.forceResync*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.forceResync.syncStatusResyncCreate({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -11,7 +11,7 @@ import { Expose } from "class-transformer";
  * @remarks
  * * `BASE64_GZIP` - BASE64_GZIP
  */
-export enum RemoteResponseResponseType {
+export enum ResponseType {
     Json = "JSON",
     Base64Gzip = "BASE64_GZIP",
 }
@@ -49,7 +49,7 @@ export class RemoteResponse extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "response_type" })
-    responseType?: RemoteResponseResponseType;
+    responseType?: ResponseType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "status" })

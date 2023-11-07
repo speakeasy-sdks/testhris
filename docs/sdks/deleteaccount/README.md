@@ -1,5 +1,5 @@
 # DeleteAccount
-(*deleteAccount*)
+(*.deleteAccount*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.deleteAccount.deleteAccountCreate({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -13,7 +13,7 @@ import { Expose, Transform, Type } from "class-transformer";
  * * `PENDING` - PENDING
  * * `INACTIVE` - INACTIVE
  */
-export enum EmployeeEmploymentStatus {
+export enum EmploymentStatus {
     Active = "ACTIVE",
     Pending = "PENDING",
     Inactive = "INACTIVE",
@@ -31,7 +31,7 @@ export enum EmployeeEmploymentStatus {
  * * `WHITE` - WHITE
  * * `PREFER_NOT_TO_DISCLOSE` - PREFER_NOT_TO_DISCLOSE
  */
-export enum EmployeeEthnicity {
+export enum Ethnicity {
     AmericanIndianOrAlaskaNative = "AMERICAN_INDIAN_OR_ALASKA_NATIVE",
     AsianOrIndianSubcontinent = "ASIAN_OR_INDIAN_SUBCONTINENT",
     BlackOrAfricanAmerican = "BLACK_OR_AFRICAN_AMERICAN",
@@ -51,7 +51,7 @@ export enum EmployeeEthnicity {
  * * `OTHER` - OTHER
  * * `PREFER_NOT_TO_DISCLOSE` - PREFER_NOT_TO_DISCLOSE
  */
-export enum EmployeeGender {
+export enum Gender {
     Male = "MALE",
     Female = "FEMALE",
     NonBinary = "NON-BINARY",
@@ -68,7 +68,7 @@ export enum EmployeeGender {
  * * `HEAD_OF_HOUSEHOLD` - HEAD_OF_HOUSEHOLD
  * * `QUALIFYING_WIDOW_OR_WIDOWER_WITH_DEPENDENT_CHILD` - QUALIFYING_WIDOW_OR_WIDOWER_WITH_DEPENDENT_CHILD
  */
-export enum EmployeeMaritalStatus {
+export enum MaritalStatus {
     Single = "SINGLE",
     MarriedFilingJointly = "MARRIED_FILING_JOINTLY",
     MarriedFilingSeparately = "MARRIED_FILING_SEPARATELY",
@@ -141,7 +141,7 @@ export class Employee extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "employment_status" })
-    employmentStatus?: EmployeeEmploymentStatus;
+    employmentStatus?: EmploymentStatus;
 
     /**
      * Array of `Employment` IDs for this Employee.
@@ -166,7 +166,7 @@ export class Employee extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "ethnicity" })
-    ethnicity?: EmployeeEthnicity;
+    ethnicity?: Ethnicity;
 
     @SpeakeasyMetadata()
     @Expose({ name: "field_mappings" })
@@ -192,7 +192,7 @@ export class Employee extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "gender" })
-    gender?: EmployeeGender;
+    gender?: Gender;
 
     @SpeakeasyMetadata()
     @Expose({ name: "groups" })
@@ -246,7 +246,7 @@ export class Employee extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "marital_status" })
-    maritalStatus?: EmployeeMaritalStatus;
+    maritalStatus?: MaritalStatus;
 
     /**
      * The employee's mobile phone number.

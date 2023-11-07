@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum PayrollRunsListRemoteFields {
+export enum PayrollRunsListQueryParamRemoteFields {
     RunState = "run_state",
     RunStateRunType = "run_state,run_type",
     RunType = "run_type",
@@ -26,7 +26,7 @@ export enum PayrollRunsListRemoteFields {
  * * `TERMINATION` - TERMINATION
  * * `SIGN_ON_BONUS` - SIGN_ON_BONUS
  */
-export enum PayrollRunsListRunType {
+export enum RunType {
     Correction = "CORRECTION",
     OffCycle = "OFF_CYCLE",
     Regular = "REGULAR",
@@ -37,7 +37,7 @@ export enum PayrollRunsListRunType {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum PayrollRunsListShowEnumOrigins {
+export enum PayrollRunsListQueryParamShowEnumOrigins {
     RunState = "run_state",
     RunStateRunType = "run_state,run_type",
     RunType = "run_type",
@@ -114,7 +114,7 @@ export class PayrollRunsListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: PayrollRunsListRemoteFields;
+    remoteFields?: PayrollRunsListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -134,13 +134,13 @@ export class PayrollRunsListRequest extends SpeakeasyBase {
      * * `SIGN_ON_BONUS` - SIGN_ON_BONUS
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=run_type" })
-    runType?: PayrollRunsListRunType;
+    runType?: RunType;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: PayrollRunsListShowEnumOrigins;
+    showEnumOrigins?: PayrollRunsListQueryParamShowEnumOrigins;
 
     /**
      * If provided, will only return payroll runs started after this datetime.

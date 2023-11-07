@@ -1,5 +1,5 @@
 # PayGroups
-(*payGroups*)
+(*.payGroups*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Hris } from "HRIS";
   const res = await sdk.payGroups.payGroupsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
     id: "a02c55d6-7c80-43d6-ad57-6784bdb69e62",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

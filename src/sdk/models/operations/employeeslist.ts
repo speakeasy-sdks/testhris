@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
@@ -15,7 +15,7 @@ import { AxiosResponse } from "axios";
  * * `PENDING` - PENDING
  * * `INACTIVE` - INACTIVE
  */
-export enum EmployeesListEmploymentStatus {
+export enum EmploymentStatus {
     Active = "ACTIVE",
     Inactive = "INACTIVE",
     Pending = "PENDING",
@@ -24,7 +24,7 @@ export enum EmployeesListEmploymentStatus {
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum EmployeesListExpand {
+export enum EmployeesListQueryParamExpand {
     Company = "company",
     CompanyPayGroup = "company,pay_group",
     Employments = "employments",
@@ -285,7 +285,7 @@ export enum EmployeesListExpand {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum EmployeesListRemoteFields {
+export enum EmployeesListQueryParamRemoteFields {
     EmploymentStatus = "employment_status",
     EmploymentStatusEthnicity = "employment_status,ethnicity",
     EmploymentStatusEthnicityGender = "employment_status,ethnicity,gender",
@@ -306,7 +306,7 @@ export enum EmployeesListRemoteFields {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum EmployeesListShowEnumOrigins {
+export enum EmployeesListQueryParamShowEnumOrigins {
     EmploymentStatus = "employment_status",
     EmploymentStatusEthnicity = "employment_status,ethnicity",
     EmploymentStatusEthnicityGender = "employment_status,ethnicity,gender",
@@ -371,13 +371,13 @@ export class EmployeesListRequest extends SpeakeasyBase {
      * * `INACTIVE` - INACTIVE
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=employment_status" })
-    employmentStatus?: EmployeesListEmploymentStatus;
+    employmentStatus?: EmploymentStatus;
 
     /**
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: EmployeesListExpand;
+    expand?: EmployeesListQueryParamExpand;
 
     /**
      * If provided, will only return employees with this first name.
@@ -457,7 +457,7 @@ export class EmployeesListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: EmployeesListRemoteFields;
+    remoteFields?: EmployeesListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -469,7 +469,7 @@ export class EmployeesListRequest extends SpeakeasyBase {
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: EmployeesListShowEnumOrigins;
+    showEnumOrigins?: EmployeesListQueryParamShowEnumOrigins;
 
     /**
      * If provided, will only return employees that started after this datetime.

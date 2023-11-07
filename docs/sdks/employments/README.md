@@ -1,5 +1,5 @@
 # Employments
-(*employments*)
+(*.employments*)
 
 ### Available Operations
 
@@ -15,10 +15,10 @@ Returns a list of `Employment` objects.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  EmploymentsListExpand,
-  EmploymentsListOrderBy,
-  EmploymentsListRemoteFields,
-  EmploymentsListShowEnumOrigins,
+  EmploymentsListQueryParamExpand,
+  EmploymentsListQueryParamRemoteFields,
+  EmploymentsListQueryParamShowEnumOrigins,
+  QueryParamOrderBy,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -31,6 +31,7 @@ import {
   const res = await sdk.employments.employmentsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,9 +61,9 @@ Returns an `Employment` object with the given `id`.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  EmploymentsRetrieveExpand,
-  EmploymentsRetrieveRemoteFields,
-  EmploymentsRetrieveShowEnumOrigins,
+  EmploymentsRetrieveQueryParamExpand,
+  EmploymentsRetrieveQueryParamRemoteFields,
+  EmploymentsRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -76,6 +77,7 @@ import {
     xAccountToken: "string",
     id: "02842cdf-a36b-41cb-9926-eb59f7a98c39",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

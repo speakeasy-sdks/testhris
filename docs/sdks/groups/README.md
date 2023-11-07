@@ -1,5 +1,5 @@
 # Groups
-(*groups*)
+(*.groups*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Returns a list of `Group` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { GroupsListRemoteFields, GroupsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import { GroupsListQueryParamRemoteFields, GroupsListQueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -26,6 +26,7 @@ import { GroupsListRemoteFields, GroupsListShowEnumOrigins } from "HRIS/dist/sdk
   const res = await sdk.groups.groupsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -54,7 +55,7 @@ Returns a `Group` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { GroupsRetrieveRemoteFields, GroupsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import { GroupsRetrieveQueryParamRemoteFields, GroupsRetrieveQueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -67,6 +68,7 @@ import { GroupsRetrieveRemoteFields, GroupsRetrieveShowEnumOrigins } from "HRIS/
     xAccountToken: "string",
     id: "f30195ec-1b25-45da-adb0-7836763cd896",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

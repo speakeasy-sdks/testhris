@@ -1,5 +1,5 @@
 # BankInfo
-(*bankInfo*)
+(*.bankInfo*)
 
 ### Available Operations
 
@@ -14,13 +14,7 @@ Returns a list of `BankInfo` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  BankInfoListAccountType,
-  BankInfoListExpand,
-  BankInfoListOrderBy,
-  BankInfoListRemoteFields,
-  BankInfoListShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { AccountType, Expand, OrderBy, RemoteFields, ShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -32,6 +26,7 @@ import {
   const res = await sdk.bankInfo.bankInfoList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,11 +55,7 @@ Returns a `BankInfo` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  BankInfoRetrieveExpand,
-  BankInfoRetrieveRemoteFields,
-  BankInfoRetrieveShowEnumOrigins,
-} from "HRIS/dist/sdk/models/operations";
+import { QueryParamExpand, QueryParamRemoteFields, QueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -77,6 +68,7 @@ import {
     xAccountToken: "string",
     id: "d7839d27-3932-4cf4-9920-09663471089d",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

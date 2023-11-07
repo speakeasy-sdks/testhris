@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
@@ -19,7 +19,7 @@ import { AxiosResponse } from "axios";
  * * `mktg` - mktg
  * * `filestorage` - filestorage
  */
-export enum LinkedAccountsListCategory {
+export enum Category {
     Accounting = "accounting",
     Ats = "ats",
     Crm = "crm",
@@ -44,7 +44,7 @@ export class LinkedAccountsListRequest extends SpeakeasyBase {
      * * `filestorage` - filestorage
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=category" })
-    category?: LinkedAccountsListCategory;
+    category?: Category;
 
     /**
      * The pagination cursor value.

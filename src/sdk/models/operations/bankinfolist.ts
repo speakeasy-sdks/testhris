@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
@@ -14,7 +14,7 @@ import { AxiosResponse } from "axios";
  * * `SAVINGS` - SAVINGS
  * * `CHECKING` - CHECKING
  */
-export enum BankInfoListAccountType {
+export enum AccountType {
     Checking = "CHECKING",
     Savings = "SAVINGS",
 }
@@ -22,14 +22,14 @@ export enum BankInfoListAccountType {
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum BankInfoListExpand {
+export enum Expand {
     Employee = "employee",
 }
 
 /**
  * Overrides the default ordering for this endpoint.
  */
-export enum BankInfoListOrderBy {
+export enum OrderBy {
     MinusRemoteCreatedAt = "-remote_created_at",
     RemoteCreatedAt = "remote_created_at",
 }
@@ -37,14 +37,14 @@ export enum BankInfoListOrderBy {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum BankInfoListRemoteFields {
+export enum RemoteFields {
     AccountType = "account_type",
 }
 
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum BankInfoListShowEnumOrigins {
+export enum ShowEnumOrigins {
     AccountType = "account_type",
 }
 
@@ -64,7 +64,7 @@ export class BankInfoListRequest extends SpeakeasyBase {
      * * `CHECKING` - CHECKING
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=account_type" })
-    accountType?: BankInfoListAccountType;
+    accountType?: AccountType;
 
     /**
      * If provided, will only return BankInfo's with this bank name.
@@ -100,7 +100,7 @@ export class BankInfoListRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: BankInfoListExpand;
+    expand?: Expand;
 
     /**
      * Whether to include data that was marked as deleted by third party webhooks.
@@ -130,7 +130,7 @@ export class BankInfoListRequest extends SpeakeasyBase {
      * Overrides the default ordering for this endpoint.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-    orderBy?: BankInfoListOrderBy;
+    orderBy?: OrderBy;
 
     /**
      * Number of results to return per page.
@@ -142,7 +142,7 @@ export class BankInfoListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: BankInfoListRemoteFields;
+    remoteFields?: RemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -154,7 +154,7 @@ export class BankInfoListRequest extends SpeakeasyBase {
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: BankInfoListShowEnumOrigins;
+    showEnumOrigins?: ShowEnumOrigins;
 }
 
 export class BankInfoListResponse extends SpeakeasyBase {

@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class SelectiveSyncConfigurationsListRequest extends SpeakeasyBase {
@@ -21,9 +21,6 @@ export class SelectiveSyncConfigurationsListResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
 
-    @SpeakeasyMetadata({ elemType: shared.LinkedAccountSelectiveSyncConfiguration })
-    linkedAccountSelectiveSyncConfigurations?: shared.LinkedAccountSelectiveSyncConfiguration[];
-
     /**
      * HTTP response status code for this operation
      */
@@ -35,4 +32,7 @@ export class SelectiveSyncConfigurationsListResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    @SpeakeasyMetadata({ elemType: shared.LinkedAccountSelectiveSyncConfiguration })
+    classes?: shared.LinkedAccountSelectiveSyncConfiguration[];
 }

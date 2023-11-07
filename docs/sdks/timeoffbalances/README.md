@@ -1,5 +1,5 @@
 # TimeOffBalances
-(*timeOffBalances*)
+(*.timeOffBalances*)
 
 ### Available Operations
 
@@ -15,10 +15,10 @@ Returns a list of `TimeOffBalance` objects.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  TimeOffBalancesListExpand,
-  TimeOffBalancesListPolicyType,
-  TimeOffBalancesListRemoteFields,
-  TimeOffBalancesListShowEnumOrigins,
+  PolicyType,
+  TimeOffBalancesListQueryParamExpand,
+  TimeOffBalancesListQueryParamRemoteFields,
+  TimeOffBalancesListQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -31,6 +31,7 @@ import {
   const res = await sdk.timeOffBalances.timeOffBalancesList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,9 +61,9 @@ Returns a `TimeOffBalance` object with the given `id`.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  TimeOffBalancesRetrieveExpand,
-  TimeOffBalancesRetrieveRemoteFields,
-  TimeOffBalancesRetrieveShowEnumOrigins,
+  TimeOffBalancesRetrieveQueryParamExpand,
+  TimeOffBalancesRetrieveQueryParamRemoteFields,
+  TimeOffBalancesRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -76,6 +77,7 @@ import {
     xAccountToken: "string",
     id: "1d09d575-df78-4c43-8b81-268066ab9d39",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum EmployeePayrollRunsListExpand {
+export enum EmployeePayrollRunsListQueryParamExpand {
     Employee = "employee",
     EmployeePayrollRun = "employee,payroll_run",
     PayrollRun = "payroll_run",
@@ -62,7 +62,7 @@ export class EmployeePayrollRunsListRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: EmployeePayrollRunsListExpand;
+    expand?: EmployeePayrollRunsListQueryParamExpand;
 
     /**
      * Whether to include data that was marked as deleted by third party webhooks.

@@ -1,5 +1,5 @@
 # EmployeePayrollRuns
-(*employeePayrollRuns*)
+(*.employeePayrollRuns*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Returns a list of `EmployeePayrollRun` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsListExpand } from "HRIS/dist/sdk/models/operations";
+import { EmployeePayrollRunsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -26,6 +26,7 @@ import { EmployeePayrollRunsListExpand } from "HRIS/dist/sdk/models/operations";
   const res = await sdk.employeePayrollRuns.employeePayrollRunsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -54,7 +55,7 @@ Returns an `EmployeePayrollRun` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { EmployeePayrollRunsRetrieveExpand } from "HRIS/dist/sdk/models/operations";
+import { EmployeePayrollRunsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -67,6 +68,7 @@ import { EmployeePayrollRunsRetrieveExpand } from "HRIS/dist/sdk/models/operatio
     xAccountToken: "string",
     id: "99668815-b464-40c6-9206-8627a1703c31",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

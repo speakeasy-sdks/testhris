@@ -1,5 +1,5 @@
 # LinkToken
-(*linkToken*)
+(*.linkToken*)
 
 ### Available Operations
 
@@ -42,6 +42,7 @@ import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared"
     endUserOrganizationName: "string",
     endUserOriginId: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

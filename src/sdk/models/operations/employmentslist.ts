@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum EmploymentsListExpand {
+export enum EmploymentsListQueryParamExpand {
     Employee = "employee",
     EmployeePayGroup = "employee,pay_group",
     PayGroup = "pay_group",
@@ -18,7 +18,7 @@ export enum EmploymentsListExpand {
 /**
  * Overrides the default ordering for this endpoint.
  */
-export enum EmploymentsListOrderBy {
+export enum QueryParamOrderBy {
     MinusEffectiveDate = "-effective_date",
     EffectiveDate = "effective_date",
 }
@@ -26,7 +26,7 @@ export enum EmploymentsListOrderBy {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum EmploymentsListRemoteFields {
+export enum EmploymentsListQueryParamRemoteFields {
     EmploymentType = "employment_type",
     EmploymentTypeFlsaStatus = "employment_type,flsa_status",
     EmploymentTypeFlsaStatusPayFrequency = "employment_type,flsa_status,pay_frequency",
@@ -47,7 +47,7 @@ export enum EmploymentsListRemoteFields {
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum EmploymentsListShowEnumOrigins {
+export enum EmploymentsListQueryParamShowEnumOrigins {
     EmploymentType = "employment_type",
     EmploymentTypeFlsaStatus = "employment_type,flsa_status",
     EmploymentTypeFlsaStatusPayFrequency = "employment_type,flsa_status,pay_frequency",
@@ -100,7 +100,7 @@ export class EmploymentsListRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: EmploymentsListExpand;
+    expand?: EmploymentsListQueryParamExpand;
 
     /**
      * Whether to include data that was marked as deleted by third party webhooks.
@@ -130,7 +130,7 @@ export class EmploymentsListRequest extends SpeakeasyBase {
      * Overrides the default ordering for this endpoint.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-    orderBy?: EmploymentsListOrderBy;
+    orderBy?: QueryParamOrderBy;
 
     /**
      * Number of results to return per page.
@@ -142,7 +142,7 @@ export class EmploymentsListRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: EmploymentsListRemoteFields;
+    remoteFields?: EmploymentsListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -154,7 +154,7 @@ export class EmploymentsListRequest extends SpeakeasyBase {
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: EmploymentsListShowEnumOrigins;
+    showEnumOrigins?: EmploymentsListQueryParamShowEnumOrigins;
 }
 
 export class EmploymentsListResponse extends SpeakeasyBase {

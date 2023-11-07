@@ -1,5 +1,5 @@
 # Issues
-(*issues*)
+(*.issues*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Gets issues.
 
 ```typescript
 import { Hris } from "HRIS";
-import { IssuesListStatus } from "HRIS/dist/sdk/models/operations";
+import { Status } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -24,6 +24,7 @@ import { IssuesListStatus } from "HRIS/dist/sdk/models/operations";
   });
 
   const res = await sdk.issues.issuesList({});
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -63,6 +64,7 @@ import { Hris } from "HRIS";
   const res = await sdk.issues.issuesRetrieve({
     id: "afe72258-f46d-4572-b194-a000d9ba8a35",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

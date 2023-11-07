@@ -1,5 +1,5 @@
 # Passthrough
-(*passthrough*)
+(*.passthrough*)
 
 ### Available Operations
 
@@ -13,11 +13,7 @@ Pull data from an endpoint not currently supported by Merge.
 
 ```typescript
 import { Hris } from "HRIS";
-import {
-  DataPassthroughRequestMethod,
-  DataPassthroughRequestRequestFormat,
-  MultipartFormFieldRequestEncoding,
-} from "HRIS/dist/sdk/models/shared";
+import { Encoding, Method, RequestFormat } from "HRIS/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Hris({
@@ -32,21 +28,22 @@ import {
       headers: {
         "EXTRA-HEADER": "string",
       },
-      method: DataPassthroughRequestMethod.Post,
+      method: Method.Post,
       multipartFormData: [
         {
           contentType: "application/pdf",
           data: "SW50ZWdyYXRlIGZhc3QKSW50ZWdyYXRlIG9uY2U=",
-          encoding: MultipartFormFieldRequestEncoding.Base64,
+          encoding: Encoding.Base64,
           fileName: "resume.pdf",
           name: "resume",
         },
       ],
       path: "/scooters",
-      requestFormat: DataPassthroughRequestRequestFormat.Json,
+      requestFormat: RequestFormat.Json,
     },
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

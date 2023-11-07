@@ -3,27 +3,27 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum BankInfoRetrieveExpand {
+export enum QueryParamExpand {
     Employee = "employee",
 }
 
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum BankInfoRetrieveRemoteFields {
+export enum QueryParamRemoteFields {
     AccountType = "account_type",
 }
 
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum BankInfoRetrieveShowEnumOrigins {
+export enum QueryParamShowEnumOrigins {
     AccountType = "account_type",
 }
 
@@ -38,7 +38,7 @@ export class BankInfoRetrieveRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: BankInfoRetrieveExpand;
+    expand?: QueryParamExpand;
 
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
@@ -53,13 +53,13 @@ export class BankInfoRetrieveRequest extends SpeakeasyBase {
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: BankInfoRetrieveRemoteFields;
+    remoteFields?: QueryParamRemoteFields;
 
     /**
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: BankInfoRetrieveShowEnumOrigins;
+    showEnumOrigins?: QueryParamShowEnumOrigins;
 }
 
 export class BankInfoRetrieveResponse extends SpeakeasyBase {

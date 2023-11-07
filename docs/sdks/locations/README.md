@@ -1,5 +1,5 @@
 # Locations
-(*locations*)
+(*.locations*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Returns a list of `Location` objects.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LocationsListRemoteFields, LocationsListShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import { LocationsListQueryParamRemoteFields, LocationsListQueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -26,6 +26,7 @@ import { LocationsListRemoteFields, LocationsListShowEnumOrigins } from "HRIS/di
   const res = await sdk.locations.locationsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -54,7 +55,10 @@ Returns a `Location` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { LocationsRetrieveRemoteFields, LocationsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import {
+  LocationsRetrieveQueryParamRemoteFields,
+  LocationsRetrieveQueryParamShowEnumOrigins,
+} from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -67,6 +71,7 @@ import { LocationsRetrieveRemoteFields, LocationsRetrieveShowEnumOrigins } from 
     xAccountToken: "string",
     id: "74ebd06c-c8d9-489b-8db9-cc574d8c8b72",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

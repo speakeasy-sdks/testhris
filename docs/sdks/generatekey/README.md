@@ -1,5 +1,5 @@
 # GenerateKey
-(*generateKey*)
+(*.generateKey*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.generateKey.generateKeyCreate({
     name: "Remote Deployment Key 1",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

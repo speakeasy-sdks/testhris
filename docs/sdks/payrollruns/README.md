@@ -1,5 +1,5 @@
 # PayrollRuns
-(*payrollRuns*)
+(*.payrollRuns*)
 
 ### Available Operations
 
@@ -15,9 +15,9 @@ Returns a list of `PayrollRun` objects.
 ```typescript
 import { Hris } from "HRIS";
 import {
-  PayrollRunsListRemoteFields,
-  PayrollRunsListRunType,
-  PayrollRunsListShowEnumOrigins,
+  PayrollRunsListQueryParamRemoteFields,
+  PayrollRunsListQueryParamShowEnumOrigins,
+  RunType,
 } from "HRIS/dist/sdk/models/operations";
 
 (async() => {
@@ -30,6 +30,7 @@ import {
   const res = await sdk.payrollRuns.payrollRunsList({
     xAccountToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -58,7 +59,10 @@ Returns a `PayrollRun` object with the given `id`.
 
 ```typescript
 import { Hris } from "HRIS";
-import { PayrollRunsRetrieveRemoteFields, PayrollRunsRetrieveShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
+import {
+  PayrollRunsRetrieveQueryParamRemoteFields,
+  PayrollRunsRetrieveQueryParamShowEnumOrigins,
+} from "HRIS/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Hris({
@@ -71,6 +75,7 @@ import { PayrollRunsRetrieveRemoteFields, PayrollRunsRetrieveShowEnumOrigins } f
     xAccountToken: "string",
     id: "d0f9705a-17ce-4ded-b6a3-5adfc07d0ae9",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

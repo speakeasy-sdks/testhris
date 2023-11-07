@@ -17,7 +17,7 @@ import { Expose, Type } from "class-transformer";
  * * `PATCH` - PATCH
  * * `DELETE` - DELETE
  */
-export enum DataPassthroughRequestMethod {
+export enum Method {
     Get = "GET",
     Options = "OPTIONS",
     Head = "HEAD",
@@ -34,7 +34,7 @@ export enum DataPassthroughRequestMethod {
  * * `XML` - XML
  * * `MULTIPART` - MULTIPART
  */
-export enum DataPassthroughRequestRequestFormat {
+export enum RequestFormat {
     Json = "JSON",
     Xml = "XML",
     Multipart = "MULTIPART",
@@ -72,7 +72,7 @@ export class DataPassthroughRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata({ data: "form, name=method, multipart_form, name=method" })
     @Expose({ name: "method" })
-    method: DataPassthroughRequestMethod;
+    method: Method;
 
     /**
      * Pass an array of `MultipartFormField` objects in here instead of using the `data` param if `request_format` is set to `MULTIPART`.
@@ -100,5 +100,5 @@ export class DataPassthroughRequest extends SpeakeasyBase {
 
     @SpeakeasyMetadata({ data: "form, name=request_format, multipart_form, name=request_format" })
     @Expose({ name: "request_format" })
-    requestFormat?: DataPassthroughRequestRequestFormat;
+    requestFormat?: RequestFormat;
 }

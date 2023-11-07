@@ -1,5 +1,5 @@
 # AccountToken
-(*accountToken*)
+(*.accountToken*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Hris } from "HRIS";
   const res = await sdk.accountToken.accountTokenRetrieve({
     publicToken: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

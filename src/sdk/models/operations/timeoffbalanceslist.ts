@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
  */
-export enum TimeOffBalancesListExpand {
+export enum TimeOffBalancesListQueryParamExpand {
     Employee = "employee",
 }
 
@@ -25,7 +25,7 @@ export enum TimeOffBalancesListExpand {
  * * `VOLUNTEER` - VOLUNTEER
  * * `BEREAVEMENT` - BEREAVEMENT
  */
-export enum TimeOffBalancesListPolicyType {
+export enum PolicyType {
     Bereavement = "BEREAVEMENT",
     JuryDuty = "JURY_DUTY",
     Personal = "PERSONAL",
@@ -37,14 +37,14 @@ export enum TimeOffBalancesListPolicyType {
 /**
  * Deprecated. Use show_enum_origins.
  */
-export enum TimeOffBalancesListRemoteFields {
+export enum TimeOffBalancesListQueryParamRemoteFields {
     PolicyType = "policy_type",
 }
 
 /**
  * Which fields should be returned in non-normalized form.
  */
-export enum TimeOffBalancesListShowEnumOrigins {
+export enum TimeOffBalancesListQueryParamShowEnumOrigins {
     PolicyType = "policy_type",
 }
 
@@ -83,7 +83,7 @@ export class TimeOffBalancesListRequest extends SpeakeasyBase {
      * Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expand" })
-    expand?: TimeOffBalancesListExpand;
+    expand?: TimeOffBalancesListQueryParamExpand;
 
     /**
      * Whether to include data that was marked as deleted by third party webhooks.
@@ -128,13 +128,13 @@ export class TimeOffBalancesListRequest extends SpeakeasyBase {
      * * `BEREAVEMENT` - BEREAVEMENT
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=policy_type" })
-    policyType?: TimeOffBalancesListPolicyType;
+    policyType?: PolicyType;
 
     /**
      * Deprecated. Use show_enum_origins.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=remote_fields" })
-    remoteFields?: TimeOffBalancesListRemoteFields;
+    remoteFields?: TimeOffBalancesListQueryParamRemoteFields;
 
     /**
      * The API provider's ID for the given object.
@@ -146,7 +146,7 @@ export class TimeOffBalancesListRequest extends SpeakeasyBase {
      * Which fields should be returned in non-normalized form.
      */
     @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=show_enum_origins" })
-    showEnumOrigins?: TimeOffBalancesListShowEnumOrigins;
+    showEnumOrigins?: TimeOffBalancesListQueryParamShowEnumOrigins;
 }
 
 export class TimeOffBalancesListResponse extends SpeakeasyBase {
