@@ -1,0 +1,10 @@
+# CommonModelScopesBodyRequest
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     | Example                                                                         |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `disabledFields`                                                                | *string*[]                                                                      | :heavy_check_mark:                                                              | N/A                                                                             | first_name                                                                      |
+| `enabledActions`                                                                | [shared.EnabledActionsEnum](../../../sdk/models/shared/enabledactionsenum.md)[] | :heavy_check_mark:                                                              | N/A                                                                             | READ,WRITE                                                                      |
+| `modelId`                                                                       | *string*                                                                        | :heavy_check_mark:                                                              | N/A                                                                             | hris.Employee                                                                   |

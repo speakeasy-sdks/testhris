@@ -1,5 +1,5 @@
 # GenerateKey
-(*.generateKey*)
+(*generateKey*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Hris } from "HRIS";
     name: "Remote Deployment Key 1",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -34,13 +33,17 @@ import { Hris } from "HRIS";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [shared.GenerateRemoteKeyRequest](../../models/shared/generateremotekeyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [shared.GenerateRemoteKeyRequest](../../sdk/models/shared/generateremotekeyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.GenerateKeyCreateResponse](../../models/operations/generatekeycreateresponse.md)>**
+**Promise<[operations.GenerateKeyCreateResponse](../../sdk/models/operations/generatekeycreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

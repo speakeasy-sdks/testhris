@@ -1,5 +1,5 @@
 # LinkToken
-(*.linkToken*)
+(*linkToken*)
 
 ### Available Operations
 
@@ -43,7 +43,6 @@ import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared"
     endUserOriginId: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -52,13 +51,17 @@ import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared"
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [shared.EndUserDetailsRequest](../../models/shared/enduserdetailsrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [shared.EndUserDetailsRequest](../../sdk/models/shared/enduserdetailsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
 
-**Promise<[operations.LinkTokenCreateResponse](../../models/operations/linktokencreateresponse.md)>**
+**Promise<[operations.LinkTokenCreateResponse](../../sdk/models/operations/linktokencreateresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

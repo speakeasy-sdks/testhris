@@ -1,5 +1,5 @@
 # AvailableActions
-(*.availableActions*)
+(*availableActions*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Hris } from "HRIS";
     xAccountToken: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -34,13 +33,17 @@ import { Hris } from "HRIS";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.AvailableActionsRetrieveRequest](../../models/operations/availableactionsretrieverequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.AvailableActionsRetrieveRequest](../../sdk/models/operations/availableactionsretrieverequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.AvailableActionsRetrieveResponse](../../models/operations/availableactionsretrieveresponse.md)>**
+**Promise<[operations.AvailableActionsRetrieveResponse](../../sdk/models/operations/availableactionsretrieveresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

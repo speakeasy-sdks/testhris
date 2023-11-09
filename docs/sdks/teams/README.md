@@ -1,5 +1,5 @@
 # Teams
-(*.teams*)
+(*teams*)
 
 ### Available Operations
 
@@ -27,7 +27,6 @@ import { TeamsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
     xAccountToken: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,16 +35,20 @@ import { TeamsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [operations.TeamsListRequest](../../models/operations/teamslistrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.TeamsListRequest](../../sdk/models/operations/teamslistrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.TeamsListResponse](../../models/operations/teamslistresponse.md)>**
+**Promise<[operations.TeamsListResponse](../../sdk/models/operations/teamslistresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## teamsRetrieve
 
@@ -69,7 +72,6 @@ import { TeamsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operations";
     id: "77b57dde-6730-4f60-a01d-623ae3bbe560",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -78,13 +80,17 @@ import { TeamsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.TeamsRetrieveRequest](../../models/operations/teamsretrieverequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.TeamsRetrieveRequest](../../sdk/models/operations/teamsretrieverequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `config`                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                           | :heavy_minus_sign:                                                                     | Available config options for making requests.                                          |
 
 
 ### Response
 
-**Promise<[operations.TeamsRetrieveResponse](../../models/operations/teamsretrieveresponse.md)>**
+**Promise<[operations.TeamsRetrieveResponse](../../sdk/models/operations/teamsretrieveresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

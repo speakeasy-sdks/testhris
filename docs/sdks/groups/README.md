@@ -1,5 +1,5 @@
 # Groups
-(*.groups*)
+(*groups*)
 
 ### Available Operations
 
@@ -27,7 +27,6 @@ import { GroupsListQueryParamRemoteFields, GroupsListQueryParamShowEnumOrigins }
     xAccountToken: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,16 +35,20 @@ import { GroupsListQueryParamRemoteFields, GroupsListQueryParamShowEnumOrigins }
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GroupsListRequest](../../models/operations/groupslistrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `config`                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                 | :heavy_minus_sign:                                                           | Available config options for making requests.                                |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GroupsListRequest](../../sdk/models/operations/groupslistrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
 
 
 ### Response
 
-**Promise<[operations.GroupsListResponse](../../models/operations/groupslistresponse.md)>**
+**Promise<[operations.GroupsListResponse](../../sdk/models/operations/groupslistresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## groupsRetrieve
 
@@ -69,7 +72,6 @@ import { GroupsRetrieveQueryParamRemoteFields, GroupsRetrieveQueryParamShowEnumO
     id: "f30195ec-1b25-45da-adb0-7836763cd896",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -78,13 +80,17 @@ import { GroupsRetrieveQueryParamRemoteFields, GroupsRetrieveQueryParamShowEnumO
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GroupsRetrieveRequest](../../models/operations/groupsretrieverequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GroupsRetrieveRequest](../../sdk/models/operations/groupsretrieverequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
 
 
 ### Response
 
-**Promise<[operations.GroupsRetrieveResponse](../../models/operations/groupsretrieveresponse.md)>**
+**Promise<[operations.GroupsRetrieveResponse](../../sdk/models/operations/groupsretrieveresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

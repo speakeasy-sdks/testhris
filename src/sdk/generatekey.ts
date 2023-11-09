@@ -31,7 +31,7 @@ export class GenerateKey {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/generate-key";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/generate-key";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -63,7 +63,7 @@ export class GenerateKey {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

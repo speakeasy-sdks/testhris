@@ -1,5 +1,5 @@
 # Benefits
-(*.benefits*)
+(*benefits*)
 
 ### Available Operations
 
@@ -27,7 +27,6 @@ import { BenefitsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
     xAccountToken: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -36,16 +35,20 @@ import { BenefitsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.BenefitsListRequest](../../models/operations/benefitslistrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.BenefitsListRequest](../../sdk/models/operations/benefitslistrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.BenefitsListResponse](../../models/operations/benefitslistresponse.md)>**
+**Promise<[operations.BenefitsListResponse](../../sdk/models/operations/benefitslistresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## benefitsRetrieve
 
@@ -69,7 +72,6 @@ import { BenefitsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operation
     id: "0647de81-b28f-4e68-8a5f-dee1e8a699d0",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -78,13 +80,17 @@ import { BenefitsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operation
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.BenefitsRetrieveRequest](../../models/operations/benefitsretrieverequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `config`                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                             | :heavy_minus_sign:                                                                       | Available config options for making requests.                                            |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.BenefitsRetrieveRequest](../../sdk/models/operations/benefitsretrieverequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
 
 
 ### Response
 
-**Promise<[operations.BenefitsRetrieveResponse](../../models/operations/benefitsretrieveresponse.md)>**
+**Promise<[operations.BenefitsRetrieveResponse](../../sdk/models/operations/benefitsretrieveresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

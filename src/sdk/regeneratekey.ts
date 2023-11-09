@@ -31,7 +31,7 @@ export class RegenerateKey {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/regenerate-key";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/regenerate-key";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -63,7 +63,7 @@ export class RegenerateKey {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
