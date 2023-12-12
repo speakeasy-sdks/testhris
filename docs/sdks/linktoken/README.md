@@ -15,10 +15,10 @@ Creates a link token to be used when linking a new end user.
 import { Hris } from "HRIS";
 import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -46,7 +46,9 @@ import { CategoriesEnum, EnabledActionsEnum } from "HRIS/dist/sdk/models/shared"
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

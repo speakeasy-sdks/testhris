@@ -16,10 +16,10 @@ Gets issues.
 import { Hris } from "HRIS";
 import { Status } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -28,7 +28,9 @@ import { Status } from "HRIS/dist/sdk/models/operations";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -57,10 +59,10 @@ Get a specific issue.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -71,7 +73,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

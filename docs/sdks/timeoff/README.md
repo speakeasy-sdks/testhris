@@ -18,10 +18,10 @@ Creates a `TimeOff` object with the given values.
 import { Hris } from "HRIS";
 import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } from "HRIS/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -51,7 +51,9 @@ import { TimeOffRequestRequestType, TimeOffRequestStatus, TimeOffRequestUnits } 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -87,10 +89,10 @@ import {
   TimeOffListQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -101,7 +103,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -130,10 +134,10 @@ Returns metadata for `TimeOff` POSTs.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -144,7 +148,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -178,10 +184,10 @@ import {
   TimeOffRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -193,7 +199,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

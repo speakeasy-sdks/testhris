@@ -16,10 +16,10 @@ Returns a list of `EmployeePayrollRun` objects.
 import { Hris } from "HRIS";
 import { EmployeePayrollRunsListQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -30,7 +30,9 @@ import { EmployeePayrollRunsListQueryParamExpand } from "HRIS/dist/sdk/models/op
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,10 +62,10 @@ Returns an `EmployeePayrollRun` object with the given `id`.
 import { Hris } from "HRIS";
 import { EmployeePayrollRunsRetrieveQueryParamExpand } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -75,7 +77,9 @@ import { EmployeePayrollRunsRetrieveQueryParamExpand } from "HRIS/dist/sdk/model
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

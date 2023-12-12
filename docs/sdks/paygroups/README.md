@@ -15,10 +15,10 @@ Returns a list of `PayGroup` objects.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -29,7 +29,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -58,10 +60,10 @@ Returns a `PayGroup` object with the given `id`.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -73,7 +75,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

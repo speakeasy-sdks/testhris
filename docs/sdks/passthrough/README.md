@@ -15,10 +15,10 @@ Pull data from an endpoint not currently supported by Merge.
 import { Hris } from "HRIS";
 import { Encoding, Method, RequestFormat } from "HRIS/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -47,7 +47,9 @@ import { Encoding, Method, RequestFormat } from "HRIS/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -24,10 +24,10 @@ import {
   EmployeeRequestMaritalStatus,
 } from "HRIS/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -78,7 +78,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -108,10 +110,10 @@ Ignores a specific row based on the `model_id` in the url. These records will ha
 import { Hris } from "HRIS";
 import { Reason } from "HRIS/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -127,7 +129,9 @@ import { Reason } from "HRIS/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -162,10 +166,10 @@ import {
   EmploymentStatus,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -176,7 +180,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -205,10 +211,10 @@ Returns metadata for `Employee` POSTs.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -219,7 +225,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -253,10 +261,10 @@ import {
   EmployeesRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -268,7 +276,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -21,10 +21,10 @@ import {
   TimeOffBalancesListQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -35,7 +35,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -69,10 +71,10 @@ import {
   TimeOffBalancesRetrieveQueryParamShowEnumOrigins,
 } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -84,7 +86,9 @@ import {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

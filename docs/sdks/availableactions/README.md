@@ -14,10 +14,10 @@ Returns a list of models and actions available for an account.
 ```typescript
 import { Hris } from "HRIS";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -28,7 +28,9 @@ import { Hris } from "HRIS";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

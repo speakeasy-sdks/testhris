@@ -1,6 +1,6 @@
 # HRIS
 
-<!-- Start SDK Installation -->
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ### NPM
@@ -14,19 +14,20 @@ npm add https://github.com/speakeasy-sdks/testhris
 ```bash
 yarn add https://github.com/speakeasy-sdks/testhris
 ```
-<!-- End SDK Installation -->
+<!-- End SDK Installation [installation] -->
 
+<!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
-<!-- Start SDK Example Usage -->
+
 ### Example
 
 ```typescript
 import { Hris } from "HRIS";
 
-(async () => {
+async function run() {
     const sdk = new Hris({
         security: {
-            tokenAuth: "",
+            tokenAuth: "<YOUR_API_KEY_HERE>",
         },
     });
 
@@ -37,14 +38,15 @@ import { Hris } from "HRIS";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->
 
-<!-- Start SDK Available Operations -->
+<!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
-
 
 ### [accountDetails](docs/sdks/accountdetails/README.md)
 
@@ -175,29 +177,15 @@ import { Hris } from "HRIS";
 
 * [webhookReceiversCreate](docs/sdks/webhookreceivers/README.md#webhookreceiverscreate) - Creates a `WebhookReceiver` object with the given values.
 * [webhookReceiversList](docs/sdks/webhookreceivers/README.md#webhookreceiverslist) - Returns a list of `WebhookReceiver` objects.
-<!-- End SDK Available Operations -->
+<!-- End Available Resources and Operations [operations] -->
 
 
 
-<!-- Start Dev Containers -->
-
-<!-- End Dev Containers -->
 
 
 
-<!-- Start Pagination -->
-# Pagination
 
-Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
-returned response object will have a `next` method that can be called to pull down the next group of results. If the
-return value of `next` is `null`, then there are no more pages to be fetched.
-
-Here's an example of one such pagination call:
-<!-- End Pagination -->
-
-
-
-<!-- Start Error Handling -->
+<!-- Start Error Handling [errors] -->
 ## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
@@ -211,10 +199,10 @@ Example
 ```typescript
 import { Hris } from "HRIS";
 
-(async () => {
+async function run() {
     const sdk = new Hris({
         security: {
-            tokenAuth: "",
+            tokenAuth: "<YOUR_API_KEY_HERE>",
         },
     });
 
@@ -223,19 +211,26 @@ import { Hris } from "HRIS";
         res = await sdk.accountDetails.accountDetailsRetrieve({
             xAccountToken: "string",
         });
-    } catch (e) {}
+    } catch (err) {
+        if (err instanceof errors.SDKError) {
+            console.error(err); // handle exception
+            throw err;
+        }
+    }
 
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Error Handling -->
+<!-- End Error Handling [errors] -->
 
 
 
-<!-- Start Server Selection -->
+<!-- Start Server Selection [server] -->
 ## Server Selection
 
 ### Select Server by Index
@@ -252,11 +247,11 @@ You can override the default server globally by passing a server index to the `s
 ```typescript
 import { Hris } from "HRIS";
 
-(async () => {
+async function run() {
     const sdk = new Hris({
         serverIdx: 1,
         security: {
-            tokenAuth: "",
+            tokenAuth: "<YOUR_API_KEY_HERE>",
         },
     });
 
@@ -267,7 +262,9 @@ import { Hris } from "HRIS";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
 
@@ -278,11 +275,11 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { Hris } from "HRIS";
 
-(async () => {
+async function run() {
     const sdk = new Hris({
         serverURL: "https://api.merge.dev/api/hris/v1",
         security: {
-            tokenAuth: "",
+            tokenAuth: "<YOUR_API_KEY_HERE>",
         },
     });
 
@@ -293,23 +290,25 @@ import { Hris } from "HRIS";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Server Selection -->
+<!-- End Server Selection [server] -->
 
 
 
-<!-- Start Custom HTTP Client -->
+<!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Typescript SDK makes API calls using the (axios)[https://axios-http.com/docs/intro] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
+The Typescript SDK makes API calls using the [axios](https://axios-http.com/docs/intro) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `AxiosInstance` object.
 
 For example, you could specify a header for every request that your sdk makes as follows:
 
 ```typescript
-from HRIS import Hris;
-import axios;
+import { HRIS } from "Hris";
+import axios from "axios";
 
 const httpClient = axios.create({
     headers: {'x-custom-header': 'someValue'}
@@ -317,11 +316,11 @@ const httpClient = axios.create({
 
 const sdk = new Hris({defaultClient: httpClient});
 ```
-<!-- End Custom HTTP Client -->
+<!-- End Custom HTTP Client [http-client] -->
 
 
 
-<!-- Start Authentication -->
+<!-- Start Authentication [security] -->
 ## Authentication
 
 ### Per-Client Security Schemes
@@ -336,10 +335,10 @@ You can set the security parameters through the `security` optional parameter wh
 ```typescript
 import { Hris } from "HRIS";
 
-(async () => {
+async function run() {
     const sdk = new Hris({
         security: {
-            tokenAuth: "",
+            tokenAuth: "<YOUR_API_KEY_HERE>",
         },
     });
 
@@ -350,10 +349,12 @@ import { Hris } from "HRIS";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End Authentication -->
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

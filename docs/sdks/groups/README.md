@@ -16,10 +16,10 @@ Returns a list of `Group` objects.
 import { Hris } from "HRIS";
 import { GroupsListQueryParamRemoteFields, GroupsListQueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -30,7 +30,9 @@ import { GroupsListQueryParamRemoteFields, GroupsListQueryParamShowEnumOrigins }
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,10 +62,10 @@ Returns a `Group` object with the given `id`.
 import { Hris } from "HRIS";
 import { GroupsRetrieveQueryParamRemoteFields, GroupsRetrieveQueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -75,7 +77,9 @@ import { GroupsRetrieveQueryParamRemoteFields, GroupsRetrieveQueryParamShowEnumO
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

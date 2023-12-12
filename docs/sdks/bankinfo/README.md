@@ -16,10 +16,10 @@ Returns a list of `BankInfo` objects.
 import { Hris } from "HRIS";
 import { AccountType, Expand, OrderBy, RemoteFields, ShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -30,7 +30,9 @@ import { AccountType, Expand, OrderBy, RemoteFields, ShowEnumOrigins } from "HRI
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -60,10 +62,10 @@ Returns a `BankInfo` object with the given `id`.
 import { Hris } from "HRIS";
 import { QueryParamExpand, QueryParamRemoteFields, QueryParamShowEnumOrigins } from "HRIS/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Hris({
     security: {
-      tokenAuth: "",
+      tokenAuth: "<YOUR_API_KEY_HERE>",
     },
   });
 
@@ -75,7 +77,9 @@ import { QueryParamExpand, QueryParamRemoteFields, QueryParamShowEnumOrigins } f
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

@@ -177,7 +177,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/accountdetailsretrieverequest.md
 docs/sdk/models/operations/accountdetailsretrieveresponse.md
 docs/sdk/models/operations/accounttokenretrieverequest.md
@@ -476,4 +475,5 @@ docs/sdks/teams/README.md
 docs/sdks/timeoff/README.md
 docs/sdks/timeoffbalances/README.md
 docs/sdks/webhookreceivers/README.md
+USAGE.md
 .gitattributes
