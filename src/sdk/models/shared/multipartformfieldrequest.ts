@@ -6,9 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
 /**
- * * `RAW` - RAW
+ * The encoding of the value of `data`. Defaults to `RAW` if not defined.
  *
  * @remarks
+ *
+ * * `RAW` - RAW
  * * `BASE64` - BASE64
  * * `GZIP_BASE64` - GZIP_BASE64
  */

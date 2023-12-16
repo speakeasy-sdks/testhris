@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `TEAM` - TEAM
+ * The group type
  *
  * @remarks
+ *
+ * * `TEAM` - TEAM
  * * `DEPARTMENT` - DEPARTMENT
  * * `COST_CENTER` - COST_CENTER
  * * `BUSINESS_UNIT` - BUSINESS_UNIT

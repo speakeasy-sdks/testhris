@@ -1,5 +1,7 @@
 # EmployeeRequestEmploymentStatus
 
+The employment status of the employee.
+
 * `ACTIVE` - ACTIVE
 * `PENDING` - PENDING
 * `INACTIVE` - INACTIVE

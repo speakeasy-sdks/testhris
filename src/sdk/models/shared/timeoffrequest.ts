@@ -6,9 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Transform } from "class-transformer";
 
 /**
- * * `VACATION` - VACATION
+ * The type of time off request.
  *
  * @remarks
+ *
+ * * `VACATION` - VACATION
  * * `SICK` - SICK
  * * `PERSONAL` - PERSONAL
  * * `JURY_DUTY` - JURY_DUTY
@@ -25,9 +27,11 @@ export enum TimeOffRequestRequestType {
 }
 
 /**
- * * `REQUESTED` - REQUESTED
+ * The status of this time off request.
  *
  * @remarks
+ *
+ * * `REQUESTED` - REQUESTED
  * * `APPROVED` - APPROVED
  * * `DECLINED` - DECLINED
  * * `CANCELLED` - CANCELLED
@@ -42,9 +46,11 @@ export enum TimeOffRequestStatus {
 }
 
 /**
- * * `HOURS` - HOURS
+ * The measurement that the third-party integration uses to count time requested.
  *
  * @remarks
+ *
+ * * `HOURS` - HOURS
  * * `DAYS` - DAYS
  */
 export enum TimeOffRequestUnits {

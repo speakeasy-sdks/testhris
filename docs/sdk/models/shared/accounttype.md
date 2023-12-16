@@ -1,5 +1,7 @@
 # AccountType
 
+The bank account type
+
 * `SAVINGS` - SAVINGS
 * `CHECKING` - CHECKING
 

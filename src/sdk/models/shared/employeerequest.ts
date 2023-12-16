@@ -6,9 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Transform } from "class-transformer";
 
 /**
- * * `ACTIVE` - ACTIVE
+ * The employment status of the employee.
  *
  * @remarks
+ *
+ * * `ACTIVE` - ACTIVE
  * * `PENDING` - PENDING
  * * `INACTIVE` - INACTIVE
  */
@@ -19,9 +21,11 @@ export enum EmployeeRequestEmploymentStatus {
 }
 
 /**
- * * `AMERICAN_INDIAN_OR_ALASKA_NATIVE` - AMERICAN_INDIAN_OR_ALASKA_NATIVE
+ * The employee's ethnicity.
  *
  * @remarks
+ *
+ * * `AMERICAN_INDIAN_OR_ALASKA_NATIVE` - AMERICAN_INDIAN_OR_ALASKA_NATIVE
  * * `ASIAN_OR_INDIAN_SUBCONTINENT` - ASIAN_OR_INDIAN_SUBCONTINENT
  * * `BLACK_OR_AFRICAN_AMERICAN` - BLACK_OR_AFRICAN_AMERICAN
  * * `HISPANIC_OR_LATINO` - HISPANIC_OR_LATINO
@@ -42,9 +46,11 @@ export enum EmployeeRequestEthnicity {
 }
 
 /**
- * * `MALE` - MALE
+ * The employee's gender.
  *
  * @remarks
+ *
+ * * `MALE` - MALE
  * * `FEMALE` - FEMALE
  * * `NON-BINARY` - NON-BINARY
  * * `OTHER` - OTHER
@@ -59,9 +65,11 @@ export enum EmployeeRequestGender {
 }
 
 /**
- * * `SINGLE` - SINGLE
+ * The employee's filing status as related to marital status.
  *
  * @remarks
+ *
+ * * `SINGLE` - SINGLE
  * * `MARRIED_FILING_JOINTLY` - MARRIED_FILING_JOINTLY
  * * `MARRIED_FILING_SEPARATELY` - MARRIED_FILING_SEPARATELY
  * * `HEAD_OF_HOUSEHOLD` - HEAD_OF_HOUSEHOLD

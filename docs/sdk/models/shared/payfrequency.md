@@ -1,5 +1,7 @@
 # PayFrequency
 
+The position's pay frequency.
+
 * `WEEKLY` - WEEKLY
 * `BIWEEKLY` - BIWEEKLY
 * `MONTHLY` - MONTHLY

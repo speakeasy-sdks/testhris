@@ -1,5 +1,7 @@
 # EmployeeRequestGender
 
+The employee's gender.
+
 * `MALE` - MALE
 * `FEMALE` - FEMALE
 * `NON-BINARY` - NON-BINARY

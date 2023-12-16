@@ -1,5 +1,7 @@
 # GroupType
 
+The group type
+
 * `TEAM` - TEAM
 * `DEPARTMENT` - DEPARTMENT
 * `COST_CENTER` - COST_CENTER

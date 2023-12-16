@@ -1,5 +1,7 @@
 # FlsaStatus
 
+The position's FLSA status.
+
 * `EXEMPT` - EXEMPT
 * `SALARIED_NONEXEMPT` - SALARIED_NONEXEMPT
 * `NONEXEMPT` - NONEXEMPT

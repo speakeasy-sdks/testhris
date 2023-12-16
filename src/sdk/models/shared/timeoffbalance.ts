@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `VACATION` - VACATION
+ * The policy type of this time off balance.
  *
  * @remarks
+ *
+ * * `VACATION` - VACATION
  * * `SICK` - SICK
  * * `PERSONAL` - PERSONAL
  * * `JURY_DUTY` - JURY_DUTY

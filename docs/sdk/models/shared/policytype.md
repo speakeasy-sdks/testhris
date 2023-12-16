@@ -1,5 +1,7 @@
 # PolicyType
 
+The policy type of this time off balance.
+
 * `VACATION` - VACATION
 * `SICK` - SICK
 * `PERSONAL` - PERSONAL

@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `SAVINGS` - SAVINGS
+ * The bank account type
  *
  * @remarks
+ *
+ * * `SAVINGS` - SAVINGS
  * * `CHECKING` - CHECKING
  */
 export enum AccountType {

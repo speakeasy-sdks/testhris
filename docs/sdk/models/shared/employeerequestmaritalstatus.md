@@ -1,5 +1,7 @@
 # EmployeeRequestMaritalStatus
 
+The employee's filing status as related to marital status.
+
 * `SINGLE` - SINGLE
 * `MARRIED_FILING_JOINTLY` - MARRIED_FILING_JOINTLY
 * `MARRIED_FILING_SEPARATELY` - MARRIED_FILING_SEPARATELY

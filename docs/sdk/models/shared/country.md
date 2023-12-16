@@ -1,5 +1,7 @@
 # Country
 
+The location's country.
+
 * `AF` - Afghanistan
 * `AX` - Åland Islands
 * `AL` - Albania

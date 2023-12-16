@@ -6,9 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Transform } from "class-transformer";
 
 /**
- * * `ONGOING` - ONGOING
+ * Status of the issue. Options: ('ONGOING', 'RESOLVED')
  *
  * @remarks
+ *
+ * * `ONGOING` - ONGOING
  * * `RESOLVED` - RESOLVED
  */
 export enum IssueStatus {

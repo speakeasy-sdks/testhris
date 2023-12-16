@@ -1,5 +1,7 @@
 # RunType
 
+The type of the payroll run
+
 * `REGULAR` - REGULAR
 * `OFF_CYCLE` - OFF_CYCLE
 * `CORRECTION` - CORRECTION

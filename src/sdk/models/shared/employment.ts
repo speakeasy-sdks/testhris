@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `FULL_TIME` - FULL_TIME
+ * The position's type of employment.
  *
  * @remarks
+ *
+ * * `FULL_TIME` - FULL_TIME
  * * `PART_TIME` - PART_TIME
  * * `INTERN` - INTERN
  * * `CONTRACTOR` - CONTRACTOR
@@ -24,9 +26,11 @@ export enum EmploymentType {
 }
 
 /**
- * * `EXEMPT` - EXEMPT
+ * The position's FLSA status.
  *
  * @remarks
+ *
+ * * `EXEMPT` - EXEMPT
  * * `SALARIED_NONEXEMPT` - SALARIED_NONEXEMPT
  * * `NONEXEMPT` - NONEXEMPT
  * * `OWNER` - OWNER
@@ -39,9 +43,11 @@ export enum FlsaStatus {
 }
 
 /**
- * * `XUA` - ADB Unit of Account
+ * The position's currency code.
  *
  * @remarks
+ *
+ * * `XUA` - ADB Unit of Account
  * * `AFN` - Afghan Afghani
  * * `AFA` - Afghan Afghani (1927–2002)
  * * `ALL` - Albanian Lek
@@ -658,9 +664,11 @@ export enum PayCurrency {
 }
 
 /**
- * * `WEEKLY` - WEEKLY
+ * The position's pay frequency.
  *
  * @remarks
+ *
+ * * `WEEKLY` - WEEKLY
  * * `BIWEEKLY` - BIWEEKLY
  * * `MONTHLY` - MONTHLY
  * * `QUARTERLY` - QUARTERLY
@@ -683,9 +691,11 @@ export enum PayFrequency {
 }
 
 /**
- * * `HOUR` - HOUR
+ * The time period this pay rate encompasses.
  *
  * @remarks
+ *
+ * * `HOUR` - HOUR
  * * `DAY` - DAY
  * * `WEEK` - WEEK
  * * `EVERY_TWO_WEEKS` - EVERY_TWO_WEEKS

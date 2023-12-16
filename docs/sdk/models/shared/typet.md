@@ -1,5 +1,7 @@
 # TypeT
 
+The type of earning.
+
 * `SALARY` - SALARY
 * `REIMBURSEMENT` - REIMBURSEMENT
 * `OVERTIME` - OVERTIME

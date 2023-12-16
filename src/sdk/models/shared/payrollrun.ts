@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `PAID` - PAID
+ * The state of the payroll run
  *
  * @remarks
+ *
+ * * `PAID` - PAID
  * * `DRAFT` - DRAFT
  * * `APPROVED` - APPROVED
  * * `FAILED` - FAILED
@@ -24,9 +26,11 @@ export enum RunState {
 }
 
 /**
- * * `REGULAR` - REGULAR
+ * The type of the payroll run
  *
  * @remarks
+ *
+ * * `REGULAR` - REGULAR
  * * `OFF_CYCLE` - OFF_CYCLE
  * * `CORRECTION` - CORRECTION
  * * `TERMINATION` - TERMINATION

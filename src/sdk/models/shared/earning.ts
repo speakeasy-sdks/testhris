@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `SALARY` - SALARY
+ * The type of earning.
  *
  * @remarks
+ *
+ * * `SALARY` - SALARY
  * * `REIMBURSEMENT` - REIMBURSEMENT
  * * `OVERTIME` - OVERTIME
  * * `BONUS` - BONUS

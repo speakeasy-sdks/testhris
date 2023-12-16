@@ -1,5 +1,7 @@
 # TimeOffRequestStatus
 
+The status of this time off request.
+
 * `REQUESTED` - REQUESTED
 * `APPROVED` - APPROVED
 * `DECLINED` - DECLINED

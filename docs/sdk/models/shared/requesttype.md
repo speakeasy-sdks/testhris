@@ -1,5 +1,7 @@
 # RequestType
 
+The type of time off request.
+
 * `VACATION` - VACATION
 * `SICK` - SICK
 * `PERSONAL` - PERSONAL

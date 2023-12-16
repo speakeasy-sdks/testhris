@@ -1,5 +1,7 @@
 # RunState
 
+The state of the payroll run
+
 * `PAID` - PAID
 * `DRAFT` - DRAFT
 * `APPROVED` - APPROVED

@@ -1,5 +1,7 @@
 # PayPeriod
 
+The time period this pay rate encompasses.
+
 * `HOUR` - HOUR
 * `DAY` - DAY
 * `WEEK` - WEEK

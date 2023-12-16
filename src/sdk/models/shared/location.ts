@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `AF` - Afghanistan
+ * The location's country.
  *
  * @remarks
+ *
+ * * `AF` - Afghanistan
  * * `AX` - Åland Islands
  * * `AL` - Albania
  * * `DZ` - Algeria
@@ -512,9 +514,11 @@ export enum Country {
 }
 
 /**
- * * `HOME` - HOME
+ * The location's type. Can be either WORK or HOME
  *
  * @remarks
+ *
+ * * `HOME` - HOME
  * * `WORK` - WORK
  */
 export enum LocationType {

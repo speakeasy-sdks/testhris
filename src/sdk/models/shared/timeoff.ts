@@ -7,9 +7,11 @@ import { RemoteData } from "./remotedata";
 import { Expose, Transform, Type } from "class-transformer";
 
 /**
- * * `VACATION` - VACATION
+ * The type of time off request.
  *
  * @remarks
+ *
+ * * `VACATION` - VACATION
  * * `SICK` - SICK
  * * `PERSONAL` - PERSONAL
  * * `JURY_DUTY` - JURY_DUTY
@@ -26,9 +28,11 @@ export enum RequestType {
 }
 
 /**
- * * `REQUESTED` - REQUESTED
+ * The status of this time off request.
  *
  * @remarks
+ *
+ * * `REQUESTED` - REQUESTED
  * * `APPROVED` - APPROVED
  * * `DECLINED` - DECLINED
  * * `CANCELLED` - CANCELLED
@@ -43,9 +47,11 @@ export enum TimeOffStatus {
 }
 
 /**
- * * `HOURS` - HOURS
+ * The measurement that the third-party integration uses to count time requested.
  *
  * @remarks
+ *
+ * * `HOURS` - HOURS
  * * `DAYS` - DAYS
  */
 export enum Units {
