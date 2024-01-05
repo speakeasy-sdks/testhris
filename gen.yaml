@@ -1,23 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: fdc02c3e2ea724be829328a32ae7ba59
-  docVersion: "1.0"
-  speakeasyVersion: 1.127.0
-  generationVersion: 2.220.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: HRIS
-  repoURL: https://github.com/speakeasy-sdks/testhris.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  typescript:
-    core: 3.3.9
-    deprecations: 2.81.1
-    globalSecurity: 2.82.2
-    globalServerURLs: 2.82.1
 typescript:
   version: 2.1.2
   author: Test
@@ -32,9 +19,7 @@ typescript:
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/testhris
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: HRIS
-  repoSubDirectory: .
   templateVersion: v1
