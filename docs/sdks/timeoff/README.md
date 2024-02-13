@@ -34,10 +34,10 @@ async function run() {
         employeeNote: "Moving into the new apartment Kendall Roy gave me!",
         endTime: new Date("2020-11-17T00:00:00Z"),
         integrationParams: {
-          "unique_integration_field": "string",
+          "unique_integration_field": "unique_integration_field_value",
         },
         linkedAccountParams: {
-          "unique_linked_account_field": "string",
+          "unique_linked_account_field": "unique_linked_account_field_value",
         },
         requestType: TimeOffRequestRequestType.Vacation,
         startTime: new Date("2020-11-10T00:00:00Z"),

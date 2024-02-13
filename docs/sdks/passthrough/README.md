@@ -26,7 +26,7 @@ async function run() {
     dataPassthroughRequest: {
       data: "{\"company\": \"Lime\", \"model\": \"Gen 2.5\"}",
       headers: {
-        "EXTRA-HEADER": "string",
+        "EXTRA-HEADER": "value",
       },
       method: Method.Post,
       multipartFormData: [

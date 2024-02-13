@@ -52,11 +52,11 @@ async function run() {
         hireDate: new Date("2020-10-10T00:00:00Z"),
         homeLocation: "d2f972d0-2526-434b-9409-4c3b468e08f0",
         integrationParams: {
-          "unique_integration_field": "string",
+          "unique_integration_field": "unique_integration_field_value",
         },
         lastName: "Hirsch",
         linkedAccountParams: {
-          "unique_linked_account_field": "string",
+          "unique_linked_account_field": "unique_linked_account_field_value",
         },
         manager: "0048ea5b-911e-4dff-9364-92070dea62ff",
         maritalStatus: EmployeeRequestMaritalStatus.Single,
