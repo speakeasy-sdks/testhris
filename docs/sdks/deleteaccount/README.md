@@ -22,7 +22,7 @@ async function run() {
   });
 
   const res = await sdk.deleteAccount.deleteAccountCreate({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {

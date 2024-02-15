@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.benefits.benefitsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
   });
 
   const res = await sdk.benefits.benefitsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "0647de81-b28f-4e68-8a5f-dee1e8a699d0",
   });
 

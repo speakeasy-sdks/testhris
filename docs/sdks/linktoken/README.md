@@ -38,9 +38,9 @@ async function run() {
         modelId: "hris.Employee",
       },
     ],
-    endUserEmailAddress: "string",
-    endUserOrganizationName: "string",
-    endUserOriginId: "string",
+    endUserEmailAddress: "<value>",
+    endUserOrganizationName: "<value>",
+    endUserOriginId: "<value>",
   });
 
   if (res.statusCode == 200) {

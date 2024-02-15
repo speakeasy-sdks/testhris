@@ -29,7 +29,7 @@ async function run() {
   });
 
   const res = await sdk.timeOffBalances.timeOffBalancesList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -79,7 +79,7 @@ async function run() {
   });
 
   const res = await sdk.timeOffBalances.timeOffBalancesRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "1d09d575-df78-4c43-8b81-268066ab9d39",
   });
 

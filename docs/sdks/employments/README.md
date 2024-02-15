@@ -29,7 +29,7 @@ async function run() {
   });
 
   const res = await sdk.employments.employmentsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -79,7 +79,7 @@ async function run() {
   });
 
   const res = await sdk.employments.employmentsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "02842cdf-a36b-41cb-9926-eb59f7a98c39",
   });
 

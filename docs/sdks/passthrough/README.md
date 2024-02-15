@@ -41,7 +41,7 @@ async function run() {
       path: "/scooters",
       requestFormat: RequestFormat.Json,
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -24,10 +24,10 @@ async function run() {
 
   const res = await sdk.webhookReceivers.webhookReceiversCreate({
     webhookReceiverRequest: {
-      event: "string",
+      event: "<value>",
       isActive: false,
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -72,7 +72,7 @@ async function run() {
   });
 
   const res = await sdk.webhookReceivers.webhookReceiversList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.bankInfo.bankInfoList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
   });
 
   const res = await sdk.bankInfo.bankInfoRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "d7839d27-3932-4cf4-9920-09663471089d",
   });
 

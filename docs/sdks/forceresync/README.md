@@ -22,7 +22,7 @@ async function run() {
   });
 
   const res = await sdk.forceResync.syncStatusResyncCreate({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {

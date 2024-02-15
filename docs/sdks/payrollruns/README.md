@@ -28,7 +28,7 @@ async function run() {
   });
 
   const res = await sdk.payrollRuns.payrollRunsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -77,7 +77,7 @@ async function run() {
   });
 
   const res = await sdk.payrollRuns.payrollRunsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "d0f9705a-17ce-4ded-b6a3-5adfc07d0ae9",
   });
 

@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.selectiveSync.selectiveSyncConfigurationsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -75,14 +75,14 @@ async function run() {
           linkedAccountConditions: [
             {
               conditionSchemaId: "1d101b05-1b27-4bb3-8005-3fdfb3b8ef10",
-              operator: "string",
-              value: "string",
+              operator: "<value>",
+              value: "<value>",
             },
           ],
         },
       ],
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -127,7 +127,7 @@ async function run() {
   });
 
   const res = await sdk.selectiveSync.selectiveSyncMetaList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {

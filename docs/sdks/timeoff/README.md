@@ -45,7 +45,7 @@ async function run() {
         units: TimeOffRequestUnits.Days,
       },
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -97,7 +97,7 @@ async function run() {
   });
 
   const res = await sdk.timeOff.timeOffList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -142,7 +142,7 @@ async function run() {
   });
 
   const res = await sdk.timeOff.timeOffMetaPostRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -192,7 +192,7 @@ async function run() {
   });
 
   const res = await sdk.timeOff.timeOffRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "a170075d-def5-4fcf-a2bb-ba7c32c29e53",
   });
 

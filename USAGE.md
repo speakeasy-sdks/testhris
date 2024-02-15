@@ -10,7 +10,7 @@ async function run() {
     });
 
     const res = await sdk.accountDetails.accountDetailsRetrieve({
-        xAccountToken: "string",
+        xAccountToken: "<value>",
     });
 
     if (res.statusCode == 200) {

@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.locations.locationsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -73,7 +73,7 @@ async function run() {
   });
 
   const res = await sdk.locations.locationsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "74ebd06c-c8d9-489b-8db9-cc574d8c8b72",
   });
 

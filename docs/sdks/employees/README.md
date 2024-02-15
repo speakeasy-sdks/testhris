@@ -72,7 +72,7 @@ async function run() {
         workLocation: "9efbc633-3387-4306-aa55-e2c635e6bb4f",
       },
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -122,7 +122,7 @@ async function run() {
       message: "deletion request by user id 51903790-7dfe-4053-8d63-5a10cc4ffd39",
       reason: Reason.GeneralCustomerRequest,
     },
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     modelId: "2a18e15d-530c-4d29-b14b-b6aaa7629957",
   });
 
@@ -174,7 +174,7 @@ async function run() {
   });
 
   const res = await sdk.employees.employeesList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -219,7 +219,7 @@ async function run() {
   });
 
   const res = await sdk.employees.employeesMetaPostRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -269,7 +269,7 @@ async function run() {
   });
 
   const res = await sdk.employees.employeesRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "1d206e21-c403-45d2-ac47-7e44b63a37d8",
   });
 

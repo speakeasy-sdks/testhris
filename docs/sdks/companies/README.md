@@ -23,7 +23,7 @@ async function run() {
   });
 
   const res = await sdk.companies.companiesList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -68,7 +68,7 @@ async function run() {
   });
 
   const res = await sdk.companies.companiesRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "f6981dd8-929a-425e-9dab-94febeac92c9",
   });
 

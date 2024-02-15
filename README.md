@@ -32,7 +32,7 @@ async function run() {
     });
 
     const res = await sdk.accountDetails.accountDetailsRetrieve({
-        xAccountToken: "string",
+        xAccountToken: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -209,7 +209,7 @@ async function run() {
     let res;
     try {
         res = await sdk.accountDetails.accountDetailsRetrieve({
-            xAccountToken: "string",
+            xAccountToken: "<value>",
         });
     } catch (err) {
         if (err instanceof errors.SDKError) {
@@ -256,7 +256,7 @@ async function run() {
     });
 
     const res = await sdk.accountDetails.accountDetailsRetrieve({
-        xAccountToken: "string",
+        xAccountToken: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -284,7 +284,7 @@ async function run() {
     });
 
     const res = await sdk.accountDetails.accountDetailsRetrieve({
-        xAccountToken: "string",
+        xAccountToken: "<value>",
     });
 
     if (res.statusCode == 200) {
@@ -343,7 +343,7 @@ async function run() {
     });
 
     const res = await sdk.accountDetails.accountDetailsRetrieve({
-        xAccountToken: "string",
+        xAccountToken: "<value>",
     });
 
     if (res.statusCode == 200) {

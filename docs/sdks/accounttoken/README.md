@@ -22,7 +22,7 @@ async function run() {
   });
 
   const res = await sdk.accountToken.accountTokenRetrieve({
-    publicToken: "string",
+    publicToken: "<value>",
   });
 
   if (res.statusCode == 200) {

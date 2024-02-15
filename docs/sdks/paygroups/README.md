@@ -23,7 +23,7 @@ async function run() {
   });
 
   const res = await sdk.payGroups.payGroupsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -68,7 +68,7 @@ async function run() {
   });
 
   const res = await sdk.payGroups.payGroupsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "a02c55d6-7c80-43d6-ad57-6784bdb69e62",
   });
 

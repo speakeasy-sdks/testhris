@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.groups.groupsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
   });
 
   const res = await sdk.groups.groupsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "f30195ec-1b25-45da-adb0-7836763cd896",
   });
 

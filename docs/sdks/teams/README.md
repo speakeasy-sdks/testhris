@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.teams.teamsList({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -70,7 +70,7 @@ async function run() {
   });
 
   const res = await sdk.teams.teamsRetrieve({
-    xAccountToken: "string",
+    xAccountToken: "<value>",
     id: "77b57dde-6730-4f60-a01d-623ae3bbe560",
   });
 
