@@ -4,17 +4,17 @@ management:
   docChecksum: fdc02c3e2ea724be829328a32ae7ba59
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 2.1.4
-  configChecksum: a89a5b2ac308a904901e7e29421ed4d2
+  generationVersion: 2.272.4
+  releaseVersion: 2.1.5
+  configChecksum: 0d05f5087c287bd5b884dc094d3f8597
   repoURL: https://github.com/speakeasy-sdks/testhris.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/testhris
 features:
   typescript:
-    core: 3.4.7
+    core: 3.4.8
     deprecations: 2.81.1
-    globalSecurity: 2.82.2
+    globalSecurity: 2.82.3
     globalServerURLs: 2.82.1
 generatedFiles:
   - src/sdk/accountdetails.ts

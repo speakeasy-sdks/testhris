@@ -10,9 +10,9 @@ View what operations are supported for the `Candidate` endpoint.
 
 ## Fields
 
-| Field                                        | Type                                         | Required                                     | Description                                  | Example                                      |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| `availableOperations`                        | *string*[]                                   | :heavy_check_mark:                           | N/A                                          | ["FETCH","CREATE"]                           |
-| `modelName`                                  | *string*                                     | :heavy_check_mark:                           | N/A                                          | Candidate                                    |
-| `requiredPostParameters`                     | *string*[]                                   | :heavy_check_mark:                           | N/A                                          | ["remote_user_id"]                           |
-| `supportedFields`                            | *string*[]                                   | :heavy_check_mark:                           | N/A                                          | ["first_name","last_name","company","title"] |
+| Field                                             | Type                                              | Required                                          | Description                                       | Example                                           |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| `availableOperations`                             | *string*[]                                        | :heavy_check_mark:                                | N/A                                               | [<br/>"FETCH",<br/>"CREATE"<br/>]                 |
+| `modelName`                                       | *string*                                          | :heavy_check_mark:                                | N/A                                               | Candidate                                         |
+| `requiredPostParameters`                          | *string*[]                                        | :heavy_check_mark:                                | N/A                                               | [<br/>"remote_user_id"<br/>]                      |
+| `supportedFields`                                 | *string*[]                                        | :heavy_check_mark:                                | N/A                                               | [<br/>"first_name",<br/>"last_name",<br/>"company",<br/>"title"<br/>] |
