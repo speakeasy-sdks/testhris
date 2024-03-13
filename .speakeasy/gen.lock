@@ -3,10 +3,10 @@ id: 617969a8-bdfb-48ca-99c2-dbf893f36293
 management:
   docChecksum: fdc02c3e2ea724be829328a32ae7ba59
   docVersion: "1.0"
-  speakeasyVersion: internal
-  generationVersion: 2.272.7
-  releaseVersion: 2.1.6
-  configChecksum: 11d7a84df2ae5f736870f41ea039eaa3
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 2.1.7
+  configChecksum: 481ed8f40048533e184f79b22f1c0b40
   repoURL: https://github.com/speakeasy-sdks/testhris.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/testhris
@@ -15,7 +15,7 @@ features:
     core: 3.4.8
     deprecations: 2.81.1
     globalSecurity: 2.82.4
-    globalServerURLs: 2.82.1
+    globalServerURLs: 2.82.2
 generatedFiles:
   - src/sdk/accountdetails.ts
   - src/sdk/accounttoken.ts

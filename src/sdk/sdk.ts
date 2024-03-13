@@ -84,9 +84,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0";
-    sdkVersion = "2.1.6";
-    genVersion = "2.272.7";
-    userAgent = "speakeasy-sdk/typescript 2.1.6 2.272.7 1.0 HRIS";
+    sdkVersion = "2.1.7";
+    genVersion = "2.280.6";
+    userAgent = "speakeasy-sdk/typescript 2.1.7 2.280.6 1.0 HRIS";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -129,9 +129,12 @@ export class Hris {
 
     constructor(props?: SDKProps) {
         let serverURL = props?.serverURL;
-        const serverIdx = props?.serverIdx ?? 0;
 
         if (!serverURL) {
+            const serverIdx = props?.serverIdx ?? 0;
+            if (serverIdx < 0 || serverIdx >= ServerList.length) {
+                throw new Error(`Invalid server index ${serverIdx}`);
+            }
             serverURL = ServerList[serverIdx];
         }
 
